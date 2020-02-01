@@ -5,9 +5,11 @@ import usePosts from '../hooks/usePosts';
 
 import Layout from '../components/layout';
 import SEO from '../components/seo';
+import PostPreview from '../components/postPreview';
 
 const Writing = () => {
   const posts = usePosts();
+
   return (
     <Layout>
       <SEO title='Writing' />
@@ -16,7 +18,7 @@ const Writing = () => {
 
       <h2>Here are some excellent blog posts</h2>
       {posts.map(post => (
-        <pre key={post.slug}>{JSON.stringify(post, null, 2)}</pre>
+        <PostPreview key={post.slug} post={post} />
       ))}
     </Layout>
   );
