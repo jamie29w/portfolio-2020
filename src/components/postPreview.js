@@ -7,10 +7,10 @@ const PostPreview = ({ post }) => {
   return (
     <article>
       <h3>
-        <Link to={post.slug}>{post.title}</Link>
+        <Link to={`/writing/${post.slug}/`}>{post.title}</Link>
       </h3>
       <p>{post.excerpt}</p>
-      <Link to={post.slug}>read more &rarr;</Link>
+      <Link to={`/writing/${post.slug}/`}>read more &rarr;</Link>
     </article>
   );
 };
