@@ -1,7 +1,33 @@
 import React from 'react';
-import styled from '@emotion/styled';
 import { Link, graphql, useStaticQuery } from 'gatsby';
 import BackgroundImage from 'gatsby-background-image';
+import styled from '@emotion/styled';
+
+const Hero = () => {
+  const { image } = useStaticQuery(graphql`
+    query {
+      image: file(relativePath: { eq: "gatsby-astronaut.png" }) {
+        sharp: childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+    }
+  `);
+  return (
+    <ImageBackground tag='section' fluid={image.sharp.fluid} fadeIn='soft'>
+      <TextBox>
+        <h1>FEM + Gatsby</h1>
+        <p>
+          heyo, frenz <Link to='/about/'>Learn about me</Link>
+        </p>
+      </TextBox>
+    </ImageBackground>
+  );
+};
+
+export default Hero;
 
 const ImageBackground = styled(BackgroundImage)`
   background-position: top 0% center;
@@ -38,29 +64,3 @@ const TextBox = styled.div`
     margin-top: 0.5rem;
   }
 `;
-
-const Hero = () => {
-  const { image } = useStaticQuery(graphql`
-    query {
-      image: file(relativePath: { eq: "gatsby-astronaut.png" }) {
-        sharp: childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid_withWebp
-          }
-        }
-      }
-    }
-  `);
-  return (
-    <ImageBackground tag='section' fluid={image.sharp.fluid} fadeIn='soft'>
-      <TextBox>
-        <h1>FEM + Gatsby</h1>
-        <p>
-          heyo, frenz <Link to='/about/'>Learn about me</Link>
-        </p>
-      </TextBox>
-    </ImageBackground>
-  );
-};
-
-export default Hero;

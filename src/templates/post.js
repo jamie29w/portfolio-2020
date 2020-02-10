@@ -1,7 +1,6 @@
 import React from 'react';
 import { graphql, Link } from 'gatsby';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
-
 import BackgroundImage from 'gatsby-background-image';
 import styled from '@emotion/styled';
 
@@ -32,8 +31,6 @@ const PostTemplate = ({
     mdx: { frontmatter, body },
   },
 }) => {
-  console.log('frontmatter');
-  console.log(frontmatter);
   return (
     <Layout>
       <h1>{frontmatter.title}</h1>
