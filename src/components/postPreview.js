@@ -2,8 +2,6 @@ import React from 'react';
 import { Link } from 'gatsby';
 
 const PostPreview = ({ post }) => {
-  console.log('post');
-  console.log(post);
   return (
     <article>
       <h3>
