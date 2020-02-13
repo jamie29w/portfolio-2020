@@ -5,6 +5,7 @@ import Hero from '../components/hero';
 import Layout from '../components/layout';
 import Image from '../components/image';
 import SEO from '../components/seo';
+import Gradient from '../components/gradient';
 
 const IndexPage = () => {
   const { colors } = useContext(ThemeContext);

@@ -8,8 +8,11 @@
 
 import React from 'react';
 import { ThemeProvider } from 'emotion-theming';
-import { theme } from './src/theme';
+import { theme, GlobalComponent } from './src/styles';
 
 export const wrapRootElement = ({ element }) => (
-  <ThemeProvider theme={theme}>{element}</ThemeProvider>
+  <ThemeProvider theme={theme}>
+    <GlobalComponent />
+    {element}
+  </ThemeProvider>
 );

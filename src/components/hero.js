@@ -1,38 +1,41 @@
 import React from 'react';
-import { Link, graphql, useStaticQuery } from 'gatsby';
-import BackgroundImage from 'gatsby-background-image';
+import { Link } from 'gatsby';
 import styled from '@emotion/styled';
+// import Gradient from './gradient';
 
 const Hero = () => {
-  const { image } = useStaticQuery(graphql`
-    query {
-      image: file(relativePath: { eq: "gatsby-astronaut.png" }) {
-        sharp: childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid_withWebp
-          }
-        }
-      }
-    }
-  `);
   return (
-    <ImageBackground tag='section' fluid={image.sharp.fluid} fadeIn='soft'>
+    <HeroWrapper>
       <TextBox>
-        <h1>FEM + Gatsby</h1>
-        <p>
-          heyo, frenz <Link to='/about/'>Learn about me</Link>
-        </p>
+        <h1>hi, I'm </h1>
+        <h1>Jamie Woodmancy</h1>
       </TextBox>
-    </ImageBackground>
+      <Gradient />
+    </HeroWrapper>
   );
 };
 
 export default Hero;
 
-const ImageBackground = styled(BackgroundImage)`
-  background-position: top 0% center;
-  background-size: cover;
-  height: 50vh;
+const HeroWrapper = styled.div`
+  position: relative;
+  height: 527px;
+  background: #fff;
+`;
+
+const Gradient = styled.div`
+  width: 100%;
+  position: absolute;
+  top: 0;
+  /* todo: make height more versatile */
+  height: 527px;
+  min-height: 100%;
+  overflow: hidden;
+  -webkit-transform: skewY(-12deg);
+  transform: skewY(-12deg);
+  -webkit-transform-origin: 0;
+  transform-origin: 0;
+  background: linear-gradient(150deg, #53f 15%, #05d5ff 70%, #a6ffcb 94%);
 
   /* override the default margin for sibling elements  */
   + * {
@@ -41,15 +44,16 @@ const ImageBackground = styled(BackgroundImage)`
 `;
 
 const TextBox = styled.div`
-  background: linear-gradient(to top, #ddbbffdd 2rem, #ddbbff00);
+  position: absolute;
   display: flex;
   flex-direction: column;
   height: 100%;
-  justify-content: flex-end;
-  padding: 0 calc((100vw - 550px) / 2) 2rem;
+  padding: 1em calc((100vw - 550px) / 2) 2rem;
   width: 100%;
+  z-index: 5;
 
   h1 {
+    color: #ffffff;
     text-shadow: 1px 5px 3px #eeddff66;
     font-size: 2.25rem;
   }
