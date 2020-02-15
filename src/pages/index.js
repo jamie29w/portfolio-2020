@@ -16,14 +16,6 @@ const IndexPage = () => {
     height: 100vh;
   `;
 
-  const LinkWrapper = styled.div`
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    align-items: center;
-    justify-content: center;
-  `;
-
   const HomePageLink = styled(Link)`
     display: flex;
     flex-direction: column;
