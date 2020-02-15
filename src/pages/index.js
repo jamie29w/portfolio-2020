@@ -1,28 +1,57 @@
 import React, { useContext } from 'react';
+import { Link } from 'gatsby';
 import { ThemeContext } from '@emotion/core';
+import styled from '@emotion/styled';
 
-import Hero from '../components/hero';
-import Layout from '../components/layout';
-import Image from '../components/image';
 import SEO from '../components/seo';
-import Gradient from '../components/gradient';
+import HeroGradient from '../components/heroGradient';
+import Footer from '../components/footer';
 
 const IndexPage = () => {
-  const { colors } = useContext(ThemeContext);
+  const { colors, text } = useContext(ThemeContext);
+
+  const IndexPageWrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  `;
+
+  const LinkWrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+  `;
+
+  const HomePageLink = styled(Link)`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: ${`2px solid ${colors.primary}`};
+    width: 245px;
+    height: 68px;
+    color: ${colors.primary};
+    font-size: ${text.bodyFontSize};
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+  `;
 
   return (
-    <>
-      <Hero />
-      <Layout>
-        <SEO title='Home' />
-        <h1 style={{ color: colors.primary }}>Hi people</h1>
-        <p>Welcome to your new Gatsby site.</p>
-        <p>Now go build something great.</p>
-        <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-          <Image />
+    <IndexPageWrapper>
+      <SEO title='Hello' />
+      <HeroGradient>
+        <div>{/* empty div to move other content down */}</div>
+        <div>
+          <h1>web</h1>
+          <h1>developer</h1>
         </div>
-      </Layout>
-    </>
+        <HomePageLink to='/writing/'>Let's do this</HomePageLink>
+      </HeroGradient>
+      <Footer />
+    </IndexPageWrapper>
   );
 };
 

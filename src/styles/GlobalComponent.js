@@ -10,13 +10,15 @@ import emotionNormalize from 'emotion-normalize';
 // act as the root of the project.
 
 export const GlobalComponent = () => {
-  const { colors } = useContext(ThemeContext);
+  const { colors, text, padding } = useContext(ThemeContext);
 
   return (
     <>
       <Global
         styles={css`
-          @import url('https://fonts.googleapis.com/css?family=Alegreya+Sans|Nunito&display=swap');
+          @import url('https://fonts.googleapis.com/css?family=Alegreya+Sans|Roboto&display=swap');
+          /* @import url('https://fonts.googleapis.com/css?family=Alegreya+Sans|Raleway&display=swap'); */
+          /* @import url('https://fonts.googleapis.com/css?family=Alegreya+Sans|Nunito&display=swap'); */
           ${emotionNormalize}
           html {
             font-family: sans-serif;
@@ -54,14 +56,15 @@ export const GlobalComponent = () => {
           h5,
           h6 {
             color: ${colors.primary};
-            font-family: 'Nunito', cursive;
-            padding: 0 16px;
+            font-family: 'Roboto', cursive;
+            letter-spacing: -0.5px;
+            padding: 0 ${padding};
             margin: 0;
           }
 
           p {
             color: ${colors.bodyText};
-            padding: 0 16px;
+            padding: 0 ${padding};
             margin: 0;
           }
         `}
