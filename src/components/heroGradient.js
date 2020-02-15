@@ -53,7 +53,7 @@ const Hero = ({ children }) => {
     h2 {
       color: #ffffff;
       /* text-shadow: 1px 3px 3px #ffffff66; */
-      font-size: 2.25rem;
+      font-size: 2rem;
     }
 
     h1 {
@@ -73,10 +73,7 @@ const Hero = ({ children }) => {
     <HeroWrapper>
       <Gradient />
       <TextBox>
-        <h2>HI, I'M </h2>
-        <h2>JAMIE WOODMANCY</h2>
-        {/* <h2>hi, I'm </h2>
-        <h2>Jamie Woodmancy</h2> */}
+        <h2>jamie woodmancy</h2>
         <ChildWrapper>{children}</ChildWrapper>
       </TextBox>
     </HeroWrapper>

@@ -1,6 +1,10 @@
 import React, { useContext } from 'react';
 import styled from '@emotion/styled';
-import { ThemeContext } from '@emotion/core';
+import { ThemeContext, css } from '@emotion/core';
+
+const reactIcon = require('../../images/react-icon.png');
+const gatsbyIcon = require('../../images/gatsby-icon.png');
+const netlifyIcon = require('../../images/netlify-icon.png');
 
 const Footer = () => {
   const { colors, text, padding } = useContext(ThemeContext);
@@ -15,13 +19,56 @@ const Footer = () => {
     color: ${colors.primary};
   `;
 
+  const Row1 = styled.span`
+    display: flex;
+    align-items: center;
+
+    & > * :not(:last-child) {
+      margin-right: 5px;
+    }
+  `;
+
+  const footerIcons = [
+    {
+      href: 'https://www.reactjs.org',
+      src: reactIcon,
+      alt: 'link to react homepage',
+    },
+    {
+      href: 'https://www.gatsbyjs.org',
+      src: gatsbyIcon,
+      alt: 'link to gatsby homepage',
+    },
+    {
+      href: 'https://www.netlify.com',
+      src: netlifyIcon,
+      alt: 'link to netlify homepage',
+    },
+  ];
+
   return (
     <StyledFooter>
-      <span>
-        © {new Date().getFullYear()}, Built with
-        {`  `}
-        <a href='https://www.gatsbyjs.org'>Gatsby</a>
-      </span>
+      <Row1>
+        <span>© {new Date().getFullYear()}, Big thanks to</span>
+        {footerIcons.map(icon => {
+          return (
+            <a
+              href={icon.href}
+              target='_blank'
+              rel='noopener noreferrer'
+              key={icon.alt}
+            >
+              <img
+                css={css`
+                  height: 20px;
+                `}
+                src={icon.src}
+                alt={icon.alt}
+              />
+            </a>
+          );
+        })}
+      </Row1>
     </StyledFooter>
   );
 };

@@ -48,7 +48,7 @@ const IndexPage = () => {
           <h1>web</h1>
           <h1>developer</h1>
         </div>
-        <HomePageLink to='/writing/'>Let's do this</HomePageLink>
+        <HomePageLink to='/writing/'>let's do this</HomePageLink>
       </HeroGradient>
       <Footer />
     </IndexPageWrapper>
