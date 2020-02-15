@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import styled from '@emotion/styled';
 import { ThemeContext } from '@emotion/core';
-// import Gradient from './gradient';
 
 const Hero = ({ children }) => {
   const { padding } = useContext(ThemeContext);

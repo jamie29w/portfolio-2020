@@ -2,7 +2,6 @@ import React, { useContext } from 'react';
 import { Global, css, ThemeContext } from '@emotion/core';
 import emotionNormalize from 'emotion-normalize';
 
-// todo: turn this into a a JSDoc comment
 // This component provides the global styles reset and
 // base styles for the app.
 // GlobalComponent is a single source of styling for the
@@ -10,15 +9,13 @@ import emotionNormalize from 'emotion-normalize';
 // act as the root of the project.
 
 export const GlobalComponent = () => {
-  const { colors, text, padding } = useContext(ThemeContext);
+  const { colors, padding } = useContext(ThemeContext);
 
   return (
     <>
       <Global
         styles={css`
           @import url('https://fonts.googleapis.com/css?family=Alegreya+Sans|Roboto&display=swap');
-          /* @import url('https://fonts.googleapis.com/css?family=Alegreya+Sans|Raleway&display=swap'); */
-          /* @import url('https://fonts.googleapis.com/css?family=Alegreya+Sans|Nunito&display=swap'); */
           ${emotionNormalize}
           html {
             font-family: sans-serif;
