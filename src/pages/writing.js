@@ -10,7 +10,7 @@ const Writing = () => {
   const posts = usePosts();
 
   return (
-    <Layout>
+    <Layout pathname={pathname}>
       <SEO title='Writing' />
       <h1>Hi from the writing page</h1>
       <p>Welcome to writing</p>
