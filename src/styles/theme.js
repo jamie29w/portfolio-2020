@@ -8,5 +8,5 @@ export const theme = {
   text: {
     bodyFontSize: '17px',
   },
-  padding: '17px',
+  padding: '1em',
 };
