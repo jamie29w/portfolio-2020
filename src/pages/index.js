@@ -35,7 +35,7 @@ const IndexPage = () => {
     <IndexPageWrapper>
       <SEO title='Hello' />
       <HeroGradient>
-        <div>{/* empty div to move other content down */}</div>
+        <h2>jamie woodmancy</h2>
         <div>
           <h1>web</h1>
           <h1>developer</h1>
