@@ -6,8 +6,20 @@ import { ThemeContext, css } from '@emotion/core';
 const Header = () => {
   const { colors, padding, text } = useContext(ThemeContext);
 
-  const StyledLink = styled(Link)`
+  const HeaderWrapper = styled.header`
+    background: ${colors.backgroun};
     color: ${colors.primary};
+    margin-bottom: ${padding};
+  `;
+
+  const Row1 = styled.div`
+    margin: 0 auto;
+    padding: ${padding};
+    display: flex;
+    justify-content: space-between;
+  `;
+
+  const StyledLink = styled(Link)`
     padding: ${padding};
     font-size: ${text.bodyFontSize};
     text-decoration: none;
@@ -18,22 +30,8 @@ const Header = () => {
   `;
 
   return (
-    <header
-      style={{
-        background: '#fff',
-        color: colors.primary,
-        marginBottom: `1.45rem`,
-      }}
-    >
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `1.45rem 1.0875rem`,
-          display: 'flex',
-          justifyContent: 'space-between',
-        }}
-      >
+    <HeaderWrapper>
+      <Row1>
         <StyledLink activeClassName='current-page' to='/writing/'>
           Writing
         </StyledLink>
@@ -43,8 +41,22 @@ const Header = () => {
         <StyledLink activeClassName='current-page' to='/work/'>
           Work
         </StyledLink>
-      </div>
-    </header>
+      </Row1>
+      <h3
+        css={css`
+          text-align: center;
+        `}
+      >
+        <Link
+          to='/'
+          css={css`
+            text-decoration: none;
+          `}
+        >
+          Jamie Woodmancy
+        </Link>
+      </h3>
+    </HeaderWrapper>
   );
 };
 

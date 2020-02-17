@@ -55,14 +55,26 @@ export const GlobalComponent = () => {
             color: ${colors.primary};
             font-family: 'Roboto', cursive;
             letter-spacing: -0.5px;
-            padding: 0 ${padding};
+            padding: 0;
             margin: 0;
           }
 
           p {
             color: ${colors.bodyText};
-            padding: 0 ${padding};
+            padding: 0;
             margin: 0;
+            letter-spacing: 1.1px;
+          }
+
+          a {
+            color: ${colors.accentLight};
+            letter-spacing: 0.5px;
+            padding: 0;
+
+            &:hover,
+            &:focus {
+              color: ${colors.accentMid};
+            }
           }
         `}
       />

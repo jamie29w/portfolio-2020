@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
+import { css, ThemeContext } from '@emotion/core';
+import styled from '@emotion/styled';
 
 import Header from './header';
 import Footer from './footer';
 
-const Layout = ({ children }) => {
+const Layout = ({ title, children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -15,19 +17,27 @@ const Layout = ({ children }) => {
     }
   `);
 
+  const { padding, colors } = useContext(ThemeContext);
+
+  const PageTitle = styled.h1`
+    color: ${colors.primary};
+    border-bottom: 2px solid ${colors.accentMid};
+    padding: 0 0 calc(0.5 * ${padding});
+  `;
+
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
+      <main
+        css={css`
+          margin: 0 auto;
+          padding: 0 ${padding} ${padding};
+        `}
       >
-        <main>{children}</main>
-        <Footer />
-      </div>
+        <PageTitle>{title}</PageTitle>
+        {children}
+      </main>
+      <Footer />
     </>
   );
 };

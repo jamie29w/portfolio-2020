@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 import { ThemeContext } from '@emotion/core';
 
 const Hero = ({ children }) => {
-  const { padding } = useContext(ThemeContext);
+  const { padding, colors } = useContext(ThemeContext);
 
   const HeroWrapper = styled.div`
     display: flex;
