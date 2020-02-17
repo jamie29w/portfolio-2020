@@ -1,12 +1,13 @@
 export const theme = {
   colors: {
-    bodyText: '#fff',
+    bodyText: '#f55b2d',
     primary: '#ff0033',
-    accent: '#062f4f;',
+    accentMid: '#f55b2d;',
+    accentLight: '#ffc09c;',
     background: '#fff',
   },
   text: {
     bodyFontSize: '17px',
   },
-  padding: '1em',
+  padding: '1rem',
 };

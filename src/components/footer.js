@@ -23,6 +23,10 @@ const Footer = () => {
     display: flex;
     align-items: center;
 
+    & > a {
+      padding: 0;
+    }
+
     & > * :not(:last-child) {
       margin-right: 5px;
     }
