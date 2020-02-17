@@ -1,51 +1,63 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'gatsby';
+import styled from '@emotion/styled';
+import { ThemeContext, css } from '@emotion/core';
 
-const Header = () => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-        display: 'flex',
-        justifyContent: 'space-between',
-      }}
-    >
-      <Link
-        to='/writing/'
-        style={{
-          color: `white`,
-          textDecoration: `none`,
-        }}
+const Header = () => {
+  const { colors, padding, text } = useContext(ThemeContext);
+
+  const HeaderWrapper = styled.header`
+    background: ${colors.backgroun};
+    color: ${colors.primary};
+    margin-bottom: ${padding};
+  `;
+
+  const Row1 = styled.div`
+    margin: 0 auto;
+    padding: ${padding};
+    display: flex;
+    justify-content: space-between;
+  `;
+
+  const StyledLink = styled(Link)`
+    padding: ${padding};
+    font-size: ${text.bodyFontSize};
+    text-decoration: none;
+
+    &.current-page {
+      border-bottom: 2px solid ${colors.primary};
+    }
+  `;
+
+  return (
+    <HeaderWrapper>
+      <Row1>
+        <StyledLink activeClassName='current-page' to='/writing/'>
+          Writing
+        </StyledLink>
+        <StyledLink activeClassName='current-page' to='/about/'>
+          About
+        </StyledLink>
+        <StyledLink activeClassName='current-page' to='/work/'>
+          Work
+        </StyledLink>
+      </Row1>
+      <h3
+        css={css`
+          text-align: center;
+        `}
       >
-        Writing
-      </Link>
-      <Link
-        to='/about/'
-        style={{
-          color: `white`,
-          textDecoration: `none`,
-        }}
-      >
-        About
-      </Link>
-      <Link
-        to='/work/'
-        style={{
-          color: `white`,
-          textDecoration: `none`,
-        }}
-      >
-        Work
-      </Link>
-    </div>
-  </header>
-);
+        <Link
+          to='/'
+          css={css`
+            text-decoration: none;
+          `}
+        >
+          Jamie Woodmancy
+        </Link>
+      </h3>
+    </HeaderWrapper>
+  );
+};
 
 export default Header;

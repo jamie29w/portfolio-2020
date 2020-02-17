@@ -5,7 +5,7 @@ import Layout from '../components/layout';
 import SEO from '../components/seo';
 
 const Work = () => (
-  <Layout>
+  <Layout title='Work'>
     <SEO title='Work' />
     <h1>Hi from the work page</h1>
     <p>Welcome to work</p>

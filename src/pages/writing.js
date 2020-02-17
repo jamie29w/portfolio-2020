@@ -1,21 +1,30 @@
-import React from 'react';
+import React, { useContext } from 'react';
 
 import usePosts from '../hooks/usePosts';
 
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import PostPreview from '../components/postPreview';
+import { ThemeContext, css } from '@emotion/core';
 
 const Writing = () => {
   const posts = usePosts();
+  const { padding } = useContext(ThemeContext);
 
   return (
-    <Layout>
+    <Layout title='Writing'>
       <SEO title='Writing' />
-      <h1>Hi from the writing page</h1>
-      <p>Welcome to writing</p>
+      <p
+        css={css`
+          margin: ${padding} 0;
+        `}
+      >
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium
+        magnam ab, aperiam at enim assumenda, officia rerum distinctio
+        recusandae amet veritatis. Minus placeat, illum molestias nemo ex
+        laborum ipsam nam.
+      </p>
 
-      <h2>Here are some excellent blog posts</h2>
       {posts.map(post => (
         <PostPreview key={post.slug} post={post} />
       ))}
