@@ -25,7 +25,7 @@ const Header = () => {
     text-decoration: none;
 
     &.current-page {
-      border-bottom: 2px solid ${colors.primary};
+      border-bottom: 2px solid ${colors.accentLight};
     }
   `;
 

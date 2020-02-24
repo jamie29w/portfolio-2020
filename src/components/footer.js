@@ -16,7 +16,7 @@ const Footer = () => {
     padding: ${padding};
     font-size: ${text.bodyFontSize};
     height: ${`${17 * 3}px`};
-    color: ${colors.primary};
+    color: ${colors.bodyText};
   `;
 
   const Row1 = styled.span`

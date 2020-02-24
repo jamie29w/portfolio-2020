@@ -20,7 +20,6 @@ const Layout = ({ title, children }) => {
   const { padding, colors } = useContext(ThemeContext);
 
   const PageTitle = styled.h1`
-    color: ${colors.primary};
     border-bottom: 2px solid ${colors.accentMid};
     padding: 0 0 calc(0.5 * ${padding});
   `;
