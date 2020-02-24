@@ -67,7 +67,7 @@ export const GlobalComponent = () => {
           }
 
           a {
-            color: ${colors.accentLight};
+            color: ${colors.accentMid};
             letter-spacing: 0.5px;
             padding: 0;
 
