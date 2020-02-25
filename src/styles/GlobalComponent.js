@@ -9,7 +9,7 @@ import emotionNormalize from 'emotion-normalize';
 // act as the root of the project.
 
 export const GlobalComponent = () => {
-  const { colors, padding } = useContext(ThemeContext);
+  const { colors } = useContext(ThemeContext);
 
   return (
     <>
