@@ -7,7 +7,7 @@ const Header = () => {
   const { colors, padding, text } = useContext(ThemeContext);
 
   const HeaderWrapper = styled.header`
-    background: ${colors.backgroun};
+    background: ${colors.background};
     color: ${colors.primary};
     margin-bottom: ${padding};
   `;
@@ -25,7 +25,7 @@ const Header = () => {
     text-decoration: none;
 
     &.current-page {
-      border-bottom: 2px solid ${colors.primary};
+      border-bottom: 2px solid ${colors.accentLight};
     }
   `;
 

@@ -1,13 +1,14 @@
 export const theme = {
   colors: {
-    bodyText: '#f55b2d',
-    primary: '#ff0033',
-    accentMid: '#f55b2d;',
-    accentLight: '#ffc09c;',
+    primary: '#24b47e;',
+    accentLight: '#05d5ff',
+    accentMid: '#6772e5;',
     background: '#fff',
+    bodyText: '#525f7f',
   },
   text: {
     bodyFontSize: '17px',
+    bodyFontSizeNum: 17,
   },
   padding: '1rem',
 };
