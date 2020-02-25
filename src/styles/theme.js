@@ -8,6 +8,7 @@ export const theme = {
   },
   text: {
     bodyFontSize: '17px',
+    bodyFontSizeNum: 17,
   },
   padding: '1rem',
 };

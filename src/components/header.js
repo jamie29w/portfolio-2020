@@ -7,7 +7,7 @@ const Header = () => {
   const { colors, padding, text } = useContext(ThemeContext);
 
   const HeaderWrapper = styled.header`
-    background: ${colors.backgroun};
+    background: ${colors.background};
     color: ${colors.primary};
     margin-bottom: ${padding};
   `;
