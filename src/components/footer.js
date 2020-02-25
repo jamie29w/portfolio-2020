@@ -15,7 +15,7 @@ const Footer = () => {
     align-items: center;
     padding: ${padding};
     font-size: ${text.bodyFontSize};
-    height: ${`${17 * 3}px`};
+    height: ${`${text.bodyFontSizeNum * 3}px`};
     color: ${colors.bodyText};
   `;
 
