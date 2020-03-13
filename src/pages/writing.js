@@ -2,9 +2,9 @@ import React, { useContext } from 'react';
 
 import usePosts from '../hooks/usePosts';
 
-import Layout from '../components/layout';
-import SEO from '../components/seo';
-import PostPreview from '../components/postPreview';
+import Layout from '../components/Layout';
+import SEO from '../components/Seo';
+import PostPreview from '../components/PostPreview';
 import { ThemeContext, css } from '@emotion/core';
 
 const Writing = () => {

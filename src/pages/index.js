@@ -1,11 +1,9 @@
-import React, { useContext } from 'react';
-import { Link } from 'gatsby';
-import { ThemeContext } from '@emotion/core';
+import React from 'react';
 import styled from '@emotion/styled';
 
-import SEO from '../components/seo';
-import HeroGradient from '../components/heroGradient';
-import Footer from '../components/footer';
+import SEO from '../components/Seo';
+import HeroGradient from '../components/HeroGradient';
+import Footer from '../components/Footer';
 
 const IndexPage = () => {
   const IndexPageWrapper = styled.div`

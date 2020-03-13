@@ -3,8 +3,8 @@ import { useStaticQuery, graphql } from 'gatsby';
 import { css, ThemeContext } from '@emotion/core';
 import styled from '@emotion/styled';
 
-import Header from './header';
-import Footer from './footer';
+import Header from './Header';
+import Footer from './Footer';
 
 const Layout = ({ title, children }) => {
   const data = useStaticQuery(graphql`

@@ -4,7 +4,7 @@ import { MDXRenderer } from 'gatsby-plugin-mdx';
 import BackgroundImage from 'gatsby-background-image';
 import styled from '@emotion/styled';
 
-import Layout from '../components/layout';
+import Layout from '../components/Layout';
 
 export const query = graphql`
   query($slug: String!) {
