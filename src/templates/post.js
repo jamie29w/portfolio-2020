@@ -7,8 +7,12 @@ import styled from '@emotion/styled';
 import Layout from '../components/layout';
 
 export const query = graphql`
-  query($slug: String!) {
-    mdx(frontmatter: { slug: { eq: $slug } }) {
+  query(
+    $slug: String!,
+    $prevPostSlug: String,
+    $nextPostSlug: String,
+  ) {
+    currentPost: mdx(frontmatter: { slug: { eq: $slug } }) {
       frontmatter {
         title
         author
@@ -23,14 +27,32 @@ export const query = graphql`
       }
       body
     }
+    prevPost: mdx(frontmatter: { slug: { eq: $prevPostSlug } }) {
+      frontmatter {
+        title
+        slug
+      }
+    }
+    nextPost: mdx(frontmatter: { slug: { eq: $nextPostSlug } }) {
+      frontmatter {
+        title
+        slug
+      }
+    }
   }
 `;
 
 const PostTemplate = ({
   data: {
-    mdx: { frontmatter, body },
+    currentPost: { frontmatter, body },
+    prevPost: { frontmatter: prevPostFrontMatter},
+    nextPost: { frontmatter: nextPostFrontMatter},
   },
 }) => {
+  console.log('prevPostFrontMatter')
+  console.log(prevPostFrontMatter)
+  console.log('nextPostFrontMatter')
+  console.log(nextPostFrontMatter)
   return (
     <Layout>
       <h1>{frontmatter.title}</h1>

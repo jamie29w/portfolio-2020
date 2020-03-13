@@ -11,6 +11,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         nodes {
           frontmatter {
             slug
+            title
           }
         }
       }
@@ -23,12 +24,24 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
   const posts = result.data.allMdx.nodes;
 
-  posts.forEach(post => {
+  posts.forEach((post, i) => {
+    const { slug } = post.frontmatter;
+    let prevPost = null, nextPost = null;
+
+    if (i >= 1) {
+      prevPost = posts[i - 1]
+    }
+    if (i < posts.length) {
+      nextPost = posts[i + 1]
+    }
+
     actions.createPage({
       path: `writing/${post.frontmatter.slug}`,
       component: require.resolve('./src/templates/post.js'),
       context: {
-        slug: `${post.frontmatter.slug}`,
+        slug: `${slug}`,
+        prevPostSlug: `${prevPost.frontmatter.slug}`,
+        nextPostSlug: `${nextPost.frontmatter.slug}`,
       },
     });
   });
