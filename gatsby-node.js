@@ -29,10 +29,10 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     let prevPost = null, nextPost = null;
 
     if (i >= 1) {
-      prevPost = posts[i - 1]
+      nextPost = posts[i - 1]
     }
     if (i < posts.length) {
-      nextPost = posts[i + 1]
+      prevPost = posts[i + 1]
     }
 
     actions.createPage({
