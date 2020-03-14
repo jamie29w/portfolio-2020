@@ -49,10 +49,6 @@ const PostTemplate = ({
     nextPost,
   },
 }) => {
-  console.log('prevPost')
-  console.log(prevPost)
-  console.log('nextPost')
-  console.log(nextPost)
   return (
     <Layout>
       <h1>{frontmatter.title}</h1>
@@ -65,7 +61,12 @@ const PostTemplate = ({
         />
       )}
       <MDXRenderer>{body}</MDXRenderer>
-      <Link to='/writing/'>&larr; back to other posts</Link>
+
+      <ButtonWrapper>
+
+      {prevPost ? <Link to={`/writing/${prevPost.frontmatter.slug}`}>&larr; {prevPost.frontmatter.title}</Link> : <div/>}
+      {nextPost ? <Link to={`/writing/${nextPost.frontmatter.slug}`}>{nextPost.frontmatter.title} &rarr;</Link> : <div/>}
+      </ButtonWrapper>
     </Layout>
   );
 };
@@ -77,3 +78,8 @@ const ImageBackground = styled(BackgroundImage)`
   background-size: cover;
   height: 50vh;
 `;
+
+const ButtonWrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+`
