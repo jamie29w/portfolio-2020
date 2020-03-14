@@ -45,14 +45,14 @@ export const query = graphql`
 const PostTemplate = ({
   data: {
     currentPost: { frontmatter, body },
-    prevPost: { frontmatter: prevPostFrontMatter},
-    nextPost: { frontmatter: nextPostFrontMatter},
+    prevPost,
+    nextPost,
   },
 }) => {
-  console.log('prevPostFrontMatter')
-  console.log(prevPostFrontMatter)
-  console.log('nextPostFrontMatter')
-  console.log(nextPostFrontMatter)
+  console.log('prevPost')
+  console.log(prevPost)
+  console.log('nextPost')
+  console.log(nextPost)
   return (
     <Layout>
       <h1>{frontmatter.title}</h1>
