@@ -9,8 +9,6 @@ import { ThemeContext, css } from '@emotion/core';
 
 const Writing = () => {
   const posts = usePosts();
-  console.log('posts')
-  console.log(posts)
   const { padding } = useContext(ThemeContext);
 
   return (
