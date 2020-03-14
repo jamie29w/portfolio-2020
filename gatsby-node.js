@@ -7,7 +7,7 @@
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const result = await graphql(`
     query {
-      allMdx {
+      allMdx(sort: {fields: frontmatter___published_date, order: DESC}) {
         nodes {
           frontmatter {
             slug
@@ -40,8 +40,8 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       component: require.resolve('./src/templates/post.js'),
       context: {
         slug: `${slug}`,
-        prevPostSlug: `${prevPost.frontmatter.slug}`,
-        nextPostSlug: `${nextPost.frontmatter.slug}`,
+        prevPostSlug: `${prevPost && prevPost.frontmatter.slug}`,
+        nextPostSlug: `${nextPost && nextPost.frontmatter.slug}`,
       },
     });
   });
