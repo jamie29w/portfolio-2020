@@ -6,39 +6,34 @@ import { ThemeContext, css } from '@emotion/core';
 const Header = () => {
   const { colors, padding, text } = useContext(ThemeContext);
 
-  const HeaderWrapper = styled.header`
-    background: ${colors.background};
-    color: ${colors.primary};
-    margin-bottom: ${padding};
-  `;
-
-  const Row1 = styled.div`
-    margin: 0 auto;
-    padding: ${padding};
-    display: flex;
-    justify-content: space-between;
-  `;
-
-  const StyledLink = styled(Link)`
-    padding: ${padding};
-    font-size: ${text.bodyFontSize};
-    text-decoration: none;
-
-    &.current-page {
-      border-bottom: 2px solid ${colors.accentLight};
-    }
-  `;
-
   return (
-    <HeaderWrapper>
-      <Row1>
-        <StyledLink activeClassName='current-page' to='/writing/'>
+    <HeaderWrapper colors={colors}>
+      <Row1 padding={padding}>
+        <StyledLink
+          activeClassName='current-page'
+          colors={colors}
+          padding={padding}
+          text={text}
+          to='/writing/'
+        >
           Writing
         </StyledLink>
-        <StyledLink activeClassName='current-page' to='/about/'>
+        <StyledLink
+          activeClassName='current-page'
+          colors={colors}
+          padding={padding}
+          text={text}
+          to='/about/'
+        >
           About
         </StyledLink>
-        <StyledLink activeClassName='current-page' to='/work/'>
+        <StyledLink
+          activeClassName='current-page'
+          colors={colors}
+          padding={padding}
+          text={text}
+          to='/work/'
+        >
           Work
         </StyledLink>
       </Row1>
@@ -61,3 +56,28 @@ const Header = () => {
 };
 
 export default Header;
+
+const HeaderWrapper = styled.header`
+  background: ${({ colors }) => colors.background};
+  color: ${({ colors }) => colors.primary};
+  margin-bottom: ${({ padding }) => padding};
+`;
+
+const Row1 = styled.div`
+  margin: 0 auto;
+  padding: ${({ padding }) => `0 0 ${padding}`};
+  display: flex;
+  justify-content: space-between;
+`;
+
+const StyledLink = styled(Link)`
+  flex: 1;
+  text-align: center;
+  padding: ${({ padding }) => `${padding} 0`};
+  font-size: ${({ text }) => text.bodyFontSize};
+  text-decoration: none;
+
+  &.current-page {
+    border-bottom: ${({ colors }) => `2px solid ${colors.accentLight}`};
+  }
+`;

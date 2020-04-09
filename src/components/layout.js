@@ -22,23 +22,40 @@ const Layout = ({ title, children }) => {
   const PageTitle = styled.h1`
     border-bottom: 2px solid ${colors.accentMid};
     padding: 0 0 calc(0.5 * ${padding});
+    margin-bottom: ${padding};
   `;
 
   return (
-    <>
-      <Header siteTitle={data.site.siteMetadata.title} />
-      <main
+    <LayoutWrapper padding={padding}>
+      <div
         css={css`
-          margin: 0 auto;
-          padding: 0 ${padding} ${padding};
+          width: 100%;
         `}
       >
-        <PageTitle>{title}</PageTitle>
-        {children}
-      </main>
-      <Footer />
-    </>
+        <Header siteTitle={data.site.siteMetadata.title} />
+        <main>
+          <PageTitle>{title}</PageTitle>
+          {children}
+        </main>
+      </div>
+      <FooterWrapper>
+        <Footer />
+      </FooterWrapper>
+    </LayoutWrapper>
   );
 };
 
 export default Layout;
+
+const FooterWrapper = styled.div`
+  justify-self: end;
+`;
+
+const LayoutWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 100vh;
+  padding: ${({ padding }) => padding};
+`;
