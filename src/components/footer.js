@@ -13,7 +13,7 @@ const Footer = () => {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: ${padding};
+    padding: ${padding} ${padding} 0;
     font-size: ${text.bodyFontSize};
     height: ${`${text.bodyFontSizeNum * 3}px`};
     color: ${colors.bodyText};
