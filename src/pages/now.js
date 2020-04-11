@@ -44,7 +44,7 @@ const Now = () => {
           </NowTitle>
           <ul>
             {item.details.map(detailItem => (
-              <li>{detailItem}</li>
+              <li key={detailItem}>{detailItem}</li>
             ))}
           </ul>
         </React.Fragment>
