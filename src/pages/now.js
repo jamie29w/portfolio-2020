@@ -5,12 +5,12 @@ import SEO from '../components/seo';
 import { ThemeContext } from '@emotion/core';
 import styled from '@emotion/styled';
 
-const pageTitle = 'About';
+const pageTitle = 'Now';
 
-const About = () => {
+const Now = () => {
   const { colors, padding } = useContext(ThemeContext);
 
-  const aboutData = [
+  const nowData = [
     {
       title: 'Working with',
       details: ['JS', 'React', 'React Native', 'Styled Components'],
@@ -37,11 +37,11 @@ const About = () => {
   return (
     <Layout title={pageTitle}>
       <SEO title={pageTitle} />
-      {aboutData.map(item => (
+      {nowData.map(item => (
         <React.Fragment key={item.title}>
-          <AboutTitle colors={colors} padding={padding}>
+          <NowTitle colors={colors} padding={padding}>
             {item.title}
-          </AboutTitle>
+          </NowTitle>
           <ul>
             {item.details.map(detailItem => (
               <li>{detailItem}</li>
@@ -53,9 +53,9 @@ const About = () => {
   );
 };
 
-export default About;
+export default Now;
 
-const AboutTitle = styled.h2`
+const NowTitle = styled.h2`
   color: ${({ colors }) => colors.accentMid};
   margin-bottom: ${({ padding }) => padding};
 `;
