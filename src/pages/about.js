@@ -1,19 +1,16 @@
 import React, { useContext } from 'react';
-// import { Link } from 'gatsby';
 
 import Layout from '../components/layout';
 import SEO from '../components/seo';
-import { css, ThemeContext } from '@emotion/core';
+import { ThemeContext } from '@emotion/core';
 import styled from '@emotion/styled';
 
-const pageTitle = 'Now';
+const pageTitle = 'About';
 
 const About = () => {
-  const { colors, padding, paddingAsNum } = useContext(ThemeContext);
+  const { colors, padding } = useContext(ThemeContext);
 
-  const halfPadding = `${paddingAsNum / 2}rem`;
-
-  const nowData = [
+  const aboutData = [
     {
       title: 'Working with',
       details: ['JS', 'React', 'React Native', 'Styled Components'],
@@ -22,21 +19,27 @@ const About = () => {
       title: 'Reading',
       details: ['Dune Messiah', 'Harry Potter and the Prisoner of Azkaban'],
     },
-  ];
-
-  const whatElseData = [
-    'playing cornhole with my kids',
-    'perfecting my old fashioned',
-    'reconsidering my opinions on React app architecture',
-    'Stumptown coffee',
+    {
+      title: 'Listening to',
+      details: ['Syntax', 'Front End Happy Hour'],
+    },
+    {
+      title: 'What else',
+      details: [
+        'Playing cornhole with my kids',
+        'Perfecting my old fashioned',
+        'Reconsidering my opinions on React app architecture',
+        'Stumptown coffee + Chemex',
+      ],
+    },
   ];
 
   return (
     <Layout title={pageTitle}>
       <SEO title={pageTitle} />
-      {nowData.map(item => (
+      {aboutData.map(item => (
         <React.Fragment key={item.title}>
-          <AboutTitle colors={colors} padding={halfPadding}>
+          <AboutTitle colors={colors} padding={padding}>
             {item.title}
           </AboutTitle>
           <ul>
@@ -46,26 +49,6 @@ const About = () => {
           </ul>
         </React.Fragment>
       ))}
-      <p
-        css={css`
-          margin: ${padding} 0;
-        `}
-      >
-        That's the most important stuff.
-      </p>
-      <h2
-        css={css`
-          margin: ${padding} 0;
-          color: ${colors.accentMid};
-        `}
-      >
-        What Else?
-      </h2>
-      <ul>
-        {whatElseData.map(item => (
-          <li>{item}</li>
-        ))}
-      </ul>
     </Layout>
   );
 };
@@ -74,10 +57,5 @@ export default About;
 
 const AboutTitle = styled.h2`
   color: ${({ colors }) => colors.accentMid};
-  margin-bottom: ${({ padding }) => padding};
-`;
-
-const StyledP = styled.p`
-  color: ${({ colors }) => colors.bodyText};
   margin-bottom: ${({ padding }) => padding};
 `;
