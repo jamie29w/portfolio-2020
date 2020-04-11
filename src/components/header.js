@@ -23,9 +23,9 @@ const Header = () => {
           colors={colors}
           padding={padding}
           text={text}
-          to='/about/'
+          to='/now/'
         >
-          About
+          Now
         </StyledLink>
         <StyledLink
           activeClassName='current-page'
