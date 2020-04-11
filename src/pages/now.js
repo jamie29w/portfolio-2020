@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
+import { ThemeContext } from '@emotion/core';
+import styled from '@emotion/styled';
 
 import Layout from '../components/layout';
 import SEO from '../components/seo';
-import { ThemeContext } from '@emotion/core';
-import styled from '@emotion/styled';
 
 const pageTitle = 'Now';
 

@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from '@emotion/styled';
 
-import SEO from '../components/seo';
-import HeroGradient from '../components/heroGradient';
 import Footer from '../components/footer';
+import HeroGradient from '../components/heroGradient';
+import SEO from '../components/seo';
 
 const IndexPage = () => {
   const IndexPageWrapper = styled.div`
