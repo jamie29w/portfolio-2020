@@ -6,25 +6,46 @@ import SEO from '../components/seo';
 import { css, ThemeContext } from '@emotion/core';
 import styled from '@emotion/styled';
 
-const pageTitle = 'About';
+const pageTitle = 'Now';
 
 const About = () => {
   const { colors, padding, paddingAsNum } = useContext(ThemeContext);
+
+  const halfPadding = `${paddingAsNum / 2}rem`;
+
+  const nowData = [
+    {
+      title: 'Working with',
+      details: ['JS', 'React', 'React Native', 'Styled Components'],
+    },
+    {
+      title: 'Reading',
+      details: ['Dune Messiah', 'Harry Potter and the Prisoner of Azkaban'],
+    },
+  ];
+
+  const whatElseData = [
+    'playing cornhole with my kids',
+    'perfecting my old fashioned',
+    'reconsidering my opinions on React app architecture',
+    'Stumptown coffee',
+  ];
+
   return (
     <Layout title={pageTitle}>
       <SEO title={pageTitle} />
-      <AboutTitle colors={colors} paddingAsNum={paddingAsNum}>
-        Jesus&nbsp;<span>first</span>
-      </AboutTitle>
-      <AboutTitle colors={colors} paddingAsNum={paddingAsNum}>
-        Husband&nbsp;<span>to Alexa</span>
-      </AboutTitle>
-      <AboutTitle colors={colors} paddingAsNum={paddingAsNum}>
-        Dad&nbsp;<span>to Asher + Ellie</span>
-      </AboutTitle>
-      <AboutTitle colors={colors} paddingAsNum={paddingAsNum}>
-        Dev&nbsp;<span>JS + React</span>
-      </AboutTitle>
+      {nowData.map(item => (
+        <React.Fragment key={item.title}>
+          <AboutTitle colors={colors} padding={halfPadding}>
+            {item.title}
+          </AboutTitle>
+          <ul>
+            {item.details.map(detailItem => (
+              <li>{detailItem}</li>
+            ))}
+          </ul>
+        </React.Fragment>
+      ))}
       <p
         css={css`
           margin: ${padding} 0;
@@ -34,17 +55,16 @@ const About = () => {
       </p>
       <h2
         css={css`
-          margin-top: ${padding};
+          margin: ${padding} 0;
+          color: ${colors.accentMid};
         `}
       >
         What Else?
       </h2>
       <ul>
-        <li>playing cornhole with my kids</li>
-        <li>craft beer + whiskey</li>
-        <li>coffee</li>
-        <li>front-end architecture</li>
-        <li>coffee</li>
+        {whatElseData.map(item => (
+          <li>{item}</li>
+        ))}
       </ul>
     </Layout>
   );
@@ -53,12 +73,11 @@ const About = () => {
 export default About;
 
 const AboutTitle = styled.h2`
-  color: ${({ colors }) => colors.accentLight};
-  display: flex;
-  margin-bottom: ${({ paddingAsNum }) => `${paddingAsNum / 2}rem`};
+  color: ${({ colors }) => colors.accentMid};
+  margin-bottom: ${({ padding }) => padding};
+`;
 
-  & > span {
-    color: ${({ colors }) => colors.bodyText};
-    display: flex;
-  }
+const StyledP = styled.p`
+  color: ${({ colors }) => colors.bodyText};
+  margin-bottom: ${({ padding }) => padding};
 `;
