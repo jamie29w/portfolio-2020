@@ -70,6 +70,7 @@ export const GlobalComponent = () => {
             color: ${colors.accentMid};
             letter-spacing: 0.5px;
             padding: 0;
+            text-decoration: none;
 
             &:hover,
             &:focus {
@@ -80,6 +81,7 @@ export const GlobalComponent = () => {
           ul {
             color: ${colors.bodyText};
             padding-left: 0;
+            margin-top: 0;
 
             & > li {
               margin-bottom: ${paddingAsNum / 2}rem;
