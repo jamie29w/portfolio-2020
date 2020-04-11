@@ -1,36 +1,13 @@
 import React, { useContext } from 'react';
 import styled from '@emotion/styled';
-import { ThemeContext, css } from '@emotion/core';
+import { css, ThemeContext } from '@emotion/core';
 
-const reactIcon = require('../../images/react-icon.png');
 const gatsbyIcon = require('../../images/gatsby-icon.png');
 const netlifyIcon = require('../../images/netlify-icon.png');
+const reactIcon = require('../../images/react-icon.png');
 
 const Footer = () => {
   const { colors, text, padding } = useContext(ThemeContext);
-
-  const StyledFooter = styled.footer`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: ${padding} ${padding} 0;
-    font-size: ${text.bodyFontSize};
-    height: ${`${text.bodyFontSizeNum * 3}px`};
-    color: ${colors.bodyText};
-  `;
-
-  const Row1 = styled.span`
-    display: flex;
-    align-items: center;
-
-    & > a {
-      padding: 0;
-    }
-
-    & > * :not(:last-child) {
-      margin-right: 5px;
-    }
-  `;
 
   const footerIcons = [
     {
@@ -49,6 +26,29 @@ const Footer = () => {
       alt: 'link to netlify homepage',
     },
   ];
+
+  const Row1 = styled.span`
+    display: flex;
+    align-items: center;
+
+    & > a {
+      padding: 0;
+    }
+
+    & > * :not(:last-child) {
+      margin-right: 5px;
+    }
+  `;
+
+  const StyledFooter = styled.footer`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: ${padding} ${padding} 0;
+    font-size: ${text.bodyFontSize};
+    height: ${`${text.bodyFontSizeNum * 3}px`};
+    color: ${colors.bodyText};
+  `;
 
   return (
     <StyledFooter>
