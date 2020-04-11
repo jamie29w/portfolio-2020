@@ -9,7 +9,7 @@ import emotionNormalize from 'emotion-normalize';
 // act as the root of the project.
 
 export const GlobalComponent = () => {
-  const { colors } = useContext(ThemeContext);
+  const { colors, paddingAsNum } = useContext(ThemeContext);
 
   return (
     <>
@@ -74,6 +74,16 @@ export const GlobalComponent = () => {
             &:hover,
             &:focus {
               color: ${colors.accentMid};
+            }
+          }
+
+          ul {
+            color: ${colors.bodyText};
+            padding-left: 0;
+
+            & > li {
+              margin-bottom: ${paddingAsNum / 2}rem;
+              list-style: none;
             }
           }
         `}

@@ -11,4 +11,5 @@ export const theme = {
     bodyFontSizeNum: 17,
   },
   padding: '1rem',
+  paddingAsNum: 1,
 };
