@@ -71,7 +71,7 @@ const TextBox = styled.div`
 
 const HomePageLink = styled(Link)`
   align-items: center;
-  border: ${`2px solid ${({ colors }) => colors.accentMid}`};
+  border: ${({ colors }) => `2px solid ${colors.accentMid}`};
   color: ${({ colors }) => colors.accentMid};
   bottom: ${({ padding }) => padding};
   display: flex;
