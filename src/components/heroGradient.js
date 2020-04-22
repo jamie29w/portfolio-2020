@@ -36,9 +36,9 @@ const Hero = () => {
 export default Hero;
 
 const HeroWrapper = styled.div`
-  position: relative;
-  height: ${({ footerHeight }) => `{calc(100vh - ${footerHeight}px)}`};
   background: #fff;
+  height: ${({ footerHeight }) => `{calc(100vh - ${footerHeight}px)}`};
+  position: relative;
 `;
 
 const Gradient = styled.div`
@@ -55,11 +55,11 @@ const Gradient = styled.div`
 `;
 
 const TextBox = styled.div`
-  position: absolute;
   display: flex;
   flex-direction: column;
   height: 100%;
   padding: ${({ padding }) => padding};
+  position: absolute;
   width: 100%;
   z-index: 5;
 
@@ -70,21 +70,21 @@ const TextBox = styled.div`
 `;
 
 const HomePageLink = styled(Link)`
-  display: flex;
-  position: absolute;
-  bottom: ${({ padding }) => padding};
-  left: 50%;
-  transform: translateX(-50%);
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
   border: ${`2px solid ${({ colors }) => colors.accentMid}`};
-  width: 245px;
-  height: 68px;
   color: ${({ colors }) => colors.accentMid};
+  bottom: ${({ padding }) => padding};
+  display: flex;
+  flex-direction: column;
   font-size: ${({ text }) => text.bodyFontSize};
   font-weight: 600;
+  height: 68px;
+  justify-content: center;
+  left: 50%;
+  position: absolute;
   text-align: center;
   text-decoration: none;
+  transform: translateX(-50%);
+  width: 245px;
   z-index: 5;
 `;

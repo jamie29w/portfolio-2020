@@ -18,11 +18,11 @@ const usePosts = () => {
   `);
 
   return data.allMdx.nodes.map(post => ({
-    title: post.frontmatter.title,
     author: post.frontmatter.author,
-    slug: post.frontmatter.slug,
-    published_date: post.frontmatter.published_date,
     excerpt: post.excerpt,
+    published_date: post.frontmatter.published_date,
+    slug: post.frontmatter.slug,
+    title: post.frontmatter.title,
   }));
 };
 
