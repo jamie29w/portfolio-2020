@@ -1,13 +1,16 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import styled from '@emotion/styled';
+import { ThemeContext } from '@emotion/core';
 
 import Footer from '../components/footer';
 import HeroGradient from '../components/heroGradient';
 import SEO from '../components/seo';
 
 const IndexPage = () => {
+  const { padding } = useContext(ThemeContext);
+
   return (
-    <IndexPageWrapper>
+    <IndexPageWrapper padding={padding}>
       <SEO title='Hello' />
       <HeroGradient />
       <Footer />
@@ -22,4 +25,5 @@ const IndexPageWrapper = styled.div`
   flex-direction: column;
   height: 100vh;
   justify-content: space-between;
+  padding-bottom: ${({ padding }) => padding};
 `;
