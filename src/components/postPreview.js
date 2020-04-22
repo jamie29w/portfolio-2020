@@ -1,23 +1,13 @@
 import React, { useContext } from 'react';
-import { Link } from 'gatsby';
+import { css, ThemeContext } from '@emotion/core';
 import styled from '@emotion/styled';
-import { ThemeContext, css } from '@emotion/core';
+import { Link } from 'gatsby';
 
 const PostPreview = ({ post }) => {
-  const { padding, colors } = useContext(ThemeContext);
-
-  const Article = styled.article`
-    margin-top: ${padding};
-
-    & :not(:last-of-type) {
-      border-bottom: 2px solid ${colors.accentMid};
-      margin-bottom: ${padding};
-      padding-bottom: ${padding};
-    }
-  `;
+  const { colors, padding } = useContext(ThemeContext);
 
   return (
-    <Article>
+    <Article colors={colors} padding={padding}>
       <h3
         css={css`
           margin-bottom: calc(0.25 * ${padding});
@@ -32,3 +22,13 @@ const PostPreview = ({ post }) => {
 };
 
 export default PostPreview;
+
+const Article = styled.article`
+  margin-top: ${({ padding }) => padding};
+
+  & :not(:last-of-type) {
+    border-bottom: ${({ colors }) => `2px solid ${colors.accentMid}`};
+    margin-bottom: ${({ padding }) => padding};
+    padding-bottom: ${({ padding }) => padding};
+  }
+`;
