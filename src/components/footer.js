@@ -1,57 +1,16 @@
 import React, { useContext } from 'react';
-import styled from '@emotion/styled';
 import { css, ThemeContext } from '@emotion/core';
+import styled from '@emotion/styled';
 
-const gatsbyIcon = require('../../images/gatsby-icon.png');
-const netlifyIcon = require('../../images/netlify-icon.png');
-const reactIcon = require('../../images/react-icon.png');
+import gatsbyIcon from '../../images/gatsby-icon.png';
+import netlifyIcon from '../../images/netlify-icon.png';
+import reactIcon from '../../images/react-icon.png';
 
 const Footer = () => {
   const { colors, text, padding } = useContext(ThemeContext);
 
-  const footerIcons = [
-    {
-      href: 'https://www.reactjs.org',
-      src: reactIcon,
-      alt: 'link to react homepage',
-    },
-    {
-      href: 'https://www.gatsbyjs.org',
-      src: gatsbyIcon,
-      alt: 'link to gatsby homepage',
-    },
-    {
-      href: 'https://www.netlify.com',
-      src: netlifyIcon,
-      alt: 'link to netlify homepage',
-    },
-  ];
-
-  const Row1 = styled.span`
-    display: flex;
-    align-items: center;
-
-    & > a {
-      padding: 0;
-    }
-
-    & > * :not(:last-child) {
-      margin-right: 5px;
-    }
-  `;
-
-  const StyledFooter = styled.footer`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: ${padding} ${padding} 0;
-    font-size: ${text.bodyFontSize};
-    height: ${`${text.bodyFontSizeNum * 3}px`};
-    color: ${colors.bodyText};
-  `;
-
   return (
-    <StyledFooter>
+    <StyledFooter colors={colors} padding={padding} text={text}>
       <Row1>
         <span>© {new Date().getFullYear()}, Big thanks to</span>
         {footerIcons.map(icon => {
@@ -78,3 +37,45 @@ const Footer = () => {
 };
 
 export default Footer;
+
+const Row1 = styled.span`
+  display: flex;
+  align-items: center;
+
+  & > a {
+    padding: 0;
+  }
+
+  & > * :not(:last-child) {
+    margin-right: 5px;
+  }
+`;
+
+const StyledFooter = styled.footer`
+  align-items: center;
+  color: ${({ colors }) => colors.bodyText};
+  display: flex;
+  font-size: ${({ text }) => text.bodyFontSize};
+  height: ${({ text }) => `${text.bodyFontSizeNum * 3}px`};
+  justify-content: center;
+  justify-self: flex-end;
+  padding: ${({ padding }) => `${padding} ${padding} 0`};
+`;
+
+const footerIcons = [
+  {
+    href: 'https://www.reactjs.org',
+    src: reactIcon,
+    alt: 'link to react homepage',
+  },
+  {
+    href: 'https://www.gatsbyjs.org',
+    src: gatsbyIcon,
+    alt: 'link to gatsby homepage',
+  },
+  {
+    href: 'https://www.netlify.com',
+    src: netlifyIcon,
+    alt: 'link to netlify homepage',
+  },
+];
