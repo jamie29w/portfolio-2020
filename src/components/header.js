@@ -4,7 +4,7 @@ import { ThemeContext, css } from '@emotion/core';
 import { Link } from 'gatsby';
 
 const Header = () => {
-  const { colors, padding, text } = useContext(ThemeContext);
+  const { colors, padding, paddingAsNum, text } = useContext(ThemeContext);
 
   return (
     <HeaderWrapper colors={colors}>
@@ -40,6 +40,7 @@ const Header = () => {
       <h3
         css={css`
           text-align: center;
+          margin: ${paddingAsNum * 1.5}rem 0;
         `}
       >
         <Link
