@@ -10,30 +10,6 @@ const pageTitle = 'Now';
 const Now = () => {
   const { colors, padding } = useContext(ThemeContext);
 
-  const nowData = [
-    {
-      title: 'Working with',
-      details: ['JS', 'React', 'React Native', 'Styled Components'],
-    },
-    {
-      title: 'Reading',
-      details: ['Dune Messiah', 'Harry Potter and the Prisoner of Azkaban'],
-    },
-    {
-      title: 'Listening to',
-      details: ['Syntax', 'Front End Happy Hour'],
-    },
-    {
-      title: 'What else',
-      details: [
-        'Playing cornhole with my kids',
-        'Perfecting my old fashioned',
-        'Reconsidering my opinions on React app architecture',
-        'Stumptown coffee + Chemex',
-      ],
-    },
-  ];
-
   return (
     <Layout title={pageTitle}>
       <SEO title={pageTitle} />
@@ -59,3 +35,27 @@ const NowTitle = styled.h2`
   color: ${({ colors }) => colors.accentMid};
   margin-bottom: ${({ padding }) => padding};
 `;
+
+const nowData = [
+  {
+    title: 'Working with',
+    details: ['JS', 'React', 'React Native', 'Styled Components'],
+  },
+  {
+    title: 'Reading',
+    details: ['Dune Messiah', 'Harry Potter and the Prisoner of Azkaban'],
+  },
+  {
+    title: 'Listening to',
+    details: ['Syntax', 'Front End Happy Hour'],
+  },
+  {
+    title: 'What else',
+    details: [
+      'Playing cornhole with my kids',
+      'Perfecting my old fashioned',
+      'Reconsidering my opinions on React app architecture',
+      'Stumptown coffee + Chemex',
+    ],
+  },
+];
