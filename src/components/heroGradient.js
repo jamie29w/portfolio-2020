@@ -37,7 +37,7 @@ export default Hero;
 
 const HeroWrapper = styled.div`
   background: #fff;
-  height: ${({ footerHeight }) => `{calc(100vh - ${footerHeight}px)}`};
+  height: ${({ footerHeight }) => `calc(100vh - ${footerHeight}px)`};
   position: relative;
 `;
 
