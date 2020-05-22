@@ -7,10 +7,10 @@ import HeroGradient from '../components/heroGradient';
 import SEO from '../components/seo';
 
 const IndexPage = () => {
-  const { padding } = useContext(ThemeContext);
+  const { spacing } = useContext(ThemeContext);
 
   return (
-    <IndexPageWrapper padding={padding}>
+    <IndexPageWrapper spacing={spacing}>
       <SEO title='Hello' />
       <HeroGradient />
       <Footer />
@@ -25,5 +25,5 @@ const IndexPageWrapper = styled.div`
   flex-direction: column;
   height: 100vh;
   justify-content: space-between;
-  padding-bottom: ${({ padding }) => padding};
+  padding-bottom: ${({ spacing }) => spacing}rem;
 `;

@@ -4,11 +4,11 @@ import { ThemeContext, css } from '@emotion/core';
 import { Link } from 'gatsby';
 
 const Hero = () => {
-  const { colors, padding, text } = useContext(ThemeContext);
+  const { colors, spacing, text } = useContext(ThemeContext);
 
   return (
     <HeroWrapper>
-      <TextBox colors={colors} padding={padding}>
+      <TextBox colors={colors} spacing={spacing}>
         <h4>Jamie Woodmancy</h4>
         <div
           css={css`
@@ -26,7 +26,7 @@ const Hero = () => {
         colors={colors}
         text={text}
         to='/writing/'
-        padding={padding}
+        spacing={spacing}
       >
         Let's Do This
       </HomePageLink>
@@ -63,7 +63,7 @@ const TextBox = styled.div`
   display: flex;
   flex-direction: column;
   height: 100%;
-  padding: ${({ padding }) => padding};
+  padding: ${({ spacing }) => spacing}rem;
   position: absolute;
   width: 100%;
   z-index: 5;
@@ -77,7 +77,7 @@ const HomePageLink = styled(Link)`
   align-items: center;
   border: ${({ colors }) => `2px solid ${colors.accentMid}`};
   color: ${({ colors }) => colors.accentMid};
-  bottom: ${({ padding }) => padding};
+  bottom: ${({ spacing }) => spacing}rem;
   display: flex;
   flex-direction: column;
   font-weight: 600;

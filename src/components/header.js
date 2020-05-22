@@ -4,15 +4,15 @@ import { ThemeContext, css } from '@emotion/core';
 import { Link } from 'gatsby';
 
 const Header = () => {
-  const { colors, padding, paddingAsNum, text } = useContext(ThemeContext);
+  const { colors, spacing, text } = useContext(ThemeContext);
 
   return (
-    <HeaderWrapper colors={colors}>
-      <Row1 padding={padding}>
+    <HeaderWrapper colors={colors} spacing={spacing}>
+      <Row1 spacing={spacing}>
         <StyledLink
           activeClassName='current-page'
           colors={colors}
-          padding={padding}
+          spacing={spacing}
           text={text}
           to='/writing/'
         >
@@ -21,7 +21,7 @@ const Header = () => {
         <StyledLink
           activeClassName='current-page'
           colors={colors}
-          padding={padding}
+          spacing={spacing}
           text={text}
           to='/now/'
         >
@@ -30,7 +30,7 @@ const Header = () => {
         <StyledLink
           activeClassName='current-page'
           colors={colors}
-          padding={padding}
+          spacing={spacing}
           text={text}
           to='/work/'
         >
@@ -39,8 +39,8 @@ const Header = () => {
       </Row1>
       <h3
         css={css`
+          margin: 0;
           text-align: center;
-          margin: ${paddingAsNum * 1.5}rem 0;
         `}
       >
         <Link
@@ -61,12 +61,10 @@ export default Header;
 const HeaderWrapper = styled.header`
   background: ${({ colors }) => colors.background};
   color: ${({ colors }) => colors.primary};
-  margin-bottom: ${({ padding }) => padding};
+  padding: 0 ${({ spacing }) => spacing}rem;
 `;
 
 const Row1 = styled.div`
-  margin: 0 auto;
-  padding: ${({ padding }) => `0 0 ${padding}`};
   display: flex;
   justify-content: space-between;
 `;
@@ -74,7 +72,7 @@ const Row1 = styled.div`
 const StyledLink = styled(Link)`
   flex: 1;
   text-align: center;
-  padding: ${({ padding }) => `${padding} 0`};
+  padding: ${({ spacing }) => `${spacing}rem 0`};
   text-decoration: none;
 
   &.current-page {

@@ -6,6 +6,5 @@ export const theme = {
     background: '#fff',
     bodyText: '#525f7f',
   },
-  padding: '1rem',
-  paddingAsNum: 1,
+  spacing: 1,
 };
