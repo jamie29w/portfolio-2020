@@ -4,54 +4,49 @@ import { ThemeContext, css } from '@emotion/core';
 import { Link } from 'gatsby';
 
 const Header = () => {
-  const { colors, spacing, text } = useContext(ThemeContext);
+  const {
+    colors: { accentLight, accentMid, primary },
+    spacing,
+  } = useContext(ThemeContext);
 
   return (
-    <HeaderWrapper colors={colors} spacing={spacing}>
-      <Row1 spacing={spacing}>
+    <HeaderWrapper color={primary} spacing={spacing}>
+      <NavRow spacing={spacing}>
         <StyledLink
           activeClassName='current-page'
-          colors={colors}
+          borderColor={accentLight}
           spacing={spacing}
-          text={text}
           to='/writing/'
         >
           Writing
         </StyledLink>
         <StyledLink
           activeClassName='current-page'
-          colors={colors}
+          borderColor={accentLight}
           spacing={spacing}
-          text={text}
           to='/now/'
         >
           Now
         </StyledLink>
         <StyledLink
           activeClassName='current-page'
-          colors={colors}
+          borderColor={accentLight}
           spacing={spacing}
-          text={text}
           to='/work/'
         >
           Work
         </StyledLink>
-      </Row1>
-      <h3
-        css={css`
-          margin: 0;
-          text-align: center;
-        `}
-      >
-        <Link
-          to='/'
+      </NavRow>
+      <Link to='/'>
+        <h5
           css={css`
-            text-decoration: none;
+            color: ${accentMid};
+            text-align: center;
           `}
         >
           Jamie Woodmancy
-        </Link>
-      </h3>
+        </h5>
+      </Link>
     </HeaderWrapper>
   );
 };
@@ -59,23 +54,22 @@ const Header = () => {
 export default Header;
 
 const HeaderWrapper = styled.header`
-  background: ${({ colors }) => colors.background};
-  color: ${({ colors }) => colors.primary};
+  color: ${({ color }) => color};
   padding: 0 ${({ spacing }) => spacing}rem;
 `;
 
-const Row1 = styled.div`
+const NavRow = styled.div`
   display: flex;
   justify-content: space-between;
 `;
 
 const StyledLink = styled(Link)`
   flex: 1;
-  text-align: center;
   padding: ${({ spacing }) => `${spacing}rem 0`};
+  text-align: center;
   text-decoration: none;
 
   &.current-page {
-    border-bottom: ${({ colors }) => `2px solid ${colors.accentLight}`};
+    border-bottom: ${({ borderColor }) => `2px solid ${borderColor}`};
   }
 `;

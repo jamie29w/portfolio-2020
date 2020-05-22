@@ -4,10 +4,13 @@ import styled from '@emotion/styled';
 import { Link } from 'gatsby';
 
 const PostPreview = ({ post }) => {
-  const { colors, spacing } = useContext(ThemeContext);
+  const {
+    colors: { accentLight },
+    spacing,
+  } = useContext(ThemeContext);
 
   return (
-    <Article colors={colors} spacing={spacing}>
+    <Article borderColor={accentLight} spacing={spacing}>
       <Link to={`/writing/${post.slug}/`}>
         <h4>{post.title}</h4>
       </Link>
@@ -20,8 +23,8 @@ const PostPreview = ({ post }) => {
 export default PostPreview;
 
 const Article = styled.article`
-  & :not(:last-of-type) {
-    border-bottom: ${({ colors }) => `2px solid ${colors.accentMid}`};
+  &:not(:last-of-type) {
+    border-bottom: ${({ borderColor }) => `2px solid ${borderColor}`};
     padding-bottom: ${({ spacing }) => spacing}rem;
   }
 `;
