@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { ThemeContext } from '@emotion/core';
 import styled from '@emotion/styled';
 import { graphql, Link } from 'gatsby';
 import BackgroundImage from 'gatsby-background-image';
@@ -45,14 +46,16 @@ const PostTemplate = ({
     nextPost,
   },
 }) => {
+  const { spacing } = useContext(ThemeContext);
   return (
     <Layout>
-      <h1>{frontmatter.title}</h1>
+      <h2>{frontmatter.title}</h2>
       <p>Posted by {frontmatter.author}</p>
       {frontmatter.image?.sharp?.fluid && (
         <ImageBackground
           fadeIn='soft'
           fluid={frontmatter.image.sharp.fluid}
+          spacing={spacing}
           tag='section'
         />
       )}
@@ -84,6 +87,7 @@ const ImageBackground = styled(BackgroundImage)`
   background-position: center;
   background-size: cover;
   height: 50vh;
+  margin-top: ${({ spacing }) => spacing}rem;
 `;
 
 const ButtonWrapper = styled.div`
