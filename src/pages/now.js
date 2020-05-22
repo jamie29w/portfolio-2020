@@ -1,6 +1,4 @@
-import React, { useContext } from 'react';
-import { ThemeContext } from '@emotion/core';
-import styled from '@emotion/styled';
+import React from 'react';
 
 import Layout from '../components/layout';
 import SEO from '../components/seo';
@@ -8,16 +6,12 @@ import SEO from '../components/seo';
 const pageTitle = 'Now';
 
 const Now = () => {
-  const { colors, padding } = useContext(ThemeContext);
-
   return (
     <Layout title={pageTitle}>
       <SEO title={pageTitle} />
       {nowData.map(item => (
         <React.Fragment key={item.title}>
-          <NowTitle colors={colors} padding={padding}>
-            {item.title}
-          </NowTitle>
+          <h4>{item.title}</h4>
           <ul>
             {item.details.map(detailItem => (
               <li key={detailItem}>{detailItem}</li>
@@ -30,11 +24,6 @@ const Now = () => {
 };
 
 export default Now;
-
-const NowTitle = styled.h2`
-  color: ${({ colors }) => colors.accentMid};
-  margin-bottom: ${({ padding }) => padding};
-`;
 
 const nowData = [
   {

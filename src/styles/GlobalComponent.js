@@ -13,6 +13,7 @@ import '../styles/fontFaces.css';
 export const GlobalComponent = () => {
   const {
     colors: { primary, accentLight, accentMid, background, bodyText },
+    spacing,
   } = useContext(ThemeContext);
 
   return (
@@ -22,13 +23,12 @@ export const GlobalComponent = () => {
           /* @import url('https://fonts.googleapis.com/css?family=Alegreya+Sans|Roboto&display=swap'); */
           ${emotionNormalize}
           html {
+            box-sizing: border-box;
             font-family: sans-serif;
+            margin: 0;
+            padding: 0;
             -ms-text-size-adjust: 100%;
             -webkit-text-size-adjust: 100%;
-          }
-
-          html {
-            box-sizing: border-box;
           }
 
           *,
@@ -64,7 +64,7 @@ export const GlobalComponent = () => {
             font-family: 'Open Sans', sans-serif;
             font-weight: 600;
             padding: 0;
-            margin: 0;
+            margin: ${spacing}rem 0 0;
           }
 
           h1 {
@@ -83,6 +83,7 @@ export const GlobalComponent = () => {
           }
 
           h4 {
+            color: ${accentMid};
             font-size: 2.125rem;
             letter-spacing: 0.25px;
           }
@@ -107,7 +108,7 @@ export const GlobalComponent = () => {
             font-weight: 400;
             letter-spacing: 0.5px;
             padding: 0;
-            margin: 0;
+            margin: ${spacing}rem 0 0;
           }
 
           .caption {

@@ -9,7 +9,7 @@ const pageTitle = 'Work';
 const Work = () => (
   <Layout title={pageTitle}>
     <SEO title={pageTitle} />
-    <h1>Hi from the work page</h1>
+    <h4>Hi from the work page</h4>
     <p>Welcome to work</p>
     <Link to='/'>Go back to the homepage</Link>
   </Layout>

@@ -17,25 +17,19 @@ const Layout = ({ title, children }) => {
     }
   `);
 
-  const { padding, paddingAsNum } = useContext(ThemeContext);
+  const { spacing } = useContext(ThemeContext);
 
   return (
-    <LayoutWrapper padding={padding}>
-      <div
-        css={css`
-          width: 100%;
-        `}
-      >
-        <Header siteTitle={data.site.siteMetadata.title} />
+    <>
+      <Header siteTitle={data.site.siteMetadata.title} />
+      <LayoutWrapper spacing={spacing}>
         <main>
-          <PageTitle padding={padding} paddingAsNum={paddingAsNum}>
-            {title}
-          </PageTitle>
+          <h2>{title}</h2>
           {children}
         </main>
-      </div>
-      <Footer />
-    </LayoutWrapper>
+        <Footer />
+      </LayoutWrapper>
+    </>
   );
 };
 
@@ -47,10 +41,7 @@ const LayoutWrapper = styled.div`
   flex-direction: column;
   justify-content: space-between;
   min-height: 100vh;
-  padding: ${({ padding }) => padding};
-`;
-
-const PageTitle = styled.h1`
-  margin-bottom: ${({ padding }) => padding};
-  padding: ${({ paddingAsNum }) => `0 0 ${paddingAsNum * 0.5}rem`};
+  padding: ${({ spacing }) => spacing}rem;
+  padding-top: 0;
+  width: 100%;
 `;
