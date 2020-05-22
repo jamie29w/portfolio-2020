@@ -7,17 +7,18 @@ const Hero = () => {
   const { colors, padding, text } = useContext(ThemeContext);
 
   return (
-    <HeroWrapper footerHeight={text.bodyFontSizeAsNum * 3}>
+    <HeroWrapper>
       <TextBox colors={colors} padding={padding}>
-        <h2>jamie woodmancy</h2>
+        <h4>Jamie Woodmancy</h4>
         <div
           css={css`
             position: relative;
-            top: 30%;
+            top: 10%;
           `}
         >
-          <h1>web</h1>
-          <h1>developer</h1>
+          <TitleText>Front</TitleText>
+          <TitleText>End</TitleText>
+          <TitleText>Engineer</TitleText>
         </div>
       </TextBox>
       <Gradient />
@@ -27,7 +28,7 @@ const Hero = () => {
         to='/writing/'
         padding={padding}
       >
-        let's do this
+        Let's Do This
       </HomePageLink>
     </HeroWrapper>
   );
@@ -37,8 +38,12 @@ export default Hero;
 
 const HeroWrapper = styled.div`
   background: #fff;
-  height: ${({ footerHeight }) => `calc(100vh - ${footerHeight}px)`};
+  height: calc(100vh - 55px);
   position: relative;
+`;
+
+const TitleText = styled.h2`
+  color: white;
 `;
 
 const Gradient = styled.div`
@@ -65,7 +70,6 @@ const TextBox = styled.div`
 
   h1 {
     color: ${({ colors }) => colors.background};
-    font-size: 2.25rem;
   }
 `;
 
@@ -76,7 +80,6 @@ const HomePageLink = styled(Link)`
   bottom: ${({ padding }) => padding};
   display: flex;
   flex-direction: column;
-  font-size: ${({ text }) => text.bodyFontSize};
   font-weight: 600;
   height: 68px;
   justify-content: center;

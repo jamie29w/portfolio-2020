@@ -6,10 +6,6 @@ export const theme = {
     background: '#fff',
     bodyText: '#525f7f',
   },
-  text: {
-    bodyFontSize: '17px',
-    bodyFontSizeAsNum: 17,
-  },
   padding: '1rem',
   paddingAsNum: 1,
 };

@@ -2,6 +2,8 @@ import React, { useContext } from 'react';
 import { Global, css, ThemeContext } from '@emotion/core';
 import emotionNormalize from 'emotion-normalize';
 
+import '../styles/fontFaces.css';
+
 // This component provides the global styles reset and
 // base styles for the app.
 // GlobalComponent is a single source of styling for the
@@ -9,13 +11,15 @@ import emotionNormalize from 'emotion-normalize';
 // act as the root of the project.
 
 export const GlobalComponent = () => {
-  const { colors, paddingAsNum } = useContext(ThemeContext);
+  const {
+    colors: { primary, accentLight, accentMid, background, bodyText },
+  } = useContext(ThemeContext);
 
   return (
     <>
       <Global
         styles={css`
-          @import url('https://fonts.googleapis.com/css?family=Alegreya+Sans|Roboto&display=swap');
+          /* @import url('https://fonts.googleapis.com/css?family=Alegreya+Sans|Roboto&display=swap'); */
           ${emotionNormalize}
           html {
             font-family: sans-serif;
@@ -34,9 +38,11 @@ export const GlobalComponent = () => {
           }
 
           body {
-            background: ${colors.background};
+            background: ${background};
+            font-family: 'Roboto', sans-serif;
+            font-weight: 400;
             margin: 0;
-            font-family: 'Alegreya', sans-serif;
+            padding: 0;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
           }
@@ -46,45 +52,85 @@ export const GlobalComponent = () => {
               monospace;
           }
 
+          .contract {
+          }
+
           h1,
           h2,
           h3,
           h4,
-          h5,
-          h6 {
-            color: ${colors.primary};
-            font-family: 'Roboto', cursive;
-            letter-spacing: -0.5px;
+          h5 {
+            color: ${primary};
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 600;
             padding: 0;
             margin: 0;
           }
 
-          p {
-            color: ${colors.bodyText};
+          h1 {
+            font-size: 6rem;
+            letter-spacing: -1.5px;
+          }
+
+          h2 {
+            font-size: 3.75rem;
+            letter-spacing: -0.5px;
+          }
+
+          h3 {
+            font-size: 3rem;
+            letter-spacing: 0px;
+          }
+
+          h4 {
+            font-size: 2.125rem;
+            letter-spacing: 0.25px;
+          }
+
+          h5 {
+            font-size: 1.5rem;
+            letter-spacing: 0px;
+          }
+
+          h6 {
+            font-size: 1.25rem;
+            letter-spacing: 0.15px;
+          }
+
+          a,
+          p,
+          ul,
+          li {
+            color: ${bodyText}; /* a color is overwritten */
+            font-family: 'Roboto', sans-serif;
+            font-size: 1rem;
+            font-weight: 400;
+            letter-spacing: 0.5px;
             padding: 0;
             margin: 0;
-            letter-spacing: 1.1px;
+          }
+
+          .caption {
+            color: ${bodyText};
+            font-size: 0.8rem;
+            letter-spacing: 0.4px;
           }
 
           a {
-            color: ${colors.accentMid};
-            letter-spacing: 0.5px;
-            padding: 0;
+            color: ${accentMid};
             text-decoration: none;
 
             &:hover,
             &:focus {
-              color: ${colors.accentMid};
+              color: ${accentLight};
             }
           }
 
           ul {
-            color: ${colors.bodyText};
             padding-left: 0;
             margin-top: 0;
 
             & > li {
-              margin-bottom: ${paddingAsNum / 2}rem;
               list-style: none;
             }
           }
