@@ -55,8 +55,6 @@ const StyledFooter = styled.footer`
   align-items: center;
   color: ${({ colors }) => colors.bodyText};
   display: flex;
-  font-size: ${({ text }) => text.bodyFontSize};
-  height: ${({ text }) => `${text.bodyFontSizeAsNum * 3}px`};
   justify-content: center;
   justify-self: flex-end;
   padding: ${({ padding }) => `${padding} ${padding} 0`};

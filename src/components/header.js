@@ -75,7 +75,6 @@ const StyledLink = styled(Link)`
   flex: 1;
   text-align: center;
   padding: ${({ padding }) => `${padding} 0`};
-  font-size: ${({ text }) => text.bodyFontSize};
   text-decoration: none;
 
   &.current-page {
