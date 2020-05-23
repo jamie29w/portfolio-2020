@@ -1,2 +1,2 @@
 export { GlobalComponent } from './GlobalComponent';
-export { theme } from './theme';
+export { default, theme } from './theme';
