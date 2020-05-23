@@ -1,16 +1,5 @@
-export const theme = {
-  colors: {
-    primary: '#24b47e;',
-    accentLight: '#05d5ff',
-    accentMid: '#3297d3;',
-    background: '#fff',
-    bodyText: '#525f7f',
-  },
-  spacing: 1,
-};
-
-export default function createTheme() {
-  return { palette: createPalette('light'), spacing: 1 };
+export default function createTheme(type = 'dark') {
+  return { palette: createPalette(type), spacing: 1 };
 }
 
 const common = {
@@ -50,24 +39,24 @@ const types = { light, dark };
 
 function createPalette(type) {
   const primary = {
-      light: '#CE7870',
-      dark: '#CE7870',
+      light: 'rgba(186, 100, 92, 1)',
+      dark: 'rgba(206, 120, 112, 1)',
     },
     secondary = {
-      light: '#BECBCF',
-      dark: '#BECBCF',
+      light: 'rgba(170, 183, 187, 1)',
+      dark: 'rgba(190, 203, 207, 1)',
     },
     tertiary = {
-      light: '#ECBCB0',
-      dark: '#ECBCB0',
+      light: 'rgba(215, 168, 156, 1)',
+      dark: 'rgba(235, 188, 176, 1)',
     },
     success = {
-      light: '#6E7D75',
-      dark: '#6E7D75',
+      light: 'rgba(90, 105, 97, 1)',
+      dark: 'rgba(110, 125, 117, 1)',
     },
     warning = {
-      light: '#EBA966',
-      dark: '#EBA966',
+      light: 'rgba(215, 149, 82, 1)',
+      dark: 'rgba(235, 169, 102, 1)',
     };
 
   const paletteOutput = {
