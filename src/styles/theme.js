@@ -1,4 +1,4 @@
-export default function createTheme(type = 'dark') {
+export default function createTheme(type = 'light') {
   return { palette: createPalette(type), spacing: 1 };
 }
 

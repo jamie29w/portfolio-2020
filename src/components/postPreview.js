@@ -5,12 +5,12 @@ import { Link } from 'gatsby';
 
 const PostPreview = ({ post }) => {
   const {
-    colors: { accentLight },
+    palette: { tertiary },
     spacing,
   } = useContext(ThemeContext);
 
   return (
-    <Article borderColor={accentLight} spacing={spacing}>
+    <Article bordercolor={tertiary} spacing={spacing}>
       <Link to={`/writing/${post.slug}/`}>
         <h4>{post.title}</h4>
       </Link>
@@ -24,7 +24,7 @@ export default PostPreview;
 
 const Article = styled.article`
   &:not(:last-of-type) {
-    border-bottom: ${({ borderColor }) => `2px solid ${borderColor}`};
+    border-bottom: ${({ bordercolor }) => `2px solid ${bordercolor}`};
     padding-bottom: ${({ spacing }) => spacing}rem;
   }
 `;

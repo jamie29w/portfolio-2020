@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { Global, css, ThemeContext } from '@emotion/core';
 import emotionNormalize from 'emotion-normalize';
+import Color from 'color';
 
 import '../styles/fontFaces.css';
 
@@ -12,9 +13,16 @@ import '../styles/fontFaces.css';
 
 export const GlobalComponent = () => {
   const {
-    colors: { primary, accentLight, accentMid, background, bodyText },
+    palette: {
+      primary,
+      success,
+      background: { primary: bgPrimary, secondary: bgSecondary },
+      text: { primary: bodyText },
+    },
     spacing,
   } = useContext(ThemeContext);
+
+  const Success = Color(success);
 
   return (
     <>
@@ -23,6 +31,7 @@ export const GlobalComponent = () => {
           /* @import url('https://fonts.googleapis.com/css?family=Alegreya+Sans|Roboto&display=swap'); */
           ${emotionNormalize}
           html {
+            background: ${bgPrimary};
             box-sizing: border-box;
             font-family: sans-serif;
             margin: 0;
@@ -38,7 +47,8 @@ export const GlobalComponent = () => {
           }
 
           body {
-            background: ${background};
+            background: ${bgPrimary};
+            color: ${bodyText};
             font-family: 'Roboto', sans-serif;
             font-weight: 400;
             margin: 0;
@@ -83,7 +93,7 @@ export const GlobalComponent = () => {
           }
 
           h4 {
-            color: ${accentMid};
+            color: ${success};
             font-size: 2.125rem;
             letter-spacing: 0.25px;
           }
@@ -102,7 +112,6 @@ export const GlobalComponent = () => {
           p,
           ul,
           li {
-            color: ${bodyText}; /* a color is overwritten */
             font-family: 'Roboto', sans-serif;
             font-size: 1rem;
             font-weight: 400;
@@ -112,18 +121,17 @@ export const GlobalComponent = () => {
           }
 
           .caption {
-            color: ${bodyText};
             font-size: 0.8rem;
             letter-spacing: 0.4px;
           }
 
           a {
-            color: ${accentMid};
+            color: ${success};
             text-decoration: none;
 
             &:hover,
             &:focus {
-              color: ${accentLight};
+              color: ${Success.darken(0.5)};
             }
           }
 
