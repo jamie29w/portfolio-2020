@@ -7,10 +7,16 @@ import netlifyIcon from '../../images/netlify-icon.png';
 import reactIcon from '../../images/react-icon.png';
 
 const Footer = () => {
-  const { colors, text, spacing } = useContext(ThemeContext);
+  const {
+    palette: {
+      background: { primary: bgPrimary },
+      text: { primary: textPrimary },
+    },
+    spacing,
+  } = useContext(ThemeContext);
 
   return (
-    <StyledFooter colors={colors} spacing={spacing} text={text}>
+    <StyledFooter bgcolor={bgPrimary} color={textPrimary} spacing={spacing}>
       <Row1>
         <span>© {new Date().getFullYear()}, Big thanks to</span>
         {footerIcons.map(icon => {
@@ -53,7 +59,8 @@ const Row1 = styled.span`
 
 const StyledFooter = styled.footer`
   align-items: center;
-  color: ${({ colors }) => colors.bodyText};
+  background-color: ${({ bgcolor }) => bgcolor};
+  color: ${({ color }) => color};
   display: flex;
   justify-content: center;
   justify-self: flex-end;

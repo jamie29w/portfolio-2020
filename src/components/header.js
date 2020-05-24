@@ -5,7 +5,11 @@ import { Link } from 'gatsby';
 
 const Header = () => {
   const {
-    colors: { accentLight, accentMid, primary },
+    palette: {
+      primary,
+      tertiary,
+      text: { hint: hintTextColor },
+    },
     spacing,
   } = useContext(ThemeContext);
 
@@ -14,7 +18,7 @@ const Header = () => {
       <NavRow spacing={spacing}>
         <StyledLink
           activeClassName='current-page'
-          borderColor={accentLight}
+          bordercolor={tertiary}
           spacing={spacing}
           to='/writing/'
         >
@@ -22,7 +26,7 @@ const Header = () => {
         </StyledLink>
         <StyledLink
           activeClassName='current-page'
-          borderColor={accentLight}
+          bordercolor={tertiary}
           spacing={spacing}
           to='/now/'
         >
@@ -30,7 +34,7 @@ const Header = () => {
         </StyledLink>
         <StyledLink
           activeClassName='current-page'
-          borderColor={accentLight}
+          bordercolor={tertiary}
           spacing={spacing}
           to='/work/'
         >
@@ -40,7 +44,7 @@ const Header = () => {
       <Link to='/'>
         <h5
           css={css`
-            color: ${accentMid};
+            color: ${hintTextColor};
             text-align: center;
           `}
         >
@@ -70,6 +74,6 @@ const StyledLink = styled(Link)`
   text-decoration: none;
 
   &.current-page {
-    border-bottom: ${({ borderColor }) => `2px solid ${borderColor}`};
+    border-bottom: ${({ bordercolor }) => `2px solid ${bordercolor}`};
   }
 `;

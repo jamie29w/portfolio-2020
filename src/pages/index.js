@@ -7,10 +7,15 @@ import HeroGradient from '../components/heroGradient';
 import SEO from '../components/seo';
 
 const IndexPage = () => {
-  const { spacing } = useContext(ThemeContext);
+  const {
+    palette: {
+      background: { primary: bgPrimary },
+    },
+    spacing,
+  } = useContext(ThemeContext);
 
   return (
-    <IndexPageWrapper spacing={spacing}>
+    <IndexPageWrapper bgcolor={bgPrimary} spacing={spacing}>
       <SEO title='Hello' />
       <HeroGradient />
       <Footer />
@@ -21,6 +26,7 @@ const IndexPage = () => {
 export default IndexPage;
 
 const IndexPageWrapper = styled.div`
+  background-color: ${({ bgcolor }) => bgcolor};
   display: flex;
   flex-direction: column;
   height: 100vh;

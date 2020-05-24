@@ -9,7 +9,7 @@ const pageTitle = 'Now';
 
 const Now = () => {
   const {
-    colors: { accentLight },
+    palette: { tertiary },
     spacing,
   } = useContext(ThemeContext);
 
@@ -19,7 +19,7 @@ const Now = () => {
       {nowData.map(item => (
         <React.Fragment key={item.title}>
           <h4>{item.title}</h4>
-          <StyledUl borderColor={accentLight} spacing={spacing}>
+          <StyledUl bordercolor={tertiary} spacing={spacing}>
             {item.details.map(detailItem => (
               <li key={detailItem}>{detailItem}</li>
             ))}
@@ -34,7 +34,7 @@ export default Now;
 
 const StyledUl = styled.ul`
   &:not(:last-of-type) {
-    border-bottom: ${({ borderColor }) => `2px solid ${borderColor}`};
+    border-bottom: ${({ bordercolor }) => `2px solid ${bordercolor}`};
     padding-bottom: ${({ spacing }) => spacing}rem;
   }
 `;
