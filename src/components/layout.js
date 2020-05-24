@@ -24,7 +24,7 @@ const Layout = ({ title, children }) => {
       <Header siteTitle={data.site.siteMetadata.title} />
       <LayoutWrapper spacing={spacing}>
         <main>
-          <h2>{title}</h2>
+          <h1>{title}</h1>
           {children}
         </main>
         <Footer />
