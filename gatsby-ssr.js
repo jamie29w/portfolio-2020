@@ -7,14 +7,14 @@
 // You can delete this file if you're not using it
 
 import React from 'react';
-import { ThemeProvider } from 'emotion-theming';
-import createTheme, { GlobalComponent } from './src/styles';
+import { GlobalComponent } from './src/styles';
+import ThemeProvider from './src/providers/ThemeProvider';
 
-const theme = createTheme();
-
-export const wrapRootElement = ({ element }) => (
-  <ThemeProvider theme={theme}>
-    <GlobalComponent />
-    {element}
-  </ThemeProvider>
-);
+export const wrapRootElement = ({ element }) => {
+  return (
+    <ThemeProvider>
+      <GlobalComponent />
+      {element}
+    </ThemeProvider>
+  );
+};

@@ -1,10 +1,10 @@
 import React, { useContext } from 'react';
-import { css, ThemeContext } from '@emotion/core';
 import styled from '@emotion/styled';
 import { graphql, useStaticQuery } from 'gatsby';
 
 import Footer from './footer';
 import Header from './header';
+import { ThemeContext } from '../providers/ThemeProvider';
 
 const Layout = ({ title, children }) => {
   const data = useStaticQuery(graphql`

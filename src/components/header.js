@@ -1,7 +1,9 @@
 import React, { useContext } from 'react';
 import styled from '@emotion/styled';
-import { ThemeContext, css } from '@emotion/core';
+import { css } from '@emotion/core';
 import { Link } from 'gatsby';
+
+import { ThemeContext } from '../providers/ThemeProvider';
 
 const Header = () => {
   const {
