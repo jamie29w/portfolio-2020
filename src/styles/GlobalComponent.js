@@ -1,8 +1,9 @@
 import React, { useContext } from 'react';
-import { Global, css, ThemeContext } from '@emotion/core';
+import { Global, css } from '@emotion/core';
 import emotionNormalize from 'emotion-normalize';
 import Color from 'color';
 
+import { ThemeContext } from '../providers/ThemeProvider';
 import '../styles/fontFaces.css';
 
 // This component provides the global styles reset and
@@ -14,9 +15,9 @@ import '../styles/fontFaces.css';
 export const GlobalComponent = () => {
   const {
     palette: {
+      background: { primary: bgPrimary },
       primary,
       success,
-      background: { primary: bgPrimary, secondary: bgSecondary },
       text: { primary: bodyText },
     },
     spacing,
@@ -28,7 +29,6 @@ export const GlobalComponent = () => {
     <>
       <Global
         styles={css`
-          /* @import url('https://fonts.googleapis.com/css?family=Alegreya+Sans|Roboto&display=swap'); */
           ${emotionNormalize}
           html {
             background: ${bgPrimary};

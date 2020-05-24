@@ -1,11 +1,11 @@
 import React, { useContext } from 'react';
-import { ThemeContext } from '@emotion/core';
 import styled from '@emotion/styled';
 import { graphql, Link } from 'gatsby';
 import BackgroundImage from 'gatsby-background-image';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 
 import Layout from '../components/layout';
+import { ThemeContext } from '../providers/ThemeProvider';
 
 export const query = graphql`
   query($nextPostSlug: String, $prevPostSlug: String, $slug: String!) {

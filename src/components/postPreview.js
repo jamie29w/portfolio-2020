@@ -1,7 +1,8 @@
 import React, { useContext } from 'react';
-import { ThemeContext } from '@emotion/core';
 import styled from '@emotion/styled';
 import { Link } from 'gatsby';
+
+import { ThemeContext } from '../providers/ThemeProvider';
 
 const PostPreview = ({ post }) => {
   const {

@@ -1,10 +1,11 @@
 import React, { useContext } from 'react';
-import { css, ThemeContext } from '@emotion/core';
+import { css } from '@emotion/core';
 import styled from '@emotion/styled';
 
 import gatsbyIcon from '../../images/gatsby-icon.png';
 import netlifyIcon from '../../images/netlify-icon.png';
 import reactIcon from '../../images/react-icon.png';
+import { ThemeContext } from '../providers/ThemeProvider';
 
 const Footer = () => {
   const {

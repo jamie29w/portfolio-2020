@@ -1,10 +1,10 @@
 import React, { useContext } from 'react';
 import styled from '@emotion/styled';
-import { ThemeContext } from '@emotion/core';
 
 import Footer from '../components/footer';
 import HeroGradient from '../components/heroGradient';
 import SEO from '../components/seo';
+import { ThemeContext } from '../providers/ThemeProvider';
 
 const IndexPage = () => {
   const {

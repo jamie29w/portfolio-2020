@@ -1,9 +1,11 @@
 import React, { useContext } from 'react';
 import styled from '@emotion/styled';
-import { ThemeContext } from '@emotion/core';
 import { Link } from 'gatsby';
 
+import { ThemeContext } from '../providers/ThemeProvider';
+
 const Hero = () => {
+  const theme = useContext(ThemeContext);
   const {
     palette: {
       background: { primary: bgPrimary },
@@ -13,13 +15,13 @@ const Hero = () => {
     },
     spacing,
     text,
-  } = useContext(ThemeContext);
+  } = theme;
 
   return (
     <HeroWrapper
       bgcolor={bgPrimary}
-      color2={secondary}
       color1={bgPrimary}
+      color2={secondary}
       spacing={spacing}
     >
       <div>
