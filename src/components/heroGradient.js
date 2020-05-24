@@ -25,7 +25,7 @@ const Hero = () => {
       spacing={spacing}
     >
       <div>
-        <h4>Jamie Woodmancy</h4>
+        <h2>Jamie Woodmancy</h2>
         <TitleText color={primary} spacing={spacing}>
           Front
         </TitleText>
@@ -38,7 +38,7 @@ const Hero = () => {
         to='/writing/'
         spacing={spacing}
       >
-        Let's Do This
+        See my work
       </HomePageLink>
     </HeroWrapper>
   );
@@ -57,7 +57,7 @@ const HeroWrapper = styled.div`
   position: relative;
 `;
 
-const TitleText = styled.h2`
+const TitleText = styled.h1`
   color: ${({ color }) => color};
   margin-top: ${({ spacing }) => (spacing ? 4 * spacing : 0)}rem;
 `;

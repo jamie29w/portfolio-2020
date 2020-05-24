@@ -62,15 +62,12 @@ export const GlobalComponent = () => {
               monospace;
           }
 
-          .contract {
-          }
-
           h1,
           h2,
           h3,
           h4,
           h5 {
-            color: ${primary};
+            color: ${success};
             font-family: 'Open Sans', sans-serif;
             font-weight: 600;
             padding: 0;
@@ -78,34 +75,30 @@ export const GlobalComponent = () => {
           }
 
           h1 {
-            font-size: 6rem;
+            color: ${primary};
+            font-size: 3.052rem;
             letter-spacing: -1.5px;
           }
 
           h2 {
-            font-size: 3.75rem;
+            color: ${success};
+            font-size: 2.441rem;
             letter-spacing: -0.5px;
           }
 
           h3 {
-            font-size: 3rem;
+            font-size: 1.953rem;
             letter-spacing: 0px;
           }
 
           h4 {
-            color: ${success};
-            font-size: 2.125rem;
+            font-size: 1.563rem;
             letter-spacing: 0.25px;
           }
 
           h5 {
-            font-size: 1.5rem;
-            letter-spacing: 0px;
-          }
-
-          h6 {
             font-size: 1.25rem;
-            letter-spacing: 0.15px;
+            letter-spacing: 0px;
           }
 
           a,

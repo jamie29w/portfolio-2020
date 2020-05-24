@@ -18,7 +18,7 @@ const Now = () => {
       <SEO title={pageTitle} />
       {nowData.map(item => (
         <React.Fragment key={item.title}>
-          <h4>{item.title}</h4>
+          <h3>{item.title}</h3>
           <StyledUl bordercolor={tertiary} spacing={spacing}>
             {item.details.map(detailItem => (
               <li key={detailItem}>{detailItem}</li>

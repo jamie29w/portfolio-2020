@@ -13,7 +13,7 @@ const PostPreview = ({ post }) => {
   return (
     <Article bordercolor={tertiary} spacing={spacing}>
       <Link to={`/writing/${post.slug}/`}>
-        <h4>{post.title}</h4>
+        <h3>{post.title}</h3>
       </Link>
       <p>{post.excerpt}</p>
       <Link to={`/writing/${post.slug}/`}>read more &rarr;</Link>
