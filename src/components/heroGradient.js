@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import styled from '@emotion/styled';
 import { Link } from 'gatsby';
 
+import DarkModeSwitch from './DarkModeSwitch';
 import { ThemeContext } from '../providers/ThemeProvider';
 
 const Hero = () => {
@@ -26,6 +27,9 @@ const Hero = () => {
     >
       <div>
         <h2>Jamie Woodmancy</h2>
+        <SwitchWrapper spacing={spacing}>
+          <DarkModeSwitch />
+        </SwitchWrapper>
         <TitleText color={primary} spacing={spacing}>
           Front
         </TitleText>
@@ -55,6 +59,10 @@ const HeroWrapper = styled.div`
   justify-content: space-between;
   padding: ${({ spacing }) => spacing}rem;
   position: relative;
+`;
+
+const SwitchWrapper = styled.div`
+  margin-top: ${({ spacing }) => spacing}rem;
 `;
 
 const TitleText = styled.h1`
