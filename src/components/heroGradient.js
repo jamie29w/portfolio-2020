@@ -19,12 +19,7 @@ const Hero = () => {
   } = theme;
 
   return (
-    <HeroWrapper
-      bgcolor={bgPrimary}
-      color1={bgPrimary}
-      color2={secondary}
-      spacing={spacing}
-    >
+    <HeroWrapper color1={secondary} color2={bgPrimary} spacing={spacing}>
       <div>
         <h2>Jamie Woodmancy</h2>
         <SwitchWrapper spacing={spacing}>
@@ -51,8 +46,8 @@ const Hero = () => {
 export default Hero;
 
 const HeroWrapper = styled.div`
-  background: ${({ color2, color1 }) =>
-    `linear-gradient(150deg, ${color2} 16%, ${color1} 74%)`};
+  background: ${({ color1, color2 }) =>
+    `linear-gradient(150deg, ${color1} 16%, ${color2} 74%)`};
   display: flex;
   flex-direction: column;
   height: calc(100vh - 55px);
