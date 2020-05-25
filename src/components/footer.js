@@ -45,6 +45,7 @@ const StyledFooter = styled.footer`
   align-items: center;
   display: flex;
   justify-content: center;
+  margin-top: ${({ spacing }) => spacing}rem;
 `;
 
 const IconSpan = styled.span`

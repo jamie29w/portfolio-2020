@@ -17,13 +17,14 @@ export const GlobalComponent = () => {
     palette: {
       background: { primary: bgPrimary },
       primary,
+      secondary,
       success,
       text: { primary: bodyText },
     },
     spacing,
   } = useContext(ThemeContext);
 
-  const Success = Color(success);
+  const Secondary = Color(secondary);
 
   return (
     <>
@@ -67,7 +68,7 @@ export const GlobalComponent = () => {
           h3,
           h4,
           h5 {
-            color: ${success};
+            color: ${secondary};
             font-family: 'Raleway', sans-serif;
             font-weight: 600;
             padding: 0;
@@ -119,12 +120,12 @@ export const GlobalComponent = () => {
           }
 
           a {
-            color: ${success};
+            color: ${secondary};
             text-decoration: none;
 
             &:hover,
             &:focus {
-              color: ${Success.darken(0.5)};
+              color: ${Secondary.darken(0.5)};
             }
           }
 
