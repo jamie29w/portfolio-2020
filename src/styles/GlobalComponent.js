@@ -49,7 +49,7 @@ export const GlobalComponent = () => {
           body {
             background: ${bgPrimary};
             color: ${bodyText};
-            font-family: 'Roboto', sans-serif;
+            font-family: 'Open Sans', sans-serif;
             font-weight: 400;
             margin: 0;
             padding: 0;
@@ -68,7 +68,7 @@ export const GlobalComponent = () => {
           h4,
           h5 {
             color: ${success};
-            font-family: 'Open Sans', sans-serif;
+            font-family: 'Raleway', sans-serif;
             font-weight: 600;
             padding: 0;
             margin: ${spacing}rem 0 0;
@@ -105,7 +105,7 @@ export const GlobalComponent = () => {
           p,
           ul,
           li {
-            font-family: 'Roboto', sans-serif;
+            font-family: 'Open Sans', sans-serif;
             font-size: 1rem;
             font-weight: 400;
             letter-spacing: 0.5px;
