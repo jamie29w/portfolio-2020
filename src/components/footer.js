@@ -8,18 +8,14 @@ import reactIcon from '../../images/react-icon.png';
 import { ThemeContext } from '../providers/ThemeProvider';
 
 const Footer = () => {
-  const {
-    palette: {
-      background: { primary: bgPrimary },
-      text: { primary: textPrimary },
-    },
-    spacing,
-  } = useContext(ThemeContext);
+  const { spacing } = useContext(ThemeContext);
 
   return (
-    <StyledFooter bgcolor={bgPrimary} color={textPrimary} spacing={spacing}>
-      <Row1>
-        <span>© {new Date().getFullYear()}, Big thanks to</span>
+    <StyledFooter spacing={spacing}>
+      <span className='caption'>
+        Woodmancy Dev™ {new Date().getFullYear()}, built with
+      </span>
+      <IconSpan spacing={spacing}>
         {footerIcons.map(icon => {
           return (
             <a
@@ -38,16 +34,23 @@ const Footer = () => {
             </a>
           );
         })}
-      </Row1>
+      </IconSpan>
     </StyledFooter>
   );
 };
 
 export default Footer;
 
-const Row1 = styled.span`
-  display: flex;
+const StyledFooter = styled.footer`
   align-items: center;
+  display: flex;
+  justify-content: center;
+`;
+
+const IconSpan = styled.span`
+  align-items: center;
+  display: flex;
+  margin-left: ${({ spacing }) => spacing / 2}rem;
 
   & > a {
     margin-top: 0;
@@ -56,16 +59,6 @@ const Row1 = styled.span`
   & > * :not(:last-child) {
     margin-right: 5px;
   }
-`;
-
-const StyledFooter = styled.footer`
-  align-items: center;
-  background-color: ${({ bgcolor }) => bgcolor};
-  color: ${({ color }) => color};
-  display: flex;
-  justify-content: center;
-  justify-self: flex-end;
-  padding: ${({ spacing }) => `${spacing}rem ${spacing}rem 0`};
 `;
 
 const footerIcons = [
