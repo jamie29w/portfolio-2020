@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import { css } from '@emotion/core';
 import styled from '@emotion/styled';
 import { Link } from 'gatsby';
 
@@ -21,10 +22,19 @@ const Hero = () => {
   return (
     <HeroWrapper color1={secondary} color2={bgPrimary} spacing={spacing}>
       <div>
-        <h2>Jamie Woodmancy</h2>
-        <SwitchWrapper spacing={spacing}>
-          <DarkModeSwitch />
-        </SwitchWrapper>
+        <HeadlineRow>
+          <h2>Jamie</h2>
+          <SwitchWrapper spacing={spacing}>
+            <DarkModeSwitch />
+          </SwitchWrapper>
+        </HeadlineRow>
+        <h2
+          css={css`
+            margin-top: 0;
+          `}
+        >
+          Woodmancy
+        </h2>
         <TitleText color={primary} spacing={spacing}>
           Front
         </TitleText>
@@ -50,10 +60,16 @@ const HeroWrapper = styled.div`
     `linear-gradient(150deg, ${color1} 16%, ${color2} 74%)`};
   display: flex;
   flex-direction: column;
-  height: calc(100vh - 55px);
+  min-height: calc(100vh - 55px);
   justify-content: space-between;
   padding: ${({ spacing }) => spacing}rem;
   position: relative;
+`;
+
+const HeadlineRow = styled.div`
+  align-self: center;
+  display: flex;
+  justify-content: space-between;
 `;
 
 const SwitchWrapper = styled.div`
@@ -74,6 +90,7 @@ const HomePageLink = styled(Link)`
   font-weight: 600;
   height: 68px;
   justify-content: center;
+  margin-bottom: ${({ spacing }) => spacing * 3}rem;
   text-align: center;
   text-decoration: none;
   width: 100%;

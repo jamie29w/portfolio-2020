@@ -6,13 +6,9 @@ export const ThemeContext = createContext(null);
 export default function ThemeProvider({ children }) {
   const [themeType, setThemeType] = useState('light');
 
-  const toggleDarkMode = () => {
-    setThemeType(themeType === 'light' ? 'dark' : 'light');
-  };
-
   const theme = {
     ...createTheme(themeType),
-    toggleDarkMode,
+    setThemeType,
   };
 
   return (

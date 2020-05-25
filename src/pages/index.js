@@ -29,7 +29,7 @@ const IndexPageWrapper = styled.div`
   background-color: ${({ bgcolor }) => bgcolor};
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
   justify-content: space-between;
   padding-bottom: ${({ spacing }) => spacing}rem;
 `;
