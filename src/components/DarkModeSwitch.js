@@ -1,44 +1,33 @@
 import React, { useContext } from 'react';
-import Color from 'color';
-import styled from '@emotion/styled';
-import Switch from 'react-switch';
+import { Brightness3, WbSunny } from '@material-ui/icons';
 
 import { ThemeContext } from '../providers/ThemeProvider';
 
 const DarkModeSwitch = () => {
   const {
-    palette: { primary, success, type },
-    spacing,
-    toggleDarkMode,
+    palette: {
+      background: { secondary: bgSecondary },
+      common: { white },
+      type,
+    },
+    setThemeType,
   } = useContext(ThemeContext);
 
-  // react-witch only takes hex colors
-  const Primary = Color(primary);
-  const Success = Color(success);
-
   return (
-    <Label>
-      <LabelText spacing={spacing}>Toggle dark mode:</LabelText>
-      <Switch
-        checked={type === 'dark'}
-        checkedIcon={false}
-        onChange={() => toggleDarkMode()}
-        onColor={Success.hex()}
-        offColor={Primary.lighten(0.5).hex()}
-        uncheckedIcon={false}
-      />
-    </Label>
+    <>
+      {type === 'dark' ? (
+        <WbSunny
+          onClick={() => setThemeType('light')}
+          style={{ color: white }}
+        />
+      ) : (
+        <Brightness3
+          onClick={() => setThemeType('dark')}
+          style={{ color: bgSecondary, transform: 'rotate(20deg)' }}
+        />
+      )}
+    </>
   );
 };
 
 export default DarkModeSwitch;
-
-const Label = styled.label`
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-`;
-
-const LabelText = styled.span`
-  margin-right: ${({ spacing }) => spacing / 2}rem;
-`;
