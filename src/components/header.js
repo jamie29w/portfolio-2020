@@ -5,6 +5,8 @@ import { Link } from 'gatsby';
 
 import { ThemeContext } from '../providers/ThemeProvider';
 
+import DarkModeSwitch from './DarkModeSwitch';
+
 const Header = () => {
   const {
     palette: {
@@ -43,16 +45,25 @@ const Header = () => {
           Work
         </StyledLink>
       </NavRow>
-      <Link to='/'>
-        <h5
+      <NavRow2 spacing={spacing}>
+        <Link
           css={css`
-            color: ${hintTextColor};
-            text-align: center;
+            margin-top: 0;
           `}
+          to='/'
         >
-          Jamie Woodmancy
-        </h5>
-      </Link>
+          <h5
+            css={css`
+              color: ${hintTextColor};
+              margin-top: 0;
+              text-align: center;
+            `}
+          >
+            Jamie Woodmancy
+          </h5>
+        </Link>
+        <DarkModeSwitch />
+      </NavRow2>
     </HeaderWrapper>
   );
 };
@@ -67,6 +78,13 @@ const HeaderWrapper = styled.header`
 const NavRow = styled.div`
   display: flex;
   justify-content: space-between;
+`;
+
+const NavRow2 = styled.div`
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: ${({ spacing }) => `${spacing}rem ${spacing * 2}rem 0`};
 `;
 
 const StyledLink = styled(Link)`
