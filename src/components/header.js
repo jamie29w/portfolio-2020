@@ -1,11 +1,10 @@
 import React, { useContext } from 'react';
-import styled from '@emotion/styled';
 import { css } from '@emotion/core';
+import styled from '@emotion/styled';
 import { Link } from 'gatsby';
 
-import { ThemeContext } from '../providers/ThemeProvider';
-
 import DarkModeSwitch from './DarkModeSwitch';
+import { ThemeContext } from '../providers/ThemeProvider';
 
 const Header = () => {
   const {
