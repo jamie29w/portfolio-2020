@@ -8,11 +8,7 @@ import { ThemeContext } from '../providers/ThemeProvider';
 
 const Header = () => {
   const {
-    palette: {
-      primary,
-      tertiary,
-      text: { hint: hintTextColor },
-    },
+    palette: { primary, tertiary },
     spacing,
   } = useContext(ThemeContext);
 
