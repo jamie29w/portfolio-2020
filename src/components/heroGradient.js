@@ -42,7 +42,7 @@ const Hero = () => {
         <TitleText color={primary}>Engineer</TitleText>
       </div>
       <HomePageLink
-        color={secondary}
+        color={success}
         text={text}
         to='/writing/'
         spacing={spacing}
