@@ -13,20 +13,6 @@ export default function ThemeProvider({ children }) {
     ) {
       setThemeType('dark');
     }
-
-    const handleThemePreferenceChange = e => {
-      setThemeType(e.matches ? 'dark' : 'light');
-    };
-
-    window
-      .matchMedia('(prefers-color-scheme: dark)')
-      .addEventListener('change', handleThemePreferenceChange);
-
-    return () => {
-      window
-        .matchMedia('(prefers-color-scheme: dark)')
-        .removeEventListener('change', handleThemePreferenceChange);
-    };
   }, []);
 
   const theme = {
