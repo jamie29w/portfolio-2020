@@ -39,24 +39,24 @@ const types = { light, dark };
 
 function createPalette(type) {
   const primary = {
-      light: 'rgba(186, 100, 92, 1)',
-      dark: 'rgba(206, 120, 112, 1)',
+      dark: 'rgba(186, 100, 92, 1)',
+      light: 'rgba(156, 70, 62, 1)',
     },
     secondary = {
-      light: 'rgba(170, 183, 187, 1)',
-      dark: 'rgba(190, 203, 207, 1)',
+      dark: 'rgba(140, 143, 157, 1)',
+      light: 'rgba(105, 118, 122, 1)',
     },
     tertiary = {
-      light: 'rgba(215, 168, 156, 1)',
-      dark: 'rgba(235, 188, 176, 1)',
+      dark: 'rgba(215, 168, 156, 1)',
+      light: 'rgba(185, 138, 126, 1)',
     },
     success = {
-      light: 'rgba(90, 105, 97, 1)',
-      dark: 'rgba(110, 125, 117, 1)',
+      dark: 'rgba(90, 105, 97, 1)',
+      light: 'rgba(60, 75, 67, 1)',
     },
     warning = {
-      light: 'rgba(215, 149, 82, 1)',
-      dark: 'rgba(235, 169, 102, 1)',
+      dark: 'rgba(215, 149, 82, 1)',
+      light: 'rgba(185, 119, 52, 1)',
     };
 
   const paletteOutput = {
