@@ -53,7 +53,6 @@ const Header = () => {
         >
           <h5
             css={css`
-              color: ${hintTextColor};
               margin-top: 0;
               text-align: center;
             `}
@@ -94,5 +93,6 @@ const StyledLink = styled(Link)`
 
   &.current-page {
     border-bottom: ${({ bordercolor }) => `2px solid ${bordercolor}`};
+    font-weight: 700;
   }
 `;
