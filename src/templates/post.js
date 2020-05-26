@@ -51,13 +51,9 @@ const PostTemplate = ({
     <Layout>
       <h2>{frontmatter.title}</h2>
       {frontmatter.edited_date ? (
-        <p>
-          Written by {frontmatter.author}. Updated on {frontmatter.edited_date}.
-        </p>
+        <p>Updated on {frontmatter.edited_date}.</p>
       ) : (
-        <p>
-          Posted by {frontmatter.author} on {frontmatter.published_date}.
-        </p>
+        <p>Posted on {frontmatter.published_date}.</p>
       )}
       {frontmatter.image?.sharp?.fluid && (
         <ImageBackground
