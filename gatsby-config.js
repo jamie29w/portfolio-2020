@@ -53,6 +53,13 @@ module.exports = {
       },
     },
     {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'work',
+        path: 'work',
+      },
+    },
+    {
       resolve: 'gatsby-plugin-webpack-bundle-analyzer',
       options: {
         production: true,
