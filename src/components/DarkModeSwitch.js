@@ -23,7 +23,7 @@ const DarkModeSwitch = () => {
       ) : (
         <Brightness3
           onClick={() => setThemeType('dark')}
-          style={{ color: bgSecondary, transform: 'rotate(20deg)' }}
+          style={{ color: bgSecondary }}
         />
       )}
     </>
