@@ -14,10 +14,8 @@ const Writing = () => {
     <Layout title={pageTitle}>
       <SEO title={pageTitle} />
       <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium
-        magnam ab, aperiam at enim assumenda, officia rerum distinctio
-        recusandae amet veritatis. Minus placeat, illum molestias nemo ex
-        laborum ipsam nam.
+        I won't post here often. But when I do, it'll be about debugging, tech
+        leadership, and things I learned the hard way.
       </p>
 
       {posts.map(post => (
