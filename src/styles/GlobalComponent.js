@@ -114,6 +114,10 @@ export const GlobalComponent = () => {
             margin: ${spacing}rem 0 0;
           }
 
+          p {
+            line-height: 1.4rem;
+          }
+
           .btn {
             font-size: 1.25rem;
           }
@@ -136,10 +140,9 @@ export const GlobalComponent = () => {
           ul {
             padding-left: 0;
             margin-top: 0;
-
-            & > li {
-              list-style: none;
-            }
+          }
+          li {
+            list-style: none;
           }
         `}
       />
