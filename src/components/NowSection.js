@@ -20,8 +20,11 @@ const NowListSection = ({ section: { body } }) => {
 export default NowListSection;
 
 const Wrapper = styled.ul`
+  &:not(:first-of-type) {
+    margin-top: ${({ spacing }) => spacing * 2}rem;
+  }
   &:not(:last-of-type) {
     border-bottom: ${({ bordercolor }) => `2px solid ${bordercolor}`};
-    padding-bottom: ${({ spacing }) => spacing}rem;
+    padding-bottom: ${({ spacing }) => spacing * 2}rem;
   }
 `;

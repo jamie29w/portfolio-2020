@@ -16,7 +16,7 @@ const PostPreview = ({ post }) => {
         <h3>{post.title}</h3>
       </Link>
       <p>{post.excerpt}</p>
-      <Link to={`/writing/${post.slug}/`}>read more &rarr;</Link>
+      <Link to={`/writing/${post.slug}/`}>read more</Link>
     </Article>
   );
 };
@@ -24,8 +24,11 @@ const PostPreview = ({ post }) => {
 export default PostPreview;
 
 const Article = styled.article`
+  &:not(:first-of-type) {
+    margin-top: ${({ spacing }) => spacing * 2}rem;
+  }
   &:not(:last-of-type) {
     border-bottom: ${({ bordercolor }) => `2px solid ${bordercolor}`};
-    padding-bottom: ${({ spacing }) => spacing}rem;
+    padding-bottom: ${({ spacing }) => spacing * 2}rem;
   }
 `;
