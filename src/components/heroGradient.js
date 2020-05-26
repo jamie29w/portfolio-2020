@@ -42,6 +42,7 @@ const Hero = () => {
         <TitleText color={primary}>Engineer</TitleText>
       </div>
       <HomePageLink
+        className='btn'
         color={success}
         text={text}
         to='/writing/'

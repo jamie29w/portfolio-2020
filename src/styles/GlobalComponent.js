@@ -114,6 +114,10 @@ export const GlobalComponent = () => {
             margin: ${spacing}rem 0 0;
           }
 
+          .btn {
+            font-size: 1.25rem;
+          }
+
           .caption {
             font-size: 0.8rem;
             letter-spacing: 0.4px;
