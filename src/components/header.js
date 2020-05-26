@@ -47,14 +47,7 @@ const Header = () => {
           `}
           to='/'
         >
-          <h5
-            css={css`
-              margin-top: 0;
-              text-align: center;
-            `}
-          >
-            Jamie Woodmancy
-          </h5>
+          Jamie Woodmancy
         </Link>
         <DarkModeSwitch />
       </NavRow2>
