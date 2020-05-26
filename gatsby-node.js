@@ -7,7 +7,10 @@
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const result = await graphql(`
     query {
-      allMdx(sort: {fields: frontmatter___published_date, order: DESC}) {
+      allMdx(
+        filter: { frontmatter: { type: { eq: "blog post" } } }
+        sort: { fields: frontmatter___published_date, order: DESC }
+      ) {
         nodes {
           frontmatter {
             slug
@@ -26,13 +29,14 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
   posts.forEach((post, i) => {
     const { slug } = post.frontmatter;
-    let prevPost = null, nextPost = null;
+    let prevPost = null,
+      nextPost = null;
 
     if (i >= 1) {
-      nextPost = posts[i - 1]
+      nextPost = posts[i - 1];
     }
     if (i < posts.length) {
-      prevPost = posts[i + 1]
+      prevPost = posts[i + 1];
     }
 
     actions.createPage({
