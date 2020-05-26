@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Layout from '../components/layout';
-import NowSection from '../components/NowSection';
+import Section from '../components/Section';
 import SEO from '../components/seo';
 import useNowContent from '../hooks/useNowContent';
 
@@ -14,7 +14,7 @@ const Now = () => {
     <Layout title={pageTitle}>
       <SEO title={pageTitle} />
       {nowSections.map((section, i) => (
-        <NowSection section={section} key={i} />
+        <Section section={section} key={i} />
       ))}
     </Layout>
   );
