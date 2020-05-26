@@ -50,9 +50,18 @@ const PostTemplate = ({
   return (
     <Layout>
       <h2>{frontmatter.title}</h2>
-      <p>Posted by {frontmatter.author}</p>
+      {frontmatter.edited_date ? (
+        <p>
+          Written by {frontmatter.author}. Updated on {frontmatter.edited_date}.
+        </p>
+      ) : (
+        <p>
+          Posted by {frontmatter.author} on {frontmatter.published_date}.
+        </p>
+      )}
       {frontmatter.image?.sharp?.fluid && (
         <ImageBackground
+          alt={frontmatter.image_alt}
           fadeIn='soft'
           fluid={frontmatter.image.sharp.fluid}
           spacing={spacing}
@@ -86,11 +95,18 @@ export default PostTemplate;
 const ImageBackground = styled(BackgroundImage)`
   background-position: center;
   background-size: cover;
-  height: 50vh;
+  height: 30vh;
   margin-top: ${({ spacing }) => spacing}rem;
+  max-height: 200px;
+  width: 100%;
 `;
 
 const ButtonWrapper = styled.div`
   display: flex;
   justify-content: space-between;
+
+  & > a,
+  & > div {
+    max-width: 45vw;
+  }
 `;
