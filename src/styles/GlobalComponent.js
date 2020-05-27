@@ -129,6 +129,7 @@ export const GlobalComponent = () => {
 
           a {
             color: ${secondary};
+            font-weight: 600;
             text-decoration: none;
 
             &:hover,
