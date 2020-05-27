@@ -19,7 +19,7 @@ export const GlobalComponent = () => {
       primary,
       secondary,
       success,
-      text: { primary: bodyText },
+      text: { header, primary: bodyText },
     },
     spacing,
   } = useContext(ThemeContext);
@@ -68,7 +68,7 @@ export const GlobalComponent = () => {
           h3,
           h4,
           h5 {
-            color: ${secondary};
+            color: ${header};
             font-family: 'Raleway', sans-serif;
             font-weight: 600;
             padding: 0;
@@ -76,13 +76,11 @@ export const GlobalComponent = () => {
           }
 
           h1 {
-            color: ${primary};
             font-size: 3.052rem;
             letter-spacing: -1.5px;
           }
 
           h2 {
-            color: ${success};
             font-size: 2.441rem;
             letter-spacing: -0.5px;
           }

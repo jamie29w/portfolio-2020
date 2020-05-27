@@ -1,3 +1,5 @@
+import Color from 'color';
+
 export default function createTheme(type = 'light') {
   return { palette: createPalette(type), spacing: 1 };
 }
@@ -9,6 +11,7 @@ const common = {
 
 const light = {
   text: {
+    header: 'rgba(50, 50, 50, 0.87)',
     primary: 'rgba(0, 0, 0, 0.87)',
     secondary: 'rgba(0, 0, 0, 0.54)',
     disabled: 'rgba(0, 0, 0, 0.38)',
@@ -23,6 +26,7 @@ const light = {
 
 const dark = {
   text: {
+    header: 'rgba(225, 225, 225, 0.87)',
     primary: common.white,
     secondary: 'rgba(255, 255, 255, 0.7)',
     disabled: 'rgba(255, 255, 255, 0.5)',
@@ -38,25 +42,29 @@ const dark = {
 const types = { light, dark };
 
 function createPalette(type) {
+  const primary_root = Color('#54D3F7');
+  const secondary_root = Color('#54D3F7');
+  const tertiary_root = Color('#FFA591');
+
   const primary = {
-      dark: 'rgba(186, 100, 92, 1)',
-      light: 'rgba(156, 70, 62, 1)',
+      dark: primary_root.lighten(0.3).hex(),
+      light: primary_root.hex(),
     },
     secondary = {
-      dark: 'rgba(140, 143, 157, 1)',
-      light: 'rgba(105, 118, 122, 1)',
+      dark: secondary_root.lighten(0.3).hex(),
+      light: secondary_root.hex(),
     },
     tertiary = {
-      dark: 'rgba(215, 168, 156, 1)',
-      light: 'rgba(185, 138, 126, 1)',
+      dark: tertiary_root.lighten(0.1).hex(),
+      light: tertiary_root.hex(),
     },
     success = {
-      dark: 'rgba(90, 105, 97, 1)',
-      light: 'rgba(60, 75, 67, 1)',
+      dark: secondary_root.lighten(0.3).hex(),
+      light: secondary_root.hex(),
     },
     warning = {
-      dark: 'rgba(215, 149, 82, 1)',
-      light: 'rgba(185, 119, 52, 1)',
+      dark: tertiary_root.lighten(0.1).hex(),
+      light: tertiary_root.hex(),
     };
 
   const paletteOutput = {
