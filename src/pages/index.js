@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import Color from 'color';
 import styled from '@emotion/styled';
 
 import Footer from '../components/footer';
@@ -10,12 +11,25 @@ const IndexPage = () => {
   const {
     palette: {
       background: { primary: bgPrimary },
+      primary,
+      type,
     },
     spacing,
   } = useContext(ThemeContext);
 
   return (
-    <IndexPageWrapper bgcolor={bgPrimary} spacing={spacing}>
+    <IndexPageWrapper
+      bgcolor={bgPrimary}
+      spacing={spacing}
+      color2={
+        type === 'light'
+          ? Color(primary)
+              .lighten(0.43)
+              .hex()
+          : bgPrimary
+      }
+      color1={bgPrimary}
+    >
       <SEO title='Hello' />
       <HeroGradient />
       <Footer />
@@ -26,7 +40,8 @@ const IndexPage = () => {
 export default IndexPage;
 
 const IndexPageWrapper = styled.div`
-  background-color: ${({ bgcolor }) => bgcolor};
+  background: ${({ color1, color2 }) =>
+    `linear-gradient(150deg, ${color1} 16%, ${color2} 74%)`};
   display: flex;
   flex-direction: column;
   min-height: 100vh;

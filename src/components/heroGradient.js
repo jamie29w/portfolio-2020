@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import Color from 'color';
 import { css } from '@emotion/core';
 import styled from '@emotion/styled';
 import { Link } from 'gatsby';
@@ -9,18 +10,13 @@ import { ThemeContext } from '../providers/ThemeProvider';
 const Hero = () => {
   const theme = useContext(ThemeContext);
   const {
-    palette: {
-      background: { primary: bgPrimary },
-      primary,
-      secondary,
-      success,
-    },
+    palette: { primary },
     spacing,
     text,
   } = theme;
 
   return (
-    <HeroWrapper color1={secondary} color2={bgPrimary} spacing={spacing}>
+    <HeroWrapper spacing={spacing}>
       <div>
         <HeadlineRow>
           <h2>Jamie</h2>
@@ -35,15 +31,13 @@ const Hero = () => {
         >
           Woodmancy
         </h2>
-        <TitleText color={primary} spacing={spacing}>
-          Front
-        </TitleText>
-        <TitleText color={primary}>End</TitleText>
-        <TitleText color={primary}>Engineer</TitleText>
+        <TitleText spacing={spacing}>Front</TitleText>
+        <TitleText>End</TitleText>
+        <TitleText>Engineer</TitleText>
       </div>
       <HomePageLink
         className='btn'
-        color={success}
+        color={primary}
         text={text}
         to='/writing/'
         spacing={spacing}
@@ -57,8 +51,6 @@ const Hero = () => {
 export default Hero;
 
 const HeroWrapper = styled.div`
-  background: ${({ color1, color2 }) =>
-    `linear-gradient(150deg, ${color1} 16%, ${color2} 74%)`};
   display: flex;
   flex-direction: column;
   min-height: calc(100vh - 55px);
@@ -78,7 +70,6 @@ const SwitchWrapper = styled.div`
 `;
 
 const TitleText = styled.h1`
-  color: ${({ color }) => color};
   margin-top: ${({ spacing }) => (spacing ? 4 * spacing : 0)}rem;
 `;
 
