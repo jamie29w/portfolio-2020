@@ -1,7 +1,7 @@
 import Color from 'color';
 
-export const primary_root = Color('#54D3F7');
-export const secondary_root = Color('#FFA591');
+export const primary_root = Color('#36B7FC');
+export const secondary_root = Color('#FF9F2C');
 
 export const primaryColor = Color(primary_root);
 export const secondaryColor = Color(secondary_root);
