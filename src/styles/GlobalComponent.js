@@ -53,38 +53,49 @@ export const GlobalComponent = () => {
           }
 
           h1,
+          .h1,
           h2,
+          .h2,
           h3,
-          h4,
-          h5 {
+          .h3,
+          .h3 h4,
+          .h4,
+          h5,
+          .h5 {
             color: var(--headerColor);
             font-family: 'Raleway', sans-serif;
             font-weight: 600;
+            line-height: 1.2em;
             padding: 0;
             margin: var(--spacing) 0 0;
           }
 
-          h1 {
+          h1,
+          .h1 {
             font-size: 3.052rem;
             letter-spacing: -1.5px;
           }
 
-          h2 {
+          h2,
+          .h2 {
             font-size: 2.441rem;
             letter-spacing: -0.5px;
           }
 
-          h3 {
+          h3,
+          .h3 {
             font-size: 1.953rem;
             letter-spacing: 0px;
           }
 
-          h4 {
+          h4,
+          .h4 {
             font-size: 1.563rem;
             letter-spacing: 0.25px;
           }
 
-          h5 {
+          h5,
+          .h5 {
             font-size: 1.25rem;
             letter-spacing: 0px;
           }
@@ -115,13 +126,13 @@ export const GlobalComponent = () => {
           }
 
           a {
-            color: var(--secondary);
+            color: var(--primary);
             font-weight: 600;
             text-decoration: none;
 
             &:hover,
             &:focus {
-              color: var(--secondaryHover);
+              color: var(--primaryHover);
             }
           }
 

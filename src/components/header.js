@@ -8,6 +8,18 @@ import DarkModeSwitch from './DarkModeSwitch';
 const Header = () => {
   return (
     <HeaderWrapper>
+      <NameRow>
+        <Link
+          className='h3'
+          css={css`
+            margin-top: 0;
+          `}
+          to='/'
+        >
+          Jamie Woodmancy
+        </Link>
+        <DarkModeSwitch />
+      </NameRow>
       <NavRow>
         <StyledLink activeClassName='current-page' to='/writing/'>
           Writing
@@ -19,17 +31,6 @@ const Header = () => {
           Work
         </StyledLink>
       </NavRow>
-      <NavRow2>
-        <Link
-          css={css`
-            margin-top: 0;
-          `}
-          to='/'
-        >
-          Jamie Woodmancy
-        </Link>
-        <DarkModeSwitch />
-      </NavRow2>
     </HeaderWrapper>
   );
 };
@@ -37,20 +38,19 @@ const Header = () => {
 export default Header;
 
 const HeaderWrapper = styled.header`
-  color: var(--primary);
   padding: 0 var(--spacing);
+`;
+
+const NameRow = styled.div`
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: var(--spacing) calc(2 * var(--spacing)) 0;
 `;
 
 const NavRow = styled.div`
   display: flex;
   justify-content: space-between;
-`;
-
-const NavRow2 = styled.div`
-  align-items: center;
-  display: flex;
-  justify-content: space-between;
-  padding: var(--spacing) calc(2 * var(--spacing)) 0;
 `;
 
 const StyledLink = styled(Link)`
@@ -60,7 +60,7 @@ const StyledLink = styled(Link)`
   text-decoration: none;
 
   &.current-page {
-    border-bottom: 2px solid var(--secondary);
+    border-bottom: 2px solid var(--primary);
     font-weight: 700;
   }
 `;
