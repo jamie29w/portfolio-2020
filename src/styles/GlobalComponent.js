@@ -140,6 +140,7 @@ export const GlobalComponent = () => {
             padding-left: 0;
             margin-top: 0;
           }
+
           li {
             list-style: none;
           }
