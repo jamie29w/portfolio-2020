@@ -1,7 +1,8 @@
 import React, { useContext } from 'react';
 import { Global, css } from '@emotion/core';
 import emotionNormalize from 'emotion-normalize';
-import Color from 'color';
+
+import { colors } from './colors';
 
 import { ThemeContext } from '../providers/ThemeProvider';
 import '../styles/fontFaces.css';
@@ -13,18 +14,18 @@ import '../styles/fontFaces.css';
 // act as the root of the project.
 
 export const GlobalComponent = () => {
-  const {
-    palette: {
-      background: { primary: bgPrimary },
-      primary,
-      secondary,
-      success,
-      text: { header, primary: bodyText },
-    },
-    spacing,
-  } = useContext(ThemeContext);
+  // const {
+  //   palette: {
+  //     background: { primary: bgPrimary, secondary: bgSecondary },
+  //     primary,
+  //     secondary,
+  //     text: { header: headerFontSize, primary: paragraphColor },
+  //   },
+  //   spacing,
+  // } = useContext(ThemeContext);
 
-  const Secondary = Color(secondary);
+  const type = 'dark';
+  // const spacing = 1;
 
   return (
     <>
@@ -32,7 +33,22 @@ export const GlobalComponent = () => {
         styles={css`
           ${emotionNormalize}
           html {
-            background: ${bgPrimary};
+            --primary: ${colors[type].primary};
+            --primaryHover: ${colors[type].primaryHover};
+            --secondary: ${colors[type].secondary};
+            --seondaryHover: ${colors[type].seondaryHover};
+            --headerColor: ${colors[type].header};
+            --paragraphColor: ${colors[type].paragraph};
+            --divider: ${colors[type].divider};
+            --background: ${colors[type].background};
+            --headerFontFamily: 'Raleway', sans-serif;
+            --bodyFontFamily: 'Open Sans', sans-serif;
+            --spacing: 1;
+            /* --headerFontSize: ${headerFontSize}; */
+            /* --paragraphFontSize: 1rem; */
+            /* --gutter: ${spacing}; */
+
+            /* background: ${bgPrimary}; */
             box-sizing: border-box;
             font-family: sans-serif;
             margin: 0;
@@ -48,8 +64,8 @@ export const GlobalComponent = () => {
           }
 
           body {
-            background: ${bgPrimary};
-            color: ${bodyText};
+            background: var(--bgPrimary);
+            color: var(--paragraphColor);
             font-family: 'Open Sans', sans-serif;
             font-weight: 400;
             margin: 0;
@@ -68,11 +84,11 @@ export const GlobalComponent = () => {
           h3,
           h4,
           h5 {
-            color: ${header};
+            color: var(--headerColor);
             font-family: 'Raleway', sans-serif;
             font-weight: 600;
             padding: 0;
-            margin: ${spacing}rem 0 0;
+            margin: var(--spacing)rem 0 0;
           }
 
           h1 {
@@ -109,7 +125,7 @@ export const GlobalComponent = () => {
             font-weight: 400;
             letter-spacing: 0.5px;
             padding: 0;
-            margin: ${spacing}rem 0 0;
+            margin: var(--spacing)rem 0 0;
           }
 
           p {
@@ -126,13 +142,13 @@ export const GlobalComponent = () => {
           }
 
           a {
-            color: ${secondary};
+            color: var(--secondary);
             font-weight: 600;
             text-decoration: none;
 
             &:hover,
             &:focus {
-              color: ${Secondary.darken(0.5)};
+              color: var(--secondaryHover);
             }
           }
 
