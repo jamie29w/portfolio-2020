@@ -1,10 +1,10 @@
 import Color from 'color';
 
-const primary_root = Color('#54D3F7');
-const secondary_root = Color('#FFA591');
+export const primary_root = Color('#54D3F7');
+export const secondary_root = Color('#FFA591');
 
-const primaryColor = Color(primary_root);
-const secondaryColor = Color(secondary_root);
+export const primaryColor = Color(primary_root);
+export const secondaryColor = Color(secondary_root);
 
 export const colors = {
   light: {
