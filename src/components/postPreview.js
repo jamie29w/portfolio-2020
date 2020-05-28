@@ -1,17 +1,10 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import styled from '@emotion/styled';
 import { Link } from 'gatsby';
 
-import { ThemeContext } from '../providers/ThemeProvider';
-
 const PostPreview = ({ post }) => {
-  const {
-    palette: { tertiary },
-    spacing,
-  } = useContext(ThemeContext);
-
   return (
-    <Article bordercolor={tertiary} spacing={spacing}>
+    <Article>
       <Link to={`/writing/${post.slug}/`}>
         <h3>{post.title}</h3>
       </Link>
@@ -25,10 +18,11 @@ export default PostPreview;
 
 const Article = styled.article`
   &:not(:first-of-type) {
-    margin-top: ${({ spacing }) => spacing * 2}rem;
+    margin-top: calc(2 * var(--spacing));
   }
+
   &:not(:last-of-type) {
-    border-bottom: ${({ bordercolor }) => `2px solid ${bordercolor}`};
-    padding-bottom: ${({ spacing }) => spacing * 2}rem;
+    border-bottom: 2px solid var(--secondary);
+    padding-bottom: calc(2 * var(--spacing));
   }
 `;

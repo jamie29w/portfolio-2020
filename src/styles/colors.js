@@ -12,10 +12,11 @@ export const colors = {
     primaryHover: primaryColor.darken(0.5).hex(),
     secondary: secondaryColor.hex(),
     secondaryHover: primaryColor.darken(0.3).hex(),
-    header: 'rgba(50, 50, 50, 0.87)',
+    header: 'rgba(0, 0, 0, 0.87)',
     paragraph: 'rgba(75, 75, 75, 0.87)',
     divider: 'rgba(255, 255, 255, 0.12)',
     background: 'rgba(255, 255, 255, 1)',
+    gradient2: primaryColor.lighten(0.43).hex(),
   },
   dark: {
     primary: primaryColor.lighten(0.3).hex(),
@@ -25,6 +26,7 @@ export const colors = {
     header: 'rgba(225, 225, 225, 0.87)',
     paragraph: 'rgba(200, 200, 200, 0.87)',
     divider: 'rgba(255, 255, 255, 0.82)',
-    background: 'rgba(50, 50, 50, 0.87)',
+    background: 'rgba(0, 0, 0, 0.87)',
+    gradient2: 'rgba(0, 0, 0, 0.87)',
   },
 };
