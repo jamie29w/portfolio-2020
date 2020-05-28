@@ -1,5 +1,4 @@
 import React, { createContext, useEffect, useState } from 'react';
-import createTheme from '../styles';
 
 export const ThemeContext = createContext(null);
 
@@ -16,7 +15,7 @@ export default function ThemeProvider({ children }) {
   }, []);
 
   const theme = {
-    ...createTheme(themeType),
+    themeType,
     setThemeType,
   };
 

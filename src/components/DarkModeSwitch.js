@@ -4,26 +4,19 @@ import { Brightness3, WbSunny } from '@material-ui/icons';
 import { ThemeContext } from '../providers/ThemeProvider';
 
 const DarkModeSwitch = () => {
-  const {
-    palette: {
-      background: { secondary: bgSecondary },
-      common: { white },
-      type,
-    },
-    setThemeType,
-  } = useContext(ThemeContext);
+  const { themeType, setThemeType } = useContext(ThemeContext);
 
   return (
     <>
-      {type === 'dark' ? (
+      {themeType === 'dark' ? (
         <WbSunny
           onClick={() => setThemeType('light')}
-          style={{ color: white }}
+          style={{ color: 'var(--headerColor)' }}
         />
       ) : (
         <Brightness3
           onClick={() => setThemeType('dark')}
-          style={{ color: bgSecondary }}
+          style={{ color: 'var(--headerColor)' }}
         />
       )}
     </>
