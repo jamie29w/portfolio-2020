@@ -36,11 +36,10 @@ const Layout = ({ title, children }) => {
 export default Layout;
 
 const LayoutWrapper = styled.div`
-  align-items: center;
+  align-items: stretch;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   min-height: 100vh;
   padding: 0 var(--spacing) var(--spacing);
-  width: 100%;
 `;
