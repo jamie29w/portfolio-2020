@@ -1,46 +1,25 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { css } from '@emotion/core';
 import styled from '@emotion/styled';
 import { Link } from 'gatsby';
 
 import DarkModeSwitch from './DarkModeSwitch';
-import { ThemeContext } from '../providers/ThemeProvider';
 
 const Header = () => {
-  const {
-    palette: { primary, tertiary },
-    spacing,
-  } = useContext(ThemeContext);
-
   return (
-    <HeaderWrapper color={primary} spacing={spacing}>
-      <NavRow spacing={spacing}>
-        <StyledLink
-          activeClassName='current-page'
-          bordercolor={tertiary}
-          spacing={spacing}
-          to='/writing/'
-        >
+    <HeaderWrapper>
+      <NavRow>
+        <StyledLink activeClassName='current-page' to='/writing/'>
           Writing
         </StyledLink>
-        <StyledLink
-          activeClassName='current-page'
-          bordercolor={tertiary}
-          spacing={spacing}
-          to='/now/'
-        >
+        <StyledLink activeClassName='current-page' to='/now/'>
           Now
         </StyledLink>
-        <StyledLink
-          activeClassName='current-page'
-          bordercolor={tertiary}
-          spacing={spacing}
-          to='/work/'
-        >
+        <StyledLink activeClassName='current-page' to='/work/'>
           Work
         </StyledLink>
       </NavRow>
-      <NavRow2 spacing={spacing}>
+      <NavRow2>
         <Link
           css={css`
             margin-top: 0;
@@ -58,8 +37,8 @@ const Header = () => {
 export default Header;
 
 const HeaderWrapper = styled.header`
-  color: ${({ color }) => color};
-  padding: 0 ${({ spacing }) => spacing}rem;
+  color: var(--primary);
+  padding: 0 var(--spacing);
 `;
 
 const NavRow = styled.div`
@@ -71,17 +50,17 @@ const NavRow2 = styled.div`
   align-items: center;
   display: flex;
   justify-content: space-between;
-  padding: ${({ spacing }) => `${spacing}rem ${spacing * 2}rem 0`};
+  padding: var(--spacing) calc(2 * var(--spacing)) 0;
 `;
 
 const StyledLink = styled(Link)`
   flex: 1;
-  padding: ${({ spacing }) => `${spacing}rem 0`};
+  padding: var(--spacing) 0;
   text-align: center;
   text-decoration: none;
 
   &.current-page {
-    border-bottom: ${({ bordercolor }) => `2px solid ${bordercolor}`};
+    border-bottom: 2px solid var(--secondary);
     font-weight: 700;
   }
 `;

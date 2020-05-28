@@ -41,6 +41,6 @@ const LayoutWrapper = styled.div`
   flex-direction: column;
   justify-content: space-between;
   min-height: 100vh;
-  padding: ${({ spacing }) => `0 ${spacing}rem ${spacing}rem`};
+  padding: 0 var(--spacing) var(--spacing);
   width: 100%;
 `;

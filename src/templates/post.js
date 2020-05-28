@@ -1,11 +1,10 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import styled from '@emotion/styled';
 import { graphql, Link } from 'gatsby';
 import BackgroundImage from 'gatsby-background-image';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 
 import Layout from '../components/layout';
-import { ThemeContext } from '../providers/ThemeProvider';
 
 export const query = graphql`
   query($nextPostSlug: String, $prevPostSlug: String, $slug: String!) {
@@ -46,7 +45,6 @@ const PostTemplate = ({
     nextPost,
   },
 }) => {
-  const { spacing } = useContext(ThemeContext);
   return (
     <Layout>
       <h2>{frontmatter.title}</h2>
@@ -60,7 +58,6 @@ const PostTemplate = ({
           alt={frontmatter.image_alt}
           fadeIn='soft'
           fluid={frontmatter.image.sharp.fluid}
-          spacing={spacing}
           tag='section'
         />
       )}
@@ -92,7 +89,7 @@ const ImageBackground = styled(BackgroundImage)`
   background-position: center;
   background-size: cover;
   height: 30vh;
-  margin-top: ${({ spacing }) => spacing}rem;
+  margin-top: var(--spacing);
   max-height: 200px;
   width: 100%;
 `;

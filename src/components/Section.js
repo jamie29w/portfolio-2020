@@ -1,17 +1,10 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import styled from '@emotion/styled';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 
-import { ThemeContext } from '../providers/ThemeProvider';
-
 const NowListSection = ({ section: { body } }) => {
-  const {
-    palette: { tertiary },
-    spacing,
-  } = useContext(ThemeContext);
-
   return (
-    <Wrapper bordercolor={tertiary} spacing={spacing}>
+    <Wrapper>
       <MDXRenderer>{body}</MDXRenderer>
     </Wrapper>
   );
@@ -21,10 +14,11 @@ export default NowListSection;
 
 const Wrapper = styled.ul`
   &:not(:first-of-type) {
-    margin-top: ${({ spacing }) => spacing * 2}rem;
+    margin-top: calc(2 * var(--spacing));
   }
+
   &:not(:last-of-type) {
-    border-bottom: ${({ bordercolor }) => `2px solid ${bordercolor}`};
-    padding-bottom: ${({ spacing }) => spacing * 2}rem;
+    border-bottom: 2px solid var(--secondary);
+    padding-bottom: calc(2 * var(--spacing));
   }
 `;

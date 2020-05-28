@@ -1,10 +1,9 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { Global, css } from '@emotion/core';
 import emotionNormalize from 'emotion-normalize';
 
 import { colors } from './colors';
 
-import { ThemeContext } from '../providers/ThemeProvider';
 import '../styles/fontFaces.css';
 
 // This component provides the global styles reset and
@@ -14,18 +13,7 @@ import '../styles/fontFaces.css';
 // act as the root of the project.
 
 export const GlobalComponent = () => {
-  // const {
-  //   palette: {
-  //     background: { primary: bgPrimary, secondary: bgSecondary },
-  //     primary,
-  //     secondary,
-  //     text: { header: headerFontSize, primary: paragraphColor },
-  //   },
-  //   spacing,
-  // } = useContext(ThemeContext);
-
   const type = 'dark';
-  // const spacing = 1;
 
   return (
     <>
@@ -34,6 +22,7 @@ export const GlobalComponent = () => {
           ${emotionNormalize}
           html {
             --primary: ${colors[type].primary};
+            --gradient2: ${colors[type].gradient2};
             --primaryHover: ${colors[type].primaryHover};
             --secondary: ${colors[type].secondary};
             --seondaryHover: ${colors[type].seondaryHover};
@@ -43,12 +32,8 @@ export const GlobalComponent = () => {
             --background: ${colors[type].background};
             --headerFontFamily: 'Raleway', sans-serif;
             --bodyFontFamily: 'Open Sans', sans-serif;
-            --spacing: 1;
-            /* --headerFontSize: ${headerFontSize}; */
-            /* --paragraphFontSize: 1rem; */
-            /* --gutter: ${spacing}; */
+            --spacing: 1rem;
 
-            /* background: ${bgPrimary}; */
             box-sizing: border-box;
             font-family: sans-serif;
             margin: 0;
@@ -64,7 +49,7 @@ export const GlobalComponent = () => {
           }
 
           body {
-            background: var(--bgPrimary);
+            background: var(--background);
             color: var(--paragraphColor);
             font-family: 'Open Sans', sans-serif;
             font-weight: 400;
@@ -88,7 +73,7 @@ export const GlobalComponent = () => {
             font-family: 'Raleway', sans-serif;
             font-weight: 600;
             padding: 0;
-            margin: var(--spacing)rem 0 0;
+            margin: var(--spacing) 0 0;
           }
 
           h1 {
@@ -125,7 +110,7 @@ export const GlobalComponent = () => {
             font-weight: 400;
             letter-spacing: 0.5px;
             padding: 0;
-            margin: var(--spacing)rem 0 0;
+            margin: var(--spacing) 0 0;
           }
 
           p {
