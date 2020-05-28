@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Global, css } from '@emotion/core';
 import emotionNormalize from 'emotion-normalize';
 
+import { ThemeContext } from '../providers/ThemeProvider';
 import { colors } from './colors';
 
 import '../styles/fontFaces.css';
@@ -13,7 +14,7 @@ import '../styles/fontFaces.css';
 // act as the root of the project.
 
 export const GlobalComponent = () => {
-  const type = 'dark';
+  const { themeType } = useContext(ThemeContext);
 
   return (
     <>
@@ -21,15 +22,15 @@ export const GlobalComponent = () => {
         styles={css`
           ${emotionNormalize}
           html {
-            --primary: ${colors[type].primary};
-            --gradient2: ${colors[type].gradient2};
-            --primaryHover: ${colors[type].primaryHover};
-            --secondary: ${colors[type].secondary};
-            --seondaryHover: ${colors[type].seondaryHover};
-            --headerColor: ${colors[type].header};
-            --paragraphColor: ${colors[type].paragraph};
-            --divider: ${colors[type].divider};
-            --background: ${colors[type].background};
+            --primary: ${colors[themeType].primary};
+            --gradient2: ${colors[themeType].gradient2};
+            --primaryHover: ${colors[themeType].primaryHover};
+            --secondary: ${colors[themeType].secondary};
+            --seondaryHover: ${colors[themeType].seondaryHover};
+            --headerColor: ${colors[themeType].header};
+            --paragraphColor: ${colors[themeType].paragraph};
+            --divider: ${colors[themeType].divider};
+            --background: ${colors[themeType].background};
             --headerFontFamily: 'Raleway', sans-serif;
             --bodyFontFamily: 'Open Sans', sans-serif;
             --spacing: 1rem;
