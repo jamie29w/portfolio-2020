@@ -1,7 +1,7 @@
 import React from 'react';
 
 import ThemeProvider from './src/providers/ThemeProvider';
-import { colors } from './src/styles/colors';
+import { colors } from './src/styles';
 import { GlobalComponent } from './src/styles';
 
 const MagicScriptTag = () => {

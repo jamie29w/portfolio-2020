@@ -1,2 +1,3 @@
 export { GlobalComponent } from './GlobalComponent';
-export { default } from './theme';
+
+export * from './colors';
