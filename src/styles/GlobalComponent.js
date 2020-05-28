@@ -1,9 +1,6 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { Global, css } from '@emotion/core';
 import emotionNormalize from 'emotion-normalize';
-
-import { ThemeContext } from '../providers/ThemeProvider';
-import { colors } from './colors';
 
 import '../styles/fontFaces.css';
 
@@ -14,23 +11,13 @@ import '../styles/fontFaces.css';
 // act as the root of the project.
 
 export const GlobalComponent = () => {
-  const { themeType } = useContext(ThemeContext);
-
   return (
     <>
       <Global
         styles={css`
           ${emotionNormalize}
           html {
-            --primary: ${colors[themeType].primary};
-            --gradient2: ${colors[themeType].gradient2};
-            --primaryHover: ${colors[themeType].primaryHover};
-            --secondary: ${colors[themeType].secondary};
-            --seondaryHover: ${colors[themeType].seondaryHover};
-            --headerColor: ${colors[themeType].header};
-            --paragraphColor: ${colors[themeType].paragraph};
-            --divider: ${colors[themeType].divider};
-            --background: ${colors[themeType].background};
+            /* initial palette CSS Vars are hung in gatsby-ssr */
             --headerFontFamily: 'Raleway', sans-serif;
             --bodyFontFamily: 'Open Sans', sans-serif;
             --spacing: 1rem;
