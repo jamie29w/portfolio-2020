@@ -12,7 +12,7 @@ export const colors = {
     primaryHover: primaryColor.darken(0.5).hex(),
     secondary: secondaryColor.hex(),
     secondaryHover: primaryColor.darken(0.3).hex(),
-    header: 'rgba(0, 0, 0, 0.87)',
+    header: 'rgba(35, 35, 35, 0.87)',
     paragraph: 'rgba(75, 75, 75, 0.87)',
     divider: 'rgba(255, 255, 255, 0.12)',
     background: 'rgba(255, 255, 255, 1)',
