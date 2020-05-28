@@ -1,15 +1,92 @@
-/**
- * Implement Gatsby's SSR (Server Side Rendering) APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/ssr-apis/
- */
-
-// You can delete this file if you're not using it
-
 import React from 'react';
 
-import { GlobalComponent } from './src/styles';
 import ThemeProvider from './src/providers/ThemeProvider';
+import { colors } from './src/styles/colors';
+import { GlobalComponent } from './src/styles';
+
+const MagicScriptTag = () => {
+  const codeToRunOnClient = `
+    (function() {
+      function getInitialColorMode() {
+        const persistedColorPreference = window.localStorage.getItem('color-mode');
+        const hasPersistedPreference = typeof persistedColorPreference === 'string';
+      
+        if (hasPersistedPreference) {
+          return persistedColorPreference;
+        }
+      
+        const mql = window.matchMedia('(prefers-color-scheme: dark)');
+        const hasMediaQueryPreference = typeof mql.matches === 'boolean';
+      
+        if (hasMediaQueryPreference) {
+          return mql.matches ? 'dark' : 'light';
+        }
+      
+        return 'light';
+      };
+
+      const colorMode = getInitialColorMode();
+      const root = document.documentElement;
+
+      root.style.setProperty(
+        '--primary',
+        colorMode === 'light' ? '${colors.light.primary}' : '${colors.dark.primary}'
+      );
+
+      root.style.setProperty(
+        '--primaryHover',
+        colorMode === 'light' ? '${colors.light.primaryHover}' : '${colors.dark.primaryHover}'
+      );
+
+      root.style.setProperty(
+        '--secondary',
+        colorMode === 'light' ? '${colors.light.secondary}' : '${colors.dark.secondary}'
+      );
+
+      root.style.setProperty(
+        '--secondaryHover',
+        colorMode === 'light' ? '${colors.light.secondaryHover}' : '${colors.dark.secondaryHover}'
+      );
+
+      root.style.setProperty(
+        '--headerColor',
+        colorMode === 'light' ? '${colors.light.header}' : '${colors.dark.header}'
+      );
+
+      root.style.setProperty(
+        '--paragraphColor',
+        colorMode === 'light' ? '${colors.light.paragraph}' : '${colors.dark.paragraph}'
+      );
+
+      root.style.setProperty(
+        '--divider',
+        colorMode === 'light' ? '${colors.light.divider}' : '${colors.dark.divider}'
+      );
+
+      root.style.setProperty(
+        '--background',
+        colorMode === 'light' ? '${colors.light.background}' : '${colors.dark.background}'
+      );
+
+      root.style.setProperty(
+        '--gradient2',
+        colorMode === 'light' ? '${colors.light.gradient2}' : '${colors.dark.gradient2}'
+      );
+
+      root.style.setProperty('--initial-color-mode', colorMode);
+    })()
+  `;
+
+  // eslint-disable-next-line react/no-danger
+  return <script dangerouslySetInnerHTML={{ __html: codeToRunOnClient }} />;
+};
+
+// MagicScriptTag hangs all initial CSS Vars based on local storage,
+// media query, or default light
+// It's inserted above other body components, blocking content render
+export const onRenderBody = ({ setPreBodyComponents }) => {
+  setPreBodyComponents(<MagicScriptTag />);
+};
 
 export const wrapRootElement = ({ element }) => {
   return (
