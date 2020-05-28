@@ -2,7 +2,7 @@ import React from 'react';
 import styled from '@emotion/styled';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 
-const NowListSection = ({ section: { body } }) => {
+const Section = ({ section: { body } }) => {
   return (
     <Wrapper>
       <MDXRenderer>{body}</MDXRenderer>
@@ -10,9 +10,11 @@ const NowListSection = ({ section: { body } }) => {
   );
 };
 
-export default NowListSection;
+export default Section;
 
 const Wrapper = styled.ul`
+  align-self: stretch;
+
   &:not(:first-of-type) {
     margin-top: calc(2 * var(--spacing));
   }
