@@ -39,14 +39,14 @@ export default Header;
 
 const HeaderWrapper = styled.header`
   background-color: var(--background);
-  padding: 0 var(--spacing);
+  padding: 0 var(--gutter);
 `;
 
 const NameRow = styled.div`
   align-items: center;
   display: flex;
   justify-content: space-between;
-  padding: var(--spacing) calc(2 * var(--spacing)) 0;
+  padding: var(--spacing) 0 0;
 `;
 
 const NavRow = styled.div`
@@ -56,6 +56,7 @@ const NavRow = styled.div`
 
 const StyledLink = styled(Link)`
   flex: 1;
+  margin-top: 0;
   padding: var(--spacing) 0;
   text-align: center;
   text-decoration: none;
