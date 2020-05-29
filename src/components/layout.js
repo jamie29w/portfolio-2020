@@ -23,10 +23,10 @@ const Layout = ({ title, children }) => {
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
       <LayoutWrapper spacing={spacing}>
-        <main>
+        <StyledMain>
           <h1>{title}</h1>
           {children}
-        </main>
+        </StyledMain>
         <Footer />
       </LayoutWrapper>
     </>
@@ -43,4 +43,9 @@ const LayoutWrapper = styled.div`
   justify-content: space-between;
   min-height: 100vh;
   padding: 0 var(--spacing) var(--spacing);
+`;
+
+const StyledMain = styled.main`
+  margin: 0 auto;
+  max-width: 1000px;
 `;
