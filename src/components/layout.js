@@ -54,6 +54,7 @@ const LayoutWrapper = styled.div`
   justify-content: space-between;
   min-height: 100vh;
   padding: var(--gutter);
+  padding-top: 0;
 `;
 
 // todo: remove when desktop responsive design is set up
