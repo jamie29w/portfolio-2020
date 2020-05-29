@@ -38,6 +38,7 @@ const Header = () => {
 export default Header;
 
 const HeaderWrapper = styled.header`
+  background-color: var(--background);
   padding: 0 var(--spacing);
 `;
 

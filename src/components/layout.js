@@ -37,6 +37,7 @@ export default Layout;
 
 const LayoutWrapper = styled.div`
   align-items: stretch;
+  background-color: var(--background);
   display: flex;
   flex-direction: column;
   justify-content: space-between;

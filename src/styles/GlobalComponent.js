@@ -37,7 +37,6 @@ export const GlobalComponent = () => {
           }
 
           body {
-            background: var(--background);
             color: var(--paragraphColor);
             font-family: 'Open Sans', sans-serif;
             font-weight: 400;
