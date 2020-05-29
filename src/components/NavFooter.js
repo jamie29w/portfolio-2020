@@ -25,6 +25,9 @@ const NavFooterWrapper = styled.div`
   bottom: 0;
   box-shadow: var(--shadowTop);
   display: flex;
+  /* gutter + body font-size + padding top and bottom */
+  height: calc(var(--gutter) + 1rem + calc(2 * var(--spacing)));
+  left: 0;
   justify-content: space-between;
   position: fixed;
   width: 100%;

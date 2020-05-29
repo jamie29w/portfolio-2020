@@ -26,8 +26,8 @@ const Layout = ({ title, children }) => {
             {children}
           </StyledMain>
         </LayoutWrapper>
+        <NavFooter />
       </GradientWrapper>
-      <NavFooter />
     </>
   );
 };
@@ -41,8 +41,9 @@ const GradientWrapper = styled.div`
     var(--gradient2Layout) 74%
   );
   background-attachment: fixed;
-  height: 100vh;
-  overflow: scroll;
+  min-height: 100vh;
+  /* gutter + body font-size + padding top and bottom and 1 extra unit of spacing */
+  padding-bottom: calc(var(--gutter) + 1rem + calc(3 * var(--spacing)));
   width: 100%;
 `;
 
@@ -52,8 +53,6 @@ const LayoutWrapper = styled.div`
   flex-direction: column;
   justify-content: space-between;
   min-height: 100vh;
-  /* gutter + body font-size + padding top and bottom */
-  margin-bottom: calc(var(--gutter) + 1rem + calc(2 * var(--spacing)));
   padding: var(--gutter);
 `;
 
