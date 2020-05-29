@@ -21,7 +21,7 @@ const IndexPageWrapper = styled.div`
   background: linear-gradient(
     150deg,
     var(--background) 16%,
-    var(--gradient2) 74%
+    var(--gradient2HomePage) 74%
   );
   display: flex;
   flex-direction: column;
