@@ -68,8 +68,31 @@ export default function ThemeProvider({ children }) {
     );
 
     root.style.setProperty(
-      '--gradient2',
-      newValue === 'light' ? colors.light.gradient2 : colors.dark.gradient2
+      '--gradient2HomePage',
+      newValue === 'light'
+        ? colors.light.gradient2HomePage
+        : colors.dark.gradient2HomePage
+    );
+
+    root.style.setProperty(
+      '--gradient2Layout',
+      newValue === 'light'
+        ? colors.light.gradient2Layout
+        : colors.dark.gradient2Layout
+    );
+
+    root.style.setProperty(
+      '--boxShadowColor',
+      newValue === 'light'
+        ? colors.light.boxShadowColor
+        : colors.dark.boxShadowColor
+    );
+
+    root.style.setProperty(
+      '--navFooterBackground',
+      newValue === 'light'
+        ? colors.light.navFooterBackground
+        : colors.dark.navFooterBackground
     );
   }
 

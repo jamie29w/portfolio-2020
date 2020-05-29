@@ -22,7 +22,10 @@ export const GlobalComponent = () => {
             --bodyFontFamily: 'Open Sans', sans-serif;
             --gutter: 1rem;
             --spacing: 2rem;
+            --shadowTop: 0px -5px 20px -4px var(--boxShadowColor);
+            --navFooterHeight: 84px;
 
+            background-color: var(--background);
             box-sizing: border-box;
             font-family: sans-serif;
             margin: 0;

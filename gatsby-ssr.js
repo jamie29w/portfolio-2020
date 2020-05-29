@@ -69,8 +69,23 @@ const MagicScriptTag = () => {
       );
 
       root.style.setProperty(
-        '--gradient2',
-        colorMode === 'light' ? '${colors.light.gradient2}' : '${colors.dark.gradient2}'
+        '--gradient2HomePage',
+        colorMode === 'light' ? '${colors.light.gradient2HomePage}' : '${colors.dark.gradient2HomePage}'
+      );
+
+      root.style.setProperty(
+        '--gradient2Layout',
+        colorMode === 'light' ? '${colors.light.gradient2Layout}' : '${colors.dark.gradient2Layout}'
+      );
+
+      root.style.setProperty(
+        '--boxShadowColor',
+        colorMode === 'light' ? '${colors.light.boxShadowColor}' : '${colors.dark.boxShadowColor}'
+      );
+
+      root.style.setProperty(
+        '--navFooterBackground',
+        colorMode === 'light' ? '${colors.light.navFooterBackground}' : '${colors.dark.navFooterBackground}'
       );
 
       root.style.setProperty('--initial-color-mode', colorMode);
