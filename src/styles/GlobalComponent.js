@@ -21,13 +21,14 @@ export const GlobalComponent = () => {
             --headerFontFamily: 'Raleway', sans-serif;
             --bodyFontFamily: 'Open Sans', sans-serif;
             --gutter: 1rem;
-            --spacing: 2rem;
+            --spacing: 1.5rem;
             --shadowTop: 0px -5px 20px -4px var(--boxShadowColor);
             --navFooterHeight: 84px;
 
             background-color: var(--background);
             box-sizing: border-box;
             font-family: sans-serif;
+            font-size: 18px;
             margin: 0;
             padding: 0;
             -ms-text-size-adjust: 100%;

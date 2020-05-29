@@ -28,5 +28,6 @@ const HeaderWrapper = styled.header`
   align-items: center;
   display: flex;
   padding: var(--gutter);
+  padding-bottom: 0;
   justify-content: space-between;
 `;
