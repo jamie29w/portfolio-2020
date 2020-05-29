@@ -1,21 +1,18 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { css } from '@emotion/core';
 import styled from '@emotion/styled';
 
-import { ThemeContext } from '../providers/ThemeProvider';
 import gatsbyIcon from '../../images/gatsby-icon.png';
 import netlifyIcon from '../../images/netlify-icon.png';
 import reactIcon from '../../images/react-icon.png';
 
 const Footer = () => {
-  const { spacing } = useContext(ThemeContext);
-
   return (
-    <StyledFooter spacing={spacing}>
+    <StyledFooter>
       <span className='caption'>
         Woodmancy Dev™ {new Date().getFullYear()}, built with
       </span>
-      <IconSpan spacing={spacing}>
+      <IconSpan>
         {footerIcons.map(icon => {
           return (
             <a
@@ -45,13 +42,13 @@ const StyledFooter = styled.footer`
   align-items: center;
   display: flex;
   justify-content: center;
-  margin-top: ${({ spacing }) => spacing}rem;
+  margin-top: var(--spacing);
 `;
 
 const IconSpan = styled.span`
   align-items: center;
   display: flex;
-  margin-left: ${({ spacing }) => spacing / 2}rem;
+  margin-left: calc(var(--spacing) / 4);
 
   & > a {
     margin-top: 0;

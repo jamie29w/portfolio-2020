@@ -20,7 +20,8 @@ export const GlobalComponent = () => {
             /* initial palette CSS Vars are hung in gatsby-ssr */
             --headerFontFamily: 'Raleway', sans-serif;
             --bodyFontFamily: 'Open Sans', sans-serif;
-            --spacing: 1rem;
+            --gutter: 1rem;
+            --spacing: 2rem;
 
             box-sizing: border-box;
             font-family: sans-serif;

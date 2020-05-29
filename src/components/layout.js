@@ -42,7 +42,7 @@ const LayoutWrapper = styled.div`
   flex-direction: column;
   justify-content: space-between;
   min-height: 100vh;
-  padding: 0 var(--spacing) var(--spacing);
+  padding: var(--gutter);
 `;
 
 const StyledMain = styled.main`
