@@ -1,25 +1,14 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { graphql, useStaticQuery } from 'gatsby';
 
 import Header from './header';
 import NavFooter from './NavFooter';
 
 const Layout = ({ title, children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `);
-
   return (
     <>
       <LayoutWrapper>
-        <Header siteTitle={data.site.siteMetadata.title} />
+        <Header />
         <Main>
           <h1>{title}</h1>
           {children}
@@ -35,7 +24,7 @@ export default Layout;
 const LayoutWrapper = styled.div`
   background: var(--background);
   background-attachment: fixed;
-  min-height: 100%;
+  min-height: 100vh;
   padding: var(--gutterVertical) var(--gutterHorizontal);
   width: 100%;
 
