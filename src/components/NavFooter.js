@@ -5,13 +5,25 @@ import { Link } from 'gatsby';
 const NavFooter = () => {
   return (
     <NavFooterWrapper>
-      <StyledLink activeClassName='current-page' to='/writing/'>
+      <StyledLink
+        activeClassName='current-page'
+        partiallyActive={true}
+        to='/writing/'
+      >
         Writing
       </StyledLink>
-      <StyledLink activeClassName='current-page' to='/now/'>
+      <StyledLink
+        activeClassName='current-page'
+        partiallyActive={true}
+        to='/now/'
+      >
         Now
       </StyledLink>
-      <StyledLink activeClassName='current-page' to='/work/'>
+      <StyledLink
+        activeClassName='current-page'
+        partiallyActive={true}
+        to='/work/'
+      >
         Work
       </StyledLink>
     </NavFooterWrapper>

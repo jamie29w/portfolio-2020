@@ -1,5 +1,4 @@
 import React from 'react';
-import { css } from '@emotion/core';
 import styled from '@emotion/styled';
 import { Link } from 'gatsby';
 
@@ -11,17 +10,29 @@ const Header = () => {
       <NameLink className='h3' to='/'>
         Jamie Woodmancy
       </NameLink>
-      <NavLinks>
-        <StyledLink activeClassName='current-page' to='/writing/'>
+      <NavLinksWrapper>
+        <StyledLink
+          activeClassName='current-page'
+          partiallyActive={true}
+          to='/writing/'
+        >
           Writing
         </StyledLink>
-        <StyledLink activeClassName='current-page' to='/now/'>
+        <StyledLink
+          activeClassName='current-page'
+          partiallyActive={true}
+          to='/now/'
+        >
           Now
         </StyledLink>
-        <StyledLink activeClassName='current-page' to='/work/'>
+        <StyledLink
+          activeClassName='current-page'
+          partiallyActive={true}
+          to='/work/'
+        >
           Work
         </StyledLink>
-      </NavLinks>
+      </NavLinksWrapper>
       <DarkModeSwitch />
     </HeaderWrapper>
   );
@@ -44,7 +55,7 @@ const NameLink = styled(Link)`
   margin-top: 0;
 `;
 
-const NavLinks = styled.div`
+const NavLinksWrapper = styled.div`
   display: none;
 
   @media (min-width: 55em) {
