@@ -25,8 +25,8 @@ export const GlobalComponent = () => {
             --spacing: 2rem;
             --shadowTop: 0px -5px 20px -4px var(--boxShadowColor);
             --navFooterHeight: 84px;
-            --tabletUp: 42em;
-            --desktopUp: 55em;
+            --tabletUp: 48em;
+            --desktopUp: 62em;
             --bodyFontSize: 1rem;
 
             background-color: var(--background);
@@ -38,7 +38,7 @@ export const GlobalComponent = () => {
             -ms-text-size-adjust: 100%;
             -webkit-text-size-adjust: 100%;
 
-            @media (min-width: 42em) {
+            @media (min-width: 48em) {
               --gutterHorizontal: 3rem;
               --gutterVertical: 3rem;
             }

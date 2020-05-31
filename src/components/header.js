@@ -58,7 +58,7 @@ const NameLink = styled(Link)`
 const NavLinksWrapper = styled.div`
   display: none;
 
-  @media (min-width: 55em) {
+  @media (min-width: 62em) {
     align-items: flex-end;
     display: flex;
     flex: 1;

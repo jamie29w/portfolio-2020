@@ -49,9 +49,9 @@ const PostTemplate = ({
     <Layout>
       <h2>{frontmatter.title}</h2>
       {frontmatter.edited_date ? (
-        <p>Updated on {frontmatter.edited_date}.</p>
+        <p>Updated on {frontmatter.edited_date}</p>
       ) : (
-        <p>Posted on {frontmatter.published_date}.</p>
+        <p>Posted on {frontmatter.published_date}</p>
       )}
       {frontmatter.image?.sharp?.fluid && (
         <ImageBackground
@@ -92,6 +92,10 @@ const ImageBackground = styled(BackgroundImage)`
   margin-top: var(--spacing);
   max-height: 200px;
   width: 100%;
+
+  @media (min-width: 48em) {
+    max-height: 400px;
+  }
 `;
 
 const ButtonWrapper = styled.div`
