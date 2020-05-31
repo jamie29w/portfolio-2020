@@ -9,9 +9,9 @@ export const secondaryColor = Color(secondary_root);
 export const colors = {
   light: {
     primary: primaryColor,
-    primaryHover: primaryColor.darken(0.5),
+    primaryHover: primaryColor.lighten(0.3),
     secondary: secondaryColor,
-    secondaryHover: primaryColor.darken(0.3),
+    secondaryHover: primaryColor.lighten(0.3),
     header: 'rgba(35, 35, 35, 0.87)',
     paragraph: 'rgba(75, 75, 75, 0.87)',
     background: 'rgba(255, 255, 255, 1)',
@@ -23,9 +23,9 @@ export const colors = {
   },
   dark: {
     primary: primaryColor.lighten(0.3).fade(0.13),
-    primaryHover: primaryColor.darken(0.2).fade(0.13),
+    primaryHover: primaryColor.lighten(0.6).fade(0.13),
     secondary: secondaryColor.lighten(0.1).fade(0.13),
-    secondaryHover: secondaryColor.darken(0.2).fade(0.13),
+    secondaryHover: secondaryColor.lighten(0.4).fade(0.13),
     header: 'rgba(225, 225, 225, 0.87)',
     paragraph: 'rgba(200, 200, 200, 0.87)',
     background: 'rgba(0, 0, 0, 0.87)',
