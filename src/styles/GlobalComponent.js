@@ -39,7 +39,8 @@ export const GlobalComponent = () => {
             -webkit-text-size-adjust: 100%;
 
             @media (min-width: 42em) {
-              --gutter: 3rem;
+              --gutterHorizontal: 3rem;
+              --gutterVertical: 3rem;
             }
           }
 

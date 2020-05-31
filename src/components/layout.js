@@ -40,7 +40,9 @@ const LayoutWrapper = styled.div`
   width: 100%;
 
   @media (min-width: 42em) {
-    padding-bottom: calc(var(--gutterHorizontal) + 1rem);
+    padding: var(--gutterVertical) var(--gutterHorizontal)
+      calc(var(--gutterVertical) + 1rem);
+    /* padding-bottom: calc(var(--gutterHorizontal) + 1rem); */
   }
 `;
 
