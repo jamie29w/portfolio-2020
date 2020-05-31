@@ -69,13 +69,13 @@ const MagicScriptTag = () => {
       );
 
       root.style.setProperty(
+        '--gradient1HomePage',
+        colorMode === 'light' ? '${colors.light.gradient1HomePage}' : '${colors.dark.gradient1HomePage}'
+      );
+      
+      root.style.setProperty(
         '--gradient2HomePage',
         colorMode === 'light' ? '${colors.light.gradient2HomePage}' : '${colors.dark.gradient2HomePage}'
-      );
-
-      root.style.setProperty(
-        '--gradient2Layout',
-        colorMode === 'light' ? '${colors.light.gradient2Layout}' : '${colors.dark.gradient2Layout}'
       );
 
       root.style.setProperty(
