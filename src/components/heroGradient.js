@@ -22,7 +22,7 @@ const HomepageMain = () => {
         <h1>Engineer</h1>
       </TitleBlock>
       <AboutBlock>
-        <p>Balanced feeling and function</p>
+        <p>Balanced form and function</p>
       </AboutBlock>
       <CtaWrapper>
         <Link className='btn' to='/writing/'>
@@ -51,7 +51,7 @@ const HomepageMainWrapper = styled.div`
   grid-template-columns: 1fr;
   grid-template-rows: auto 1.5fr 1fr 1fr auto;
   min-height: 100vh;
-  padding: var(--gutter);
+  padding: var(--gutterHorizontal);
   position: relative;
 `;
 
@@ -78,8 +78,8 @@ const NameWrapper = styled.div`
 const DarkModeSwitchWrapper = styled.div`
   align-items: flex-start;
   position: absolute;
-  right: var(--gutter);
-  top: var(--gutter);
+  right: var(--gutterHorizontal);
+  top: var(--gutterHorizontal);
 `;
 
 const TitleBlock = styled.div`
@@ -146,10 +146,16 @@ const CtaWrapper = styled.div`
       max-width: 200px;
     }
 
-    &:active,
-    &:hover {
+    &:active {
       border: 2px solid var(--primaryHover);
       color: var(--primaryHover);
+    }
+
+    @media (hover) {
+      &:hover {
+        border: 2px solid var(--primaryHover);
+        color: var(--primaryHover);
+      }
     }
   }
 `;

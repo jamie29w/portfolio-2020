@@ -18,47 +18,43 @@ const Layout = ({ title, children }) => {
 
   return (
     <>
-      <GradientWrapper>
+      <LayoutWrapper>
         <Header siteTitle={data.site.siteMetadata.title} />
-        <LayoutWrapper>
-          <StyledMain>
-            <h1>{title}</h1>
-            {children}
-          </StyledMain>
-        </LayoutWrapper>
+        <Main>
+          <h1>{title}</h1>
+          {children}
+        </Main>
         <NavFooter />
-      </GradientWrapper>
+      </LayoutWrapper>
     </>
   );
 };
 
 export default Layout;
 
-const GradientWrapper = styled.div`
-  background: linear-gradient(
-    150deg,
-    var(--background) 16%,
-    var(--gradient2Layout) 74%
-  );
+const LayoutWrapper = styled.div`
+  background: var(--gradient2Layout);
   background-attachment: fixed;
   min-height: 100vh;
-  /* gutter + body font-size + padding top and bottom and 1 extra unit of spacing */
-  padding-bottom: calc(var(--gutter) + 1rem + calc(3 * var(--spacing)));
+  padding: var(--gutterVertical) var(--gutterHorizontal);
   width: 100%;
+
+  @media (min-width: 42em) {
+    padding-bottom: calc(var(--gutterHorizontal) + 1rem);
+  }
 `;
 
-const LayoutWrapper = styled.div`
+const Main = styled.main`
   align-items: stretch;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  margin: var(--spacing) auto 0;
+  max-width: 1080px;
   min-height: 100vh;
-  padding: var(--gutter);
-  padding-top: 0;
-`;
+  padding-bottom: calc(var(--gutterVertical) + 2rem + calc(2 * var(--spacing)));
 
-// todo: remove when desktop responsive design is set up
-const StyledMain = styled.main`
-  margin: 0 auto;
-  max-width: 1000px;
+  @media (min-width: 55em) {
+    padding-bottom: 0;
+  }
 `;

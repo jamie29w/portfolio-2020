@@ -1,10 +1,11 @@
 import React from 'react';
+import styled from '@emotion/styled';
 
 import Layout from '../components/layout';
-import Section from '../components/Section';
 import SEO from '../components/seo';
 import useNowContent from '../hooks/useNowContent';
 
+import NowSection from '../components/NowSection';
 const pageTitle = 'Now';
 
 const Now = () => {
@@ -13,11 +14,17 @@ const Now = () => {
   return (
     <Layout title={pageTitle}>
       <SEO title={pageTitle} />
-      {nowSections.map((section, i) => (
-        <Section section={section} key={i} />
-      ))}
+      <NowSectionWrapper>
+        {nowSections.map((section, i) => (
+          <NowSection section={section} key={i} />
+        ))}
+      </NowSectionWrapper>
     </Layout>
   );
 };
 
 export default Now;
+
+const NowSectionWrapper = styled.div`
+  margin-top: var(--spacing);
+`;

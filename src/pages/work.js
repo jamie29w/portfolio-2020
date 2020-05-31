@@ -1,4 +1,5 @@
 import React from 'react';
+import styled from '@emotion/styled';
 
 import Layout from '../components/layout';
 import Section from '../components/Section';
@@ -13,11 +14,15 @@ const Work = () => {
   return (
     <Layout title={pageTitle}>
       <SEO title={pageTitle} />
-      {workSections.map((section, i) => (
-        <Section section={section} key={i} />
-      ))}
+      <WorkSections>
+        {workSections.map((section, i) => (
+          <Section section={section} key={i} />
+        ))}
+      </WorkSections>
     </Layout>
   );
 };
 
 export default Work;
+
+const WorkSections = styled.div``;
