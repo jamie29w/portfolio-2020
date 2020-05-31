@@ -15,7 +15,7 @@ export const query = graphql`
         published_date
         image {
           sharp: childImageSharp {
-            fluid {
+            fluid(quality: 90) {
               ...GatsbyImageSharpFluid_withWebp
             }
           }
@@ -94,7 +94,8 @@ const ImageBackground = styled(BackgroundImage)`
   width: 100%;
 
   @media (min-width: 48em) {
-    max-height: 400px;
+    height: 40vh;
+    max-height: 600px;
   }
 `;
 
