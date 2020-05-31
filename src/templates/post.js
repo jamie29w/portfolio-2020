@@ -105,6 +105,6 @@ const ButtonWrapper = styled.div`
 
   & > a,
   & > div {
-    max-width: 45vw;
+    max-width: 40vw;
   }
 `;

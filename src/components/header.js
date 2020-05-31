@@ -14,9 +14,9 @@ const Header = () => {
         <StyledLink
           activeClassName='current-page'
           partiallyActive={true}
-          to='/writing/'
+          to='/work/'
         >
-          Writing
+          Work
         </StyledLink>
         <StyledLink
           activeClassName='current-page'
@@ -28,9 +28,9 @@ const Header = () => {
         <StyledLink
           activeClassName='current-page'
           partiallyActive={true}
-          to='/work/'
+          to='/writing/'
         >
-          Work
+          Writing
         </StyledLink>
       </NavLinksWrapper>
       <DarkModeSwitch />
