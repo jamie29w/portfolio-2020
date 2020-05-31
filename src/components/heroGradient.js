@@ -1,82 +1,95 @@
 import React from 'react';
-import { css } from '@emotion/core';
 import styled from '@emotion/styled';
 import { Link } from 'gatsby';
 
 import DarkModeSwitch from './DarkModeSwitch';
 
-const HomepageContent = () => {
+const HomepageMain = () => {
   return (
-    <HomepageContentWrapper>
-      <div>
-        <HeadlineRow>
-          <h2>Jamie</h2>
-          <SwitchWrapper>
-            <DarkModeSwitch />
-          </SwitchWrapper>
-        </HeadlineRow>
-        <h2
-          css={css`
-            margin-top: 0;
-          `}
-        >
-          Woodmancy
-        </h2>
-        <TitleText>Front</TitleText>
-        <TitleText>End</TitleText>
-        <TitleText>Engineer</TitleText>
-      </div>
-      <HomePageLink className='btn' to='/writing/'>
-        See my work
-      </HomePageLink>
-    </HomepageContentWrapper>
+    <HomepageMainWrapper>
+      <NameWrapper>
+        <h2>Jamie</h2>
+        <h2>Woodmancy</h2>
+      </NameWrapper>
+      <DarkModeSwitchWrapper>
+        <DarkModeSwitch />
+      </DarkModeSwitchWrapper>
+      <Main>
+        <h1>Front</h1>
+        <h1>End</h1>
+        <h1>Engineer</h1>
+      </Main>
+      <CtaWrapper>
+        <Link className='btn' to='/writing/'>
+          See my work
+        </Link>
+      </CtaWrapper>
+    </HomepageMainWrapper>
   );
 };
 
-export default HomepageContent;
+export default HomepageMain;
 
-const HomepageContentWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
+const HomepageMainWrapper = styled.div`
+  display: grid;
+  grid-template-areas:
+    'nameWrapper darkModeSwitch'
+    'main main'
+    'cta cta';
+  grid-template-columns: 1fr 30px;
+  grid-template-rows: auto 1fr auto;
   min-height: calc(100vh - 55px);
-  justify-content: space-between;
   padding: var(--spacing);
 `;
 
-const HeadlineRow = styled.div`
-  align-self: center;
-  display: flex;
-  justify-content: space-between;
-`;
+const NameWrapper = styled.div`
+  align-items: flex-start;
+  grid-area: nameWrapper;
 
-const SwitchWrapper = styled.div`
-  margin-top: var(--spacing);
-`;
-
-const TitleText = styled.h1`
-  margin-top: 0;
-
-  &:first-of-type {
-    margin-top: calc(4 * var(--spacing));
+  & > h2 {
+    margin-top: 0;
   }
 `;
 
-const HomePageLink = styled(Link)`
-  align-items: center;
-  display: flex;
-  border: 2px solid var(--primary);
-  color: var(--primary);
-  flex-direction: column;
-  font-weight: 600;
-  height: 68px;
-  justify-content: center;
-  margin-bottom: calc(3 * var(--spacing));
-  text-align: center;
-  width: 100%;
+const DarkModeSwitchWrapper = styled.div`
+  align-items: flex-start;
+  grid-area: darkModeSwitch;
+`;
 
-  &:active,
-  &:hover {
-    border: 2px solid var(--primaryHover);
-    color: var(--primaryHover);
+const Main = styled.main`
+  grid-area: main;
+
+  & > h1 {
+    margin-top: 0;
+
+    &:first-of-type {
+      margin-top: calc(4 * var(--spacing));
+    }
+  }
+`;
+
+const CtaWrapper = styled.div`
+  align-items: flex-end;
+  grid-area: cta;
+
+  & > a {
+    align-items: center;
+    display: flex;
+    border: 2px solid var(--primary);
+    color: var(--primary);
+    grid-area: cta;
+    flex-direction: column;
+    font-weight: 600;
+    height: 68px;
+    justify-content: center;
+    margin-top: 0;
+    text-align: center;
+    width: 100%;
+
+    &:active,
+    &:hover {
+      border: 2px solid var(--primaryHover);
+      color: var(--primaryHover);
+    }
   }
 `;
