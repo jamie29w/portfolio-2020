@@ -14,6 +14,7 @@ const Now = () => {
   return (
     <Layout title={pageTitle}>
       <SEO title={pageTitle} />
+      <p>I'm really bad at favorites. But here are my currents:</p>
       <NowSectionWrapper>
         {nowSections.map((section, i) => (
           <NowSection section={section} key={i} />

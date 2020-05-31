@@ -26,8 +26,12 @@ const GridList = styled.ul`
   display: grid;
   grid-template-columns: 1fr;
 
+  & > li {
+    margin-top: var(--spacing);
+  }
+
   @media (min-width: 62em) {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 `;
 
