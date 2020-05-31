@@ -33,6 +33,10 @@ export const GlobalComponent = () => {
             padding: 0;
             -ms-text-size-adjust: 100%;
             -webkit-text-size-adjust: 100%;
+
+            @media (min-width: 42em) {
+              --gutter: 3rem;
+            }
           }
 
           *,

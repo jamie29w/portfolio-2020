@@ -6,9 +6,9 @@ import gatsbyIcon from '../../images/gatsby-icon.png';
 import netlifyIcon from '../../images/netlify-icon.png';
 import reactIcon from '../../images/react-icon.png';
 
-const Footer = () => {
+const Footer = props => {
   return (
-    <StyledFooter>
+    <StyledFooter {...props}>
       <span className='caption'>
         Woodmancy Dev™ {new Date().getFullYear()}, built with
       </span>
