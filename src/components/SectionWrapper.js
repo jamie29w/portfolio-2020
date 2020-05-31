@@ -7,7 +7,7 @@ const Section = ({ children, ...other }) => {
 
 export default Section;
 
-const Wrapper = styled.ul`
+const Wrapper = styled.div`
   align-self: stretch;
 
   &:not(:first-of-type) {
