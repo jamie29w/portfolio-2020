@@ -12,7 +12,7 @@ const NowSection = ({
 }) => {
   return (
     <SectionWrapper>
-      <StyledH3>{title}:</StyledH3>
+      <StyledH3>{title}</StyledH3>
       <GridList>
         <MDXRenderer>{body}</MDXRenderer>
       </GridList>
@@ -24,14 +24,15 @@ export default NowSection;
 
 const GridList = styled.ul`
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: calc(0.5 * var(--spacing));
 
   & > li {
-    margin-top: var(--spacing);
+    margin-top: calc(0.5var (--spacing));
   }
 
   @media (min-width: 62em) {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 `;
 
