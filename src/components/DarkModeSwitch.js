@@ -10,20 +10,12 @@ const DarkModeSwitch = () => {
   return (
     <>
       {themeType === 'dark' ? (
-        <IconButton>
-          <WbSunny
-            onClick={() => setThemeType('light')}
-            role='button'
-            style={{ color: 'var(--headerColor)' }}
-          />
+        <IconButton onClick={() => setThemeType('light')}>
+          <WbSunny style={{ color: 'var(--headerColor)' }} />
         </IconButton>
       ) : (
-        <IconButton>
-          <Brightness3
-            onClick={() => setThemeType('dark')}
-            role='button'
-            style={{ color: 'var(--headerColor)' }}
-          />
+        <IconButton onClick={() => setThemeType('dark')}>
+          <Brightness3 style={{ color: 'var(--headerColor)' }} />
         </IconButton>
       )}
     </>
@@ -37,8 +29,4 @@ const IconButton = styled.button`
   border: none;
   box-shadow: none;
   padding: 0;
-
-  &:focus {
-    outline: none;
-  }
 `;
