@@ -23,9 +23,10 @@ const HomepageMain = () => {
       </TitleBlock>
       <AboutBlock>
         <p>Balanced form and function</p>
+        <p>[Under construction]</p>
       </AboutBlock>
       <CtaWrapper>
-        <Link className='btn' to='/writing/'>
+        <Link className='btn' to='/work/'>
           See my work
         </Link>
       </CtaWrapper>

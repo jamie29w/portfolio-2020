@@ -8,7 +8,7 @@ const NavFooter = () => {
       <StyledLink
         activeClassName='current-page'
         partiallyActive={true}
-        to='/writing/'
+        to='/work/'
       >
         Writing
       </StyledLink>
@@ -22,7 +22,7 @@ const NavFooter = () => {
       <StyledLink
         activeClassName='current-page'
         partiallyActive={true}
-        to='/work/'
+        to='/writing/'
       >
         Work
       </StyledLink>
