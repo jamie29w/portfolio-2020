@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from '@emotion/styled';
 
-const Section = ({ children }) => {
-  return <Wrapper>{children}</Wrapper>;
+const Section = ({ children, ...other }) => {
+  return <Wrapper {...other}>{children}</Wrapper>;
 };
 
 export default Section;
