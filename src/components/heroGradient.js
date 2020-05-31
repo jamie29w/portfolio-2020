@@ -76,10 +76,10 @@ const NameWrapper = styled.div`
 `;
 
 const DarkModeSwitchWrapper = styled.div`
-  align-items: flex-start;
+  align-items: center;
   position: absolute;
-  right: var(--gutterHorizontal);
-  top: var(--gutterHorizontal);
+  right: calc(0.5em + var(--gutterHorizontal));
+  top: calc(0.5em + var(--gutterHorizontal));
 `;
 
 const TitleBlock = styled.div`
