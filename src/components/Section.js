@@ -1,26 +1,14 @@
 import React from 'react';
-import styled from '@emotion/styled';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
+
+import SectionWrapper from './SectionWrapper';
 
 const Section = ({ section: { body } }) => {
   return (
-    <Wrapper>
+    <SectionWrapper>
       <MDXRenderer>{body}</MDXRenderer>
-    </Wrapper>
+    </SectionWrapper>
   );
 };
 
 export default Section;
-
-const Wrapper = styled.ul`
-  align-self: stretch;
-
-  &:not(:first-of-type) {
-    margin-top: calc(2 * var(--spacing));
-  }
-
-  &:not(:last-of-type) {
-    border-bottom: 2px solid var(--secondary);
-    padding-bottom: calc(2 * var(--spacing));
-  }
-`;

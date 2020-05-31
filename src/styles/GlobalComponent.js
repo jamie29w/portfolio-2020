@@ -20,15 +20,19 @@ export const GlobalComponent = () => {
             /* initial palette CSS Vars are hung in gatsby-ssr */
             --headerFontFamily: 'Raleway', sans-serif;
             --bodyFontFamily: 'Open Sans', sans-serif;
-            --gutter: 1rem;
-            --spacing: 1.5rem;
+            --gutterHorizontal: 1rem;
+            --gutterVertical: 0.5rem;
+            --spacing: 2rem;
             --shadowTop: 0px -5px 20px -4px var(--boxShadowColor);
             --navFooterHeight: 84px;
+            --tabletUp: 42em;
+            --desktopUp: 55em;
+            --bodyFontSize: 1rem;
 
             background-color: var(--background);
             box-sizing: border-box;
             font-family: sans-serif;
-            font-size: 18px;
+            font-size: 16px;
             margin: 0;
             padding: 0;
             -ms-text-size-adjust: 100%;
@@ -113,15 +117,28 @@ export const GlobalComponent = () => {
           ul,
           li {
             font-family: 'Open Sans', sans-serif;
-            font-size: 1rem;
+            font-size: var(--bodyFontSize);
             font-weight: 400;
             letter-spacing: 0.5px;
+            line-height: 1.8;
             padding: 0;
             margin: var(--spacing) 0 0;
           }
 
-          p {
-            line-height: 1.4rem;
+          a {
+            color: var(--primary);
+            font-weight: 600;
+            text-decoration: none;
+
+            &:focus {
+              color: var(--primaryHover);
+            }
+
+            @media (hover) {
+              &:hover {
+                color: var(--primaryHover);
+              }
+            }
           }
 
           .btn {
@@ -133,17 +150,6 @@ export const GlobalComponent = () => {
             letter-spacing: 0.4px;
           }
 
-          a {
-            color: var(--primary);
-            font-weight: 600;
-            text-decoration: none;
-
-            &:hover,
-            &:focus {
-              color: var(--primaryHover);
-            }
-          }
-
           ul {
             padding-left: 0;
             margin-top: 0;
@@ -151,6 +157,7 @@ export const GlobalComponent = () => {
 
           li {
             list-style: none;
+            margin-top: calc(0.5 * var(--spacing));
           }
         `}
       />

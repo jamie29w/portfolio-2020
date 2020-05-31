@@ -37,4 +37,8 @@ const IconButton = styled.button`
   border: none;
   box-shadow: none;
   padding: 0;
+
+  &:focus {
+    outline: none;
+  }
 `;

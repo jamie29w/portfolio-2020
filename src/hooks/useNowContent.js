@@ -9,6 +9,9 @@ const useNowContent = () => {
       ) {
         nodes {
           body
+          frontmatter {
+            title
+          }
         }
       }
     }
