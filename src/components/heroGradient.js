@@ -63,7 +63,7 @@ const NameWrapper = styled.div`
     margin-top: 0;
   }
 
-  @media (min-width: 42em) {
+  @media (min-width: 48em) {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -92,7 +92,7 @@ const TitleBlock = styled.div`
     margin-top: 0;
   }
 
-  @media (min-width: 42em) {
+  @media (min-width: 48em) {
     flex-direction: row;
     align-items: flex-end;
     justify-content: center;
@@ -114,7 +114,7 @@ const AboutBlock = styled.div`
     margin-top: 0;
   }
 
-  @media (min-width: 42em) {
+  @media (min-width: 48em) {
     align-items: center;
   }
 `;
@@ -124,7 +124,7 @@ const CtaWrapper = styled.div`
   align-items: flex-start;
   grid-area: cta;
 
-  @media (min-width: 42em) {
+  @media (min-width: 48em) {
     justify-content: center;
   }
 
@@ -142,7 +142,7 @@ const CtaWrapper = styled.div`
     text-align: center;
     width: 100%;
 
-    @media (min-width: 42em) {
+    @media (min-width: 48em) {
       max-width: 200px;
     }
 

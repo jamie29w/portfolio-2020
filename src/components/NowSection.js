@@ -26,7 +26,7 @@ const GridList = styled.ul`
   display: grid;
   grid-template-columns: 1fr;
 
-  @media (min-width: 55em) {
+  @media (min-width: 62em) {
     grid-template-columns: repeat(4, 1fr);
   }
 `;

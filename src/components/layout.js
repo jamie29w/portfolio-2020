@@ -33,16 +33,15 @@ const Layout = ({ title, children }) => {
 export default Layout;
 
 const LayoutWrapper = styled.div`
-  background: var(--gradient2Layout);
+  background: var(--background);
   background-attachment: fixed;
   min-height: 100vh;
   padding: var(--gutterVertical) var(--gutterHorizontal);
   width: 100%;
 
-  @media (min-width: 42em) {
+  @media (min-width: 48em) {
     padding: var(--gutterVertical) var(--gutterHorizontal)
       calc(var(--gutterVertical) + 1rem);
-    /* padding-bottom: calc(var(--gutterHorizontal) + 1rem); */
   }
 `;
 
@@ -56,7 +55,7 @@ const Main = styled.main`
   min-height: 100vh;
   padding-bottom: calc(var(--gutterVertical) + 2rem + calc(2 * var(--spacing)));
 
-  @media (min-width: 55em) {
+  @media (min-width: 62em) {
     padding-bottom: 0;
   }
 `;
