@@ -25,8 +25,11 @@ const DarkModeSwitch = () => {
 export default DarkModeSwitch;
 
 const IconButton = styled.button`
+  align-items: center;
   background: transparent;
   border: none;
   box-shadow: none;
+  display: flex;
+  justify-content: center;
   padding: 0;
 `;
