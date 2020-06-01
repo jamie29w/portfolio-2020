@@ -1,4 +1,5 @@
 import React from 'react';
+import { css } from '@emotion/core';
 import styled from '@emotion/styled';
 import { Link } from 'gatsby';
 
@@ -7,33 +8,48 @@ import DarkModeSwitch from './DarkModeSwitch';
 const Header = () => {
   return (
     <HeaderWrapper>
-      <NameLink className='h3' to='/'>
-        Jamie Woodmancy
-      </NameLink>
-      <NavLinksWrapper>
-        <StyledLink
-          activeClassName='current-page'
-          partiallyActive={true}
-          to='/work/'
-        >
-          Work
-        </StyledLink>
-        <StyledLink
-          activeClassName='current-page'
-          partiallyActive={true}
-          to='/now/'
-        >
-          Now
-        </StyledLink>
-        <StyledLink
-          activeClassName='current-page'
-          partiallyActive={true}
-          to='/writing/'
-        >
-          Writing
-        </StyledLink>
-      </NavLinksWrapper>
-      <DarkModeSwitch />
+      <InnerWrapper>
+        <NameLink className='h3' to='/'>
+          Jamie Woodmancy
+        </NameLink>
+        <NavLinksWrapper>
+          <StyledLink
+            activeClassName='current-page'
+            partiallyActive={true}
+            to='/work/'
+          >
+            Work
+          </StyledLink>
+          <StyledLink
+            activeClassName='current-page'
+            partiallyActive={true}
+            to='/now/'
+          >
+            Now
+          </StyledLink>
+          <StyledLink
+            activeClassName='current-page'
+            partiallyActive={true}
+            to='/writing/'
+          >
+            Writing
+          </StyledLink>
+          <DarkModeSwitch
+            css={css`
+              margin-bottom: calc(0.25 * var(--spacing));
+              margin-left: calc(0.25 * var(--spacing));
+            `}
+          />
+        </NavLinksWrapper>
+        <SoloDMSwitchWrapper>
+          <DarkModeSwitch
+            css={css`
+              margin-bottom: calc(0.25 * var(--spacing));
+              margin-left: calc(0.25 * var(--spacing));
+            `}
+          />
+        </SoloDMSwitchWrapper>
+      </InnerWrapper>
     </HeaderWrapper>
   );
 };
@@ -41,13 +57,28 @@ const Header = () => {
 export default Header;
 
 const HeaderWrapper = styled.header`
+  @media (min-width: 62rem) {
+    background-color: var(--background);
+    box-shadow: var(--shadowBottom);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0 var(--gutterHorizontal);
+  }
+`;
+
+const InnerWrapper = styled.header`
   align-items: center;
   display: flex;
-  padding: var(--gutterHorizontal);
-  padding: 0;
   justify-content: space-between;
-  max-width: 1080px;
   margin: 0 auto;
+  max-width: 1080px;
+  padding: 0;
+
+  @media (min-width: 62em) {
+    padding: 0;
+  }
 `;
 
 const NameLink = styled(Link)`
@@ -62,7 +93,6 @@ const NavLinksWrapper = styled.div`
     align-items: flex-end;
     display: flex;
     flex: 1;
-    margin-right: var(--spacing);
   }
 `;
 
@@ -76,5 +106,13 @@ const StyledLink = styled(Link)`
   &.current-page {
     border-bottom: 2px solid var(--primary);
     font-weight: 700;
+  }
+`;
+
+const SoloDMSwitchWrapper = styled.div`
+  display: flex;
+
+  @media (min-width: 62em) {
+    display: none;
   }
 `;

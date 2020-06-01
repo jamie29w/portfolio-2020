@@ -23,6 +23,7 @@ export const GlobalComponent = () => {
             --gutterHorizontal: 1rem;
             --gutterVertical: 0.5rem;
             --spacing: 2rem;
+            --shadowBottom: 0px 5px 20px -4px var(--boxShadowColor);
             --shadowTop: 0px -5px 20px -4px var(--boxShadowColor);
             --navFooterHeight: 84px;
             --tabletUp: 48em;
