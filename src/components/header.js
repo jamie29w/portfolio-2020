@@ -57,14 +57,16 @@ const Header = () => {
 export default Header;
 
 const HeaderWrapper = styled.header`
+  transition: 0.3s;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: var(--background);
+  padding: 0 var(--gutterHorizontal);
+  width: 100%;
+
   @media (min-width: 62rem) {
-    background-color: var(--background);
     box-shadow: var(--shadowBottom);
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 0 var(--gutterHorizontal);
   }
 `;
 
