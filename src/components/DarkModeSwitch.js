@@ -5,17 +5,17 @@ import styled from '@emotion/styled';
 
 import { ThemeContext } from '../providers/ThemeProvider';
 
-const DarkModeSwitch = () => {
+const DarkModeSwitch = props => {
   const { themeType, setThemeType } = useContext(ThemeContext);
 
   return (
     <>
       {themeType === 'dark' ? (
-        <IconButton onClick={() => setThemeType('light')}>
+        <IconButton onClick={() => setThemeType('light')} {...props}>
           <WbSunny />
         </IconButton>
       ) : (
-        <IconButton onClick={() => setThemeType('dark')}>
+        <IconButton onClick={() => setThemeType('dark')} {...props}>
           <Brightness3 />
         </IconButton>
       )}
