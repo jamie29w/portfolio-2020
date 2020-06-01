@@ -7,7 +7,7 @@ import SEO from '../components/seo';
 const IndexPage = () => {
   return (
     <IndexPageWrapper>
-      <SEO title='Hello' />
+      <SEO title='Home' />
       <HeroGradient />
     </IndexPageWrapper>
   );

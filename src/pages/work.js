@@ -8,7 +8,7 @@ import SEO from '../components/seo';
 // import Section from '../components/Section';
 // import useWorkContent from '../hooks/useWorkContent';
 
-const pageTitle = 'Work';
+const pageTitle = 'Recent Work';
 
 const Work = () => {
   // const workSections = useWorkContent();
