@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { css } from '@emotion/core';
 import styled from '@emotion/styled';
 import { Link } from 'gatsby';
@@ -6,10 +6,26 @@ import { Link } from 'gatsby';
 import DarkModeSwitch from './DarkModeSwitch';
 
 const Header = () => {
+  const [showShadow, setShowShadow] = useState(false);
+  const nameRef = useRef(null);
+
+  useEffect(() => {
+    function handleScroll() {
+      const _window = window;
+      const heightDiff = parseInt(nameRef.current.offsetHeight);
+      const scrollPos = _window.scrollY;
+      setShowShadow(scrollPos > heightDiff);
+    }
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <HeaderWrapper>
+    <HeaderWrapper showShadow={showShadow}>
       <InnerWrapper>
-        <NameLink className='h3' to='/'>
+        <NameLink className='h3' ref={nameRef} to='/'>
           Jamie Woodmancy
         </NameLink>
         <NavLinksWrapper>
@@ -42,12 +58,7 @@ const Header = () => {
           />
         </NavLinksWrapper>
         <SoloDMSwitchWrapper>
-          <DarkModeSwitch
-            css={css`
-              margin-bottom: calc(0.25 * var(--spacing));
-              margin-left: calc(0.25 * var(--spacing));
-            `}
-          />
+          <DarkModeSwitch />
         </SoloDMSwitchWrapper>
       </InnerWrapper>
     </HeaderWrapper>
@@ -57,16 +68,23 @@ const Header = () => {
 export default Header;
 
 const HeaderWrapper = styled.header`
-  transition: 0.3s;
+  background-color: var(--background);
+  box-shadow: ${({ showShadow }) =>
+    showShadow ? 'var(--shadowBottom)' : 'none'};
+  left: 0;
   position: fixed;
   top: 0;
-  left: 0;
-  background-color: var(--background);
-  padding: 0 var(--gutterHorizontal);
+  transition: 0.3s;
+  padding: var(--gutterVertical) var(--gutterHorizontal);
   width: 100%;
+  z-index: 500;
+
+  @media (min-width: 48rem) {
+    padding: calc(0.5 * var(--gutterVertical)) var(--gutterHorizontal);
+  }
 
   @media (min-width: 62rem) {
-    box-shadow: var(--shadowBottom);
+    padding: calc(0.5 * var(--gutterVertical)) var(--gutterHorizontal);
   }
 `;
 
