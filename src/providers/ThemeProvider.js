@@ -82,6 +82,13 @@ export default function ThemeProvider({ children }) {
     );
 
     root.style.setProperty(
+      '--darkModeSwitchHover',
+      newValue === 'light'
+        ? colors.light.primaryHover
+        : colors.dark.secondaryHover
+    );
+
+    root.style.setProperty(
       '--boxShadowColor',
       newValue === 'light'
         ? colors.light.boxShadowColor

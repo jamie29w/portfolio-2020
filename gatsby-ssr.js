@@ -79,6 +79,11 @@ const MagicScriptTag = () => {
       );
 
       root.style.setProperty(
+        '--darkModeSwitchHover',
+        colorMode === 'light' ? '${colors.light.primaryHover}' : '${colors.dark.secondaryHover}'
+      );
+
+      root.style.setProperty(
         '--boxShadowColor',
         colorMode === 'light' ? '${colors.light.boxShadowColor}' : '${colors.dark.boxShadowColor}'
       );

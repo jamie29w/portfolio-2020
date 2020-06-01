@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { Brightness3, WbSunny } from '@material-ui/icons';
+import { css } from '@emotion/core';
 import styled from '@emotion/styled';
 
 import { ThemeContext } from '../providers/ThemeProvider';
@@ -11,15 +12,11 @@ const DarkModeSwitch = () => {
     <>
       {themeType === 'dark' ? (
         <IconButton onClick={() => setThemeType('light')}>
-          <WbSunny
-            style={{ color: 'var(--headerColor)', height: 32, width: 32 }}
-          />
+          <WbSunny />
         </IconButton>
       ) : (
         <IconButton onClick={() => setThemeType('dark')}>
-          <Brightness3
-            style={{ color: 'var(--headerColor)', height: 32, width: 32 }}
-          />
+          <Brightness3 />
         </IconButton>
       )}
     </>
@@ -38,4 +35,18 @@ const IconButton = styled.button`
   padding: 0;
   height: 44px;
   width: 44px;
+
+  & > svg {
+    color: var(--headerColor);
+    height: 32;
+    width: 32;
+    transition: 0.3s;
+  }
+
+  &:focus,
+  &:hover {
+    & > svg {
+      color: var(--darkModeSwitchHover);
+    }
+  }
 `;
