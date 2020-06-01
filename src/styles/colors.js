@@ -11,7 +11,7 @@ export const colors = {
     primary: primaryColor,
     primaryHover: primaryColor.lighten(0.3),
     secondary: secondaryColor,
-    secondaryHover: primaryColor.lighten(0.3),
+    secondaryHover: secondaryColor.lighten(0.3),
     header: 'rgba(35, 35, 35, 0.87)',
     paragraph: 'rgba(75, 75, 75, 0.87)',
     background: 'rgba(255, 255, 255, 1)',
