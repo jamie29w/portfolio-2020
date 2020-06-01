@@ -10,7 +10,7 @@ const NavFooter = () => {
         partiallyActive={true}
         to='/work/'
       >
-        Writing
+        Work
       </StyledLink>
       <StyledLink
         activeClassName='current-page'
@@ -24,7 +24,7 @@ const NavFooter = () => {
         partiallyActive={true}
         to='/writing/'
       >
-        Work
+        Writing
       </StyledLink>
     </NavFooterWrapper>
   );
@@ -41,7 +41,7 @@ const NavFooterWrapper = styled.div`
   justify-content: space-between;
   position: fixed;
   width: 100%;
-  z-index: 900;
+  z-index: 500;
 
   @media (min-width: 62em) {
     display: none;
