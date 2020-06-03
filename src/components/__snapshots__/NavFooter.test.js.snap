@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NavFooter renders correctly in dark mode 1`] = `
+<div
+  className="css-w8m5gk"
+>
+  <a
+    className="css-1enyijk"
+    href="/work/"
+  >
+    Work
+  </a>
+  <a
+    className="css-1enyijk"
+    href="/now/"
+  >
+    Now
+  </a>
+  <a
+    className="css-1enyijk"
+    href="/writing/"
+  >
+    Writing
+  </a>
+</div>
+`;
+
+exports[`NavFooter renders correctly in light mode 1`] = `
+<div
+  className="css-w8m5gk"
+>
+  <a
+    className="css-1enyijk"
+    href="/work/"
+  >
+    Work
+  </a>
+  <a
+    className="css-1enyijk"
+    href="/now/"
+  >
+    Now
+  </a>
+  <a
+    className="css-1enyijk"
+    href="/writing/"
+  >
+    Writing
+  </a>
+</div>
+`;
