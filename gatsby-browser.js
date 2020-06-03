@@ -8,8 +8,7 @@
 
 import React from 'react';
 
-import { GlobalComponent } from './src/styles';
-import ThemeProvider from './src/providers/ThemeProvider';
+import { GlobalComponent, ThemeProvider } from './src/styles';
 
 export const wrapRootElement = ({ element }) => {
   return (

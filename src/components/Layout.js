@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
 
-import Header from './header';
+import Header from './Header';
 import NavFooter from './NavFooter';
 
 const Layout = ({ title, children }) => {

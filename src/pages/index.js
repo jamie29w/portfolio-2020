@@ -1,14 +1,13 @@
 import React from 'react';
 import styled from '@emotion/styled';
 
-import HeroGradient from '../components/heroGradient';
-import SEO from '../components/seo';
+import { HomepageMain, Seo } from '../components';
 
 const IndexPage = () => {
   return (
     <IndexPageWrapper>
-      <SEO title='Home' />
-      <HeroGradient />
+      <Seo title='Home' />
+      <HomepageMain />
     </IndexPageWrapper>
   );
 };

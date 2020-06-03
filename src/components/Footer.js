@@ -2,9 +2,7 @@ import React from 'react';
 import { css } from '@emotion/core';
 import styled from '@emotion/styled';
 
-import gatsbyIcon from '../../images/gatsby-icon.png';
-import netlifyIcon from '../../images/netlify-icon.png';
-import reactIcon from '../../images/react-icon.png';
+import { gatsbyIcon, netlifyIcon, reactIcon } from '../../images';
 
 const Footer = props => {
   return (
