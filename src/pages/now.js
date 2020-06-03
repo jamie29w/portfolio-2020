@@ -1,11 +1,9 @@
 import React from 'react';
 import styled from '@emotion/styled';
 
-import Layout from '../components/layout';
-import SEO from '../components/seo';
-import useNowContent from '../hooks/useNowContent';
+import { Layout, NowSection, Seo } from '../components';
+import { useNowContent } from '../hooks';
 
-import NowSection from '../components/NowSection';
 const pageTitle = 'Now';
 
 const Now = () => {
@@ -13,7 +11,7 @@ const Now = () => {
 
   return (
     <Layout title={pageTitle}>
-      <SEO title={pageTitle} />
+      <Seo title={pageTitle} />
       <p>I'm really bad at favorites. But here are my currents:</p>
       <NowSectionWrapper>
         {nowSections.map((section, i) => (

@@ -1,9 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
 
-import Layout from '../components/layout';
-import SectionWrapper from '../components/SectionWrapper';
-import SEO from '../components/seo';
+import { Layout, SectionWrapper, Seo } from '../components';
 
 // import Section from '../components/Section';
 // import useWorkContent from '../hooks/useWorkContent';
@@ -15,7 +13,7 @@ const Work = () => {
 
   return (
     <Layout title='Recent work'>
-      <SEO title={pageTitle} />
+      <Seo title={pageTitle} />
       <WorkSections>
         {/* todo: figure out how to get components working in MDX files so I can move content/copy out of this file */}
 

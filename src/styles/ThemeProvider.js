@@ -1,9 +1,9 @@
 import React, { createContext, useEffect, useState } from 'react';
-import { colors } from '../styles';
+import { colors } from './colors';
 
 export const ThemeContext = createContext(null);
 
-export default function ThemeProvider({ children }) {
+export const ThemeProvider = ({ children }) => {
   const [themeType, rawSetThemeType] = useState(undefined);
 
   // reading on render prevents toggle from getting out of sync
@@ -113,4 +113,4 @@ export default function ThemeProvider({ children }) {
       {children}
     </ThemeContext.Provider>
   );
-}
+};

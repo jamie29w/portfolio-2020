@@ -4,7 +4,7 @@ import styled from '@emotion/styled';
 import { Link } from 'gatsby';
 
 import DarkModeSwitch from './DarkModeSwitch';
-import Footer from './footer';
+import Footer from './Footer';
 
 const HomepageMain = () => {
   return (

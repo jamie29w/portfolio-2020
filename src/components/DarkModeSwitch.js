@@ -1,9 +1,8 @@
 import React, { useContext } from 'react';
 import { Brightness3, WbSunny } from '@material-ui/icons';
-import { css } from '@emotion/core';
 import styled from '@emotion/styled';
 
-import { ThemeContext } from '../providers/ThemeProvider';
+import { ThemeContext } from '../styles';
 
 const DarkModeSwitch = props => {
   const { themeType, setThemeType } = useContext(ThemeContext);

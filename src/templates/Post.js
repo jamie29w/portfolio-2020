@@ -4,7 +4,7 @@ import { graphql, Link } from 'gatsby';
 import BackgroundImage from 'gatsby-background-image';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 
-import Layout from '../components/layout';
+import { Layout } from '../components';
 
 export const query = graphql`
   query($nextPostSlug: String, $prevPostSlug: String, $slug: String!) {

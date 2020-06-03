@@ -1,8 +1,6 @@
 import React from 'react';
 
-import ThemeProvider from './src/providers/ThemeProvider';
-import { colors } from './src/styles';
-import { GlobalComponent } from './src/styles';
+import { colors, GlobalComponent, ThemeProvider } from './src/styles';
 
 const MagicScriptTag = () => {
   const codeToRunOnClient = `

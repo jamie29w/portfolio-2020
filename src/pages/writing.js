@@ -1,10 +1,8 @@
 import React from 'react';
 import styled from '@emotion/styled';
 
-import Layout from '../components/layout';
-import PostPreview from '../components/postPreview';
-import SEO from '../components/seo';
-import usePosts from '../hooks/usePosts';
+import { Layout, PostPreview, Seo } from '../components';
+import { usePosts } from '../hooks';
 
 const pageTitle = 'Writing';
 
@@ -13,7 +11,7 @@ const Writing = () => {
 
   return (
     <Layout title={pageTitle}>
-      <SEO title={pageTitle} />
+      <Seo title={pageTitle} />
       <p>
         I only promise...to write here. This isn't{' '}
         <a
