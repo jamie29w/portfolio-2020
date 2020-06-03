@@ -1,6 +1,6 @@
 module.exports = {
   transform: {
-    '^.+\\.jsx?$': `<rootDir>/jest-preprocess.js`,
+    '^.+\\.(jsx|js)?$': `<rootDir>/jest-preprocess.js`,
   },
   moduleNameMapper: {
     '.+\\.(css|styl|less|sass|scss)$': `identity-obj-proxy`,
