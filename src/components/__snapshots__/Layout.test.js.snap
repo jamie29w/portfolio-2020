@@ -1,0 +1,225 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Layout renders correctly in dark mode 1`] = `
+<div
+  className="css-s0dw1h"
+>
+  <header
+    className="css-1aqmb4e"
+  >
+    <header
+      className="css-1tw4u1q"
+    >
+      <a
+        className="h3 css-fsljql"
+        href="/"
+      >
+        Jamie Woodmancy
+      </a>
+      <div
+        className="css-1xz5piw"
+      >
+        <a
+          className="css-aojknb"
+          href="/work/"
+        >
+          Work
+        </a>
+        <a
+          className="css-aojknb"
+          href="/now/"
+        >
+          Now
+        </a>
+        <a
+          className="css-aojknb"
+          href="/writing/"
+        >
+          Writing
+        </a>
+        <button
+          className="css-9xbtd6"
+          onClick={[Function]}
+        >
+          <svg
+            aria-hidden={true}
+            className="MuiSvgIcon-root"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M9 2c-1.05 0-2.05.16-3 .46 4.06 1.27 7 5.06 7 9.54 0 4.48-2.94 8.27-7 9.54.95.3 1.95.46 3 .46 5.52 0 10-4.48 10-10S14.52 2 9 2z"
+            />
+          </svg>
+        </button>
+      </div>
+      <div
+        className="css-16hq6ks"
+      >
+        <button
+          className="css-9xbtd6"
+          onClick={[Function]}
+        >
+          <svg
+            aria-hidden={true}
+            className="MuiSvgIcon-root"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M9 2c-1.05 0-2.05.16-3 .46 4.06 1.27 7 5.06 7 9.54 0 4.48-2.94 8.27-7 9.54.95.3 1.95.46 3 .46 5.52 0 10-4.48 10-10S14.52 2 9 2z"
+            />
+          </svg>
+        </button>
+      </div>
+    </header>
+  </header>
+  <main
+    className="css-1o8olku"
+  >
+    <h1>
+      mockTitle for Layout
+    </h1>
+    <h2>
+      hey there!
+    </h2>
+    <p>
+      mock body content, etc
+    </p>
+  </main>
+  <div
+    className="css-w8m5gk"
+  >
+    <a
+      className="css-1enyijk"
+      href="/work/"
+    >
+      Work
+    </a>
+    <a
+      className="css-1enyijk"
+      href="/now/"
+    >
+      Now
+    </a>
+    <a
+      className="css-1enyijk"
+      href="/writing/"
+    >
+      Writing
+    </a>
+  </div>
+</div>
+`;
+
+exports[`Layout renders correctly in light mode 1`] = `
+<div
+  className="css-s0dw1h"
+>
+  <header
+    className="css-1aqmb4e"
+  >
+    <header
+      className="css-1tw4u1q"
+    >
+      <a
+        className="h3 css-fsljql"
+        href="/"
+      >
+        Jamie Woodmancy
+      </a>
+      <div
+        className="css-1xz5piw"
+      >
+        <a
+          className="css-aojknb"
+          href="/work/"
+        >
+          Work
+        </a>
+        <a
+          className="css-aojknb"
+          href="/now/"
+        >
+          Now
+        </a>
+        <a
+          className="css-aojknb"
+          href="/writing/"
+        >
+          Writing
+        </a>
+        <button
+          className="css-9xbtd6"
+          onClick={[Function]}
+        >
+          <svg
+            aria-hidden={true}
+            className="MuiSvgIcon-root"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M9 2c-1.05 0-2.05.16-3 .46 4.06 1.27 7 5.06 7 9.54 0 4.48-2.94 8.27-7 9.54.95.3 1.95.46 3 .46 5.52 0 10-4.48 10-10S14.52 2 9 2z"
+            />
+          </svg>
+        </button>
+      </div>
+      <div
+        className="css-16hq6ks"
+      >
+        <button
+          className="css-9xbtd6"
+          onClick={[Function]}
+        >
+          <svg
+            aria-hidden={true}
+            className="MuiSvgIcon-root"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M9 2c-1.05 0-2.05.16-3 .46 4.06 1.27 7 5.06 7 9.54 0 4.48-2.94 8.27-7 9.54.95.3 1.95.46 3 .46 5.52 0 10-4.48 10-10S14.52 2 9 2z"
+            />
+          </svg>
+        </button>
+      </div>
+    </header>
+  </header>
+  <main
+    className="css-1o8olku"
+  >
+    <h1>
+      mockTitle for Layout
+    </h1>
+    <h2>
+      hey there!
+    </h2>
+    <p>
+      mock body content, etc
+    </p>
+  </main>
+  <div
+    className="css-w8m5gk"
+  >
+    <a
+      className="css-1enyijk"
+      href="/work/"
+    >
+      Work
+    </a>
+    <a
+      className="css-1enyijk"
+      href="/now/"
+    >
+      Now
+    </a>
+    <a
+      className="css-1enyijk"
+      href="/writing/"
+    >
+      Writing
+    </a>
+  </div>
+</div>
+`;

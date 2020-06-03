@@ -1,0 +1,295 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HomepageMain renders correctly in dark mode 1`] = `
+<div
+  className="css-1jrakj0"
+>
+  <div
+    className="css-41gcnh"
+  >
+    <h2>
+      Jamie
+    </h2>
+    <h2>
+      Woodmancy
+    </h2>
+  </div>
+  <div
+    className="css-1b2m9z"
+  >
+    <button
+      className="css-9xbtd6"
+      onClick={[Function]}
+    >
+      <svg
+        aria-hidden={true}
+        className="MuiSvgIcon-root"
+        focusable="false"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M9 2c-1.05 0-2.05.16-3 .46 4.06 1.27 7 5.06 7 9.54 0 4.48-2.94 8.27-7 9.54.95.3 1.95.46 3 .46 5.52 0 10-4.48 10-10S14.52 2 9 2z"
+        />
+      </svg>
+    </button>
+  </div>
+  <div
+    className="css-17s6pf5"
+  >
+    <h1>
+      Front
+    </h1>
+    <h1>
+      End
+    </h1>
+    <h1>
+      Engineer
+    </h1>
+  </div>
+  <div
+    className="css-1ah2vuk"
+  >
+    <p>
+      Balanced form and function
+    </p>
+    <p>
+      [Under construction]
+    </p>
+  </div>
+  <div
+    className="css-1bmuida"
+  >
+    <a
+      className="btn"
+      href="/work/"
+    >
+      See my work
+    </a>
+  </div>
+  <footer
+    className="css-9zmaun"
+  >
+    <span
+      className="caption"
+    >
+      Woodmancy Dev™ 
+      2020
+      , built with
+    </span>
+    <span
+      className="css-1g2vfi9"
+    >
+      <a
+        href="https://www.reactjs.org"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <img
+          alt="link to react homepage"
+          css={
+            Object {
+              "map": undefined,
+              "name": "rmhaug",
+              "next": undefined,
+              "styles": "
+                  height: 20px;
+                ",
+              "toString": [Function],
+            }
+          }
+          src="test-file-stub"
+        />
+      </a>
+      <a
+        href="https://www.gatsbyjs.org"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <img
+          alt="link to gatsby homepage"
+          css={
+            Object {
+              "map": undefined,
+              "name": "rmhaug",
+              "next": undefined,
+              "styles": "
+                  height: 20px;
+                ",
+              "toString": [Function],
+            }
+          }
+          src="test-file-stub"
+        />
+      </a>
+      <a
+        href="https://www.netlify.com"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <img
+          alt="link to netlify homepage"
+          css={
+            Object {
+              "map": undefined,
+              "name": "rmhaug",
+              "next": undefined,
+              "styles": "
+                  height: 20px;
+                ",
+              "toString": [Function],
+            }
+          }
+          src="test-file-stub"
+        />
+      </a>
+    </span>
+  </footer>
+</div>
+`;
+
+exports[`HomepageMain renders correctly in light mode 1`] = `
+<div
+  className="css-1jrakj0"
+>
+  <div
+    className="css-41gcnh"
+  >
+    <h2>
+      Jamie
+    </h2>
+    <h2>
+      Woodmancy
+    </h2>
+  </div>
+  <div
+    className="css-1b2m9z"
+  >
+    <button
+      className="css-9xbtd6"
+      onClick={[Function]}
+    >
+      <svg
+        aria-hidden={true}
+        className="MuiSvgIcon-root"
+        focusable="false"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M9 2c-1.05 0-2.05.16-3 .46 4.06 1.27 7 5.06 7 9.54 0 4.48-2.94 8.27-7 9.54.95.3 1.95.46 3 .46 5.52 0 10-4.48 10-10S14.52 2 9 2z"
+        />
+      </svg>
+    </button>
+  </div>
+  <div
+    className="css-17s6pf5"
+  >
+    <h1>
+      Front
+    </h1>
+    <h1>
+      End
+    </h1>
+    <h1>
+      Engineer
+    </h1>
+  </div>
+  <div
+    className="css-1ah2vuk"
+  >
+    <p>
+      Balanced form and function
+    </p>
+    <p>
+      [Under construction]
+    </p>
+  </div>
+  <div
+    className="css-1bmuida"
+  >
+    <a
+      className="btn"
+      href="/work/"
+    >
+      See my work
+    </a>
+  </div>
+  <footer
+    className="css-9zmaun"
+  >
+    <span
+      className="caption"
+    >
+      Woodmancy Dev™ 
+      2020
+      , built with
+    </span>
+    <span
+      className="css-1g2vfi9"
+    >
+      <a
+        href="https://www.reactjs.org"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <img
+          alt="link to react homepage"
+          css={
+            Object {
+              "map": undefined,
+              "name": "rmhaug",
+              "next": undefined,
+              "styles": "
+                  height: 20px;
+                ",
+              "toString": [Function],
+            }
+          }
+          src="test-file-stub"
+        />
+      </a>
+      <a
+        href="https://www.gatsbyjs.org"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <img
+          alt="link to gatsby homepage"
+          css={
+            Object {
+              "map": undefined,
+              "name": "rmhaug",
+              "next": undefined,
+              "styles": "
+                  height: 20px;
+                ",
+              "toString": [Function],
+            }
+          }
+          src="test-file-stub"
+        />
+      </a>
+      <a
+        href="https://www.netlify.com"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <img
+          alt="link to netlify homepage"
+          css={
+            Object {
+              "map": undefined,
+              "name": "rmhaug",
+              "next": undefined,
+              "styles": "
+                  height: 20px;
+                ",
+              "toString": [Function],
+            }
+          }
+          src="test-file-stub"
+        />
+      </a>
+    </span>
+  </footer>
+</div>
+`;

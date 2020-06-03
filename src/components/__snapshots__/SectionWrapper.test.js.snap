@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SectionWrapper renders correctly in dark mode 1`] = `
+<div
+  className="css-1hgl6k4"
+/>
+`;
+
+exports[`SectionWrapper renders correctly in light mode 1`] = `
+<div
+  className="css-1hgl6k4"
+/>
+`;

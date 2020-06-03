@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PostPreview renders correctly in dark mode 1`] = `
+<div
+  className="css-1hgl6k4"
+>
+  <a
+    className="h3"
+    href="/writing/mock-post-slug/"
+  >
+    mockPostTitle
+  </a>
+  <p>
+    mocPostExcerpt lorem ipsum...
+  </p>
+  <a
+    className="css-1w26vfw"
+    href="/writing/mock-post-slug/"
+  >
+    Read more...
+  </a>
+</div>
+`;
+
+exports[`PostPreview renders correctly in light mode 1`] = `
+<div
+  className="css-1hgl6k4"
+>
+  <a
+    className="h3"
+    href="/writing/mock-post-slug/"
+  >
+    mockPostTitle
+  </a>
+  <p>
+    mocPostExcerpt lorem ipsum...
+  </p>
+  <a
+    className="css-1w26vfw"
+    href="/writing/mock-post-slug/"
+  >
+    Read more...
+  </a>
+</div>
+`;

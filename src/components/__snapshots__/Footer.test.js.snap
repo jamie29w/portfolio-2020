@@ -1,0 +1,163 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer renders correctly in dark mode 1`] = `
+<footer
+  className="css-9zmaun"
+>
+  <span
+    className="caption"
+  >
+    Woodmancy Dev™ 
+    2020
+    , built with
+  </span>
+  <span
+    className="css-1g2vfi9"
+  >
+    <a
+      href="https://www.reactjs.org"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      <img
+        alt="link to react homepage"
+        css={
+          Object {
+            "map": undefined,
+            "name": "rmhaug",
+            "next": undefined,
+            "styles": "
+                  height: 20px;
+                ",
+            "toString": [Function],
+          }
+        }
+        src="test-file-stub"
+      />
+    </a>
+    <a
+      href="https://www.gatsbyjs.org"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      <img
+        alt="link to gatsby homepage"
+        css={
+          Object {
+            "map": undefined,
+            "name": "rmhaug",
+            "next": undefined,
+            "styles": "
+                  height: 20px;
+                ",
+            "toString": [Function],
+          }
+        }
+        src="test-file-stub"
+      />
+    </a>
+    <a
+      href="https://www.netlify.com"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      <img
+        alt="link to netlify homepage"
+        css={
+          Object {
+            "map": undefined,
+            "name": "rmhaug",
+            "next": undefined,
+            "styles": "
+                  height: 20px;
+                ",
+            "toString": [Function],
+          }
+        }
+        src="test-file-stub"
+      />
+    </a>
+  </span>
+</footer>
+`;
+
+exports[`Footer renders correctly in light mode 1`] = `
+<footer
+  className="css-9zmaun"
+>
+  <span
+    className="caption"
+  >
+    Woodmancy Dev™ 
+    2020
+    , built with
+  </span>
+  <span
+    className="css-1g2vfi9"
+  >
+    <a
+      href="https://www.reactjs.org"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      <img
+        alt="link to react homepage"
+        css={
+          Object {
+            "map": undefined,
+            "name": "rmhaug",
+            "next": undefined,
+            "styles": "
+                  height: 20px;
+                ",
+            "toString": [Function],
+          }
+        }
+        src="test-file-stub"
+      />
+    </a>
+    <a
+      href="https://www.gatsbyjs.org"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      <img
+        alt="link to gatsby homepage"
+        css={
+          Object {
+            "map": undefined,
+            "name": "rmhaug",
+            "next": undefined,
+            "styles": "
+                  height: 20px;
+                ",
+            "toString": [Function],
+          }
+        }
+        src="test-file-stub"
+      />
+    </a>
+    <a
+      href="https://www.netlify.com"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      <img
+        alt="link to netlify homepage"
+        css={
+          Object {
+            "map": undefined,
+            "name": "rmhaug",
+            "next": undefined,
+            "styles": "
+                  height: 20px;
+                ",
+            "toString": [Function],
+          }
+        }
+        src="test-file-stub"
+      />
+    </a>
+  </span>
+</footer>
+`;
