@@ -150,6 +150,14 @@ export const GlobalComponent = () => {
           .caption {
             font-size: 0.8rem;
             letter-spacing: 0.4px;
+
+            & > a,
+            p,
+            ul,
+            li {
+              font-size: 0.8rem;
+              letter-spacing: 0.4px;
+            }
           }
 
           ul {
