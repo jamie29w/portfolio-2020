@@ -26,27 +26,18 @@ describe('Post', () => {
     },
   };
 
-  it('renders correctly in light mode', () => {
-    const comp = renderer
-      .create(
-        <ThemeProvider value={'light'}>
-          <Post data={mockData} />
-        </ThemeProvider>
-      )
-      .toJSON();
+  test.each([['light'], ['dark']])(
+    'renders correctly in %s mode',
+    themeValue => {
+      const comp = renderer
+        .create(
+          <ThemeProvider value={themeValue}>
+            <Post data={mockData} />
+          </ThemeProvider>
+        )
+        .toJSON();
 
-    expect(comp).toMatchSnapshot();
-  });
-
-  it('renders correctly in dark mode', () => {
-    const comp = renderer
-      .create(
-        <ThemeProvider value={'dark'}>
-          <Post data={mockData} />
-        </ThemeProvider>
-      )
-      .toJSON();
-
-    expect(comp).toMatchSnapshot();
-  });
+      expect(comp).toMatchSnapshot();
+    }
+  );
 });
