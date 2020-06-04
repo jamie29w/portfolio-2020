@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NowSection renders correctly in dark mode 1`] = `
+<div
+  className="css-1hgl6k4"
+>
+  <h3
+    className="css-jk6p7n"
+  >
+    mock title for now section
+  </h3>
+  <ul
+    className="css-1wgs8ps"
+  >
+    <li>
+      The Hub coffee + Tetsu Kasuya edition Hario V60
+    </li>
+    <li>
+      Playing cornole with my wife and kids
+    </li>
+    <li>
+      Perfecting my margarita
+    </li>
+    <li>
+      Building a UI component library
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`NowSection renders correctly in light mode 1`] = `
+<div
+  className="css-1hgl6k4"
+>
+  <h3
+    className="css-jk6p7n"
+  >
+    mock title for now section
+  </h3>
+  <ul
+    className="css-1wgs8ps"
+  >
+    <li>
+      The Hub coffee + Tetsu Kasuya edition Hario V60
+    </li>
+    <li>
+      Playing cornole with my wife and kids
+    </li>
+    <li>
+      Perfecting my margarita
+    </li>
+    <li>
+      Building a UI component library
+    </li>
+  </ul>
+</div>
+`;
