@@ -41,7 +41,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
     actions.createPage({
       path: `writing/${post.frontmatter.slug}`,
-      component: require.resolve('./src/templates/post.js'),
+      component: require.resolve('./src/templates/Post.js'),
       context: {
         slug: `${slug}`,
         prevPostSlug: `${prevPost && prevPost.frontmatter.slug}`,
