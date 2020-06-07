@@ -134,7 +134,7 @@ export const GlobalComponent = () => {
             text-decoration: none;
 
             &:active {
-              color: var(--primaryHover);
+              color: var(--primaryActive);
             }
 
             &:before {

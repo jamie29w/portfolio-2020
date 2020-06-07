@@ -39,13 +39,16 @@ const IconButton = styled.button`
     color: var(--headerColor);
     height: 32;
     width: 32;
-    transition: 0.3s;
+    transition: 0.2s;
+    /* transition: color 0.3s ease-in; */
   }
 
   &:focus,
   &:hover {
     & > svg {
       color: var(--darkModeSwitchHover);
+      transition: 0.2s;
+      /* transition: color 0.3s ease-out; */
     }
   }
 `;

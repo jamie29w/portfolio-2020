@@ -32,8 +32,8 @@ const MagicScriptTag = () => {
       );
 
       root.style.setProperty(
-        '--primaryHover',
-        colorMode === 'light' ? '${colors.light.primaryHover}' : '${colors.dark.primaryHover}'
+        '--primaryActive',
+        colorMode === 'light' ? '${colors.light.primaryActive}' : '${colors.dark.primaryActive}'
       );
 
       root.style.setProperty(
@@ -42,8 +42,8 @@ const MagicScriptTag = () => {
       );
 
       root.style.setProperty(
-        '--secondaryHover',
-        colorMode === 'light' ? '${colors.light.secondaryHover}' : '${colors.dark.secondaryHover}'
+        '--secondaryActive',
+        colorMode === 'light' ? '${colors.light.secondaryActive}' : '${colors.dark.secondaryActive}'
       );
 
       root.style.setProperty(
@@ -78,7 +78,7 @@ const MagicScriptTag = () => {
 
       root.style.setProperty(
         '--darkModeSwitchHover',
-        colorMode === 'light' ? '${colors.light.primaryHover}' : '${colors.dark.secondaryHover}'
+        colorMode === 'light' ? '${colors.light.primary}' : '${colors.dark.secondary}'
       );
 
       root.style.setProperty(

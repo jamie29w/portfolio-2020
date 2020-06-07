@@ -29,10 +29,10 @@ export const ThemeProvider = ({ children }) => {
     );
 
     root.style.setProperty(
-      '--primaryHover',
+      '--primaryActive',
       newValue === 'light'
-        ? colors.light.primaryHover
-        : colors.dark.primaryHover
+        ? colors.light.primaryActive
+        : colors.dark.primaryActive
     );
 
     root.style.setProperty(
@@ -41,10 +41,10 @@ export const ThemeProvider = ({ children }) => {
     );
 
     root.style.setProperty(
-      '--secondaryHover',
+      '--secondaryActive',
       newValue === 'light'
-        ? colors.light.secondaryHover
-        : colors.dark.secondaryHover
+        ? colors.light.secondaryActive
+        : colors.dark.secondaryActive
     );
 
     root.style.setProperty(
@@ -83,9 +83,7 @@ export const ThemeProvider = ({ children }) => {
 
     root.style.setProperty(
       '--darkModeSwitchHover',
-      newValue === 'light'
-        ? colors.light.primaryHover
-        : colors.dark.secondaryHover
+      newValue === 'light' ? colors.light.primary : colors.dark.secondary
     );
 
     root.style.setProperty(
