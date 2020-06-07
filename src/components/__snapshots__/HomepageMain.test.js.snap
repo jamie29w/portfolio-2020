@@ -2,7 +2,7 @@
 
 exports[`HomepageMain renders correctly in dark mode 1`] = `
 <div
-  className="css-1jrakj0"
+  className="css-966dd8"
 >
   <div
     className="css-41gcnh"
@@ -57,10 +57,10 @@ exports[`HomepageMain renders correctly in dark mode 1`] = `
     </p>
   </div>
   <div
-    className="css-1hxsuc"
+    className="css-w2qpid"
   >
     <a
-      className="btn"
+      className="css-13zoe8m"
       href="/work/"
     >
       See my work
@@ -149,7 +149,7 @@ exports[`HomepageMain renders correctly in dark mode 1`] = `
 
 exports[`HomepageMain renders correctly in light mode 1`] = `
 <div
-  className="css-1jrakj0"
+  className="css-966dd8"
 >
   <div
     className="css-41gcnh"
@@ -204,10 +204,10 @@ exports[`HomepageMain renders correctly in light mode 1`] = `
     </p>
   </div>
   <div
-    className="css-1hxsuc"
+    className="css-w2qpid"
   >
     <a
-      className="btn"
+      className="css-13zoe8m"
       href="/work/"
     >
       See my work

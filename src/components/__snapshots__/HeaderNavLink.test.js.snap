@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HeaderNavLink renders correctly in dark mode 1`] = `
+<a
+  className="css-10t6syk"
+  href="/"
+>
+  Test HeaderNavLink Text
+</a>
+`;
+
+exports[`HeaderNavLink renders correctly in light mode 1`] = `
+<a
+  className="css-10t6syk"
+  href="/"
+>
+  Test HeaderNavLink Text
+</a>
+`;
