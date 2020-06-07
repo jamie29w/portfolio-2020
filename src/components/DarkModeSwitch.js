@@ -81,7 +81,6 @@ const Sun = styled.div`
 
 const DotsWrapper = styled.ul`
   --numDots: 6;
-  --stageTime: 0.5s;
   --dotSize: 3px;
   --ease: ease-out;
   --numDot: 0;
@@ -97,7 +96,7 @@ const DotsWrapper = styled.ul`
   margin: 0;
 
   & > li {
-    animation: var(--animationName) calc(var(--numDot) * var(--stageTime));
+    animation: var(--animationName) 1s ease-out;
     animation-fill-mode: forwards;
     background: var(--secondary);
     padding: 0;
@@ -138,6 +137,26 @@ const DotsWrapper = styled.ul`
         opacity: 1;
         transform: translate3d(0, 0, 0);
       }
+      17% {
+        opacity: 1;
+        transform: rotate(-60deg) translate3d(14px, 0, 0);
+      }
+      33% {
+        opacity: 1;
+        transform: rotate(-60deg) translate3d(14px, 0, 0);
+      }
+      50% {
+        opacity: 1;
+        transform: rotate(-60deg) translate3d(14px, 0, 0);
+      }
+      67% {
+        opacity: 1;
+        transform: rotate(-60deg) translate3d(14px, 0, 0);
+      }
+      83% {
+        opacity: 1;
+        transform: rotate(-60deg) translate3d(14px, 0, 0);
+      }
       100% {
         opacity: 1;
         transform: rotate(-60deg) translate3d(14px, 0, 0);
@@ -148,9 +167,25 @@ const DotsWrapper = styled.ul`
       0% {
         transform: translate3d(0, -3px, 0);
       }
-      50% {
+      17% {
         transform: translate3d(0, calc(-3px * calc(var(--numDot) - 1)), 0)
           rotate(-60deg) translate3d(14px, 0, 0);
+      }
+      33% {
+        opacity: 1;
+        transform: translate3d(0, -3px, 0) rotate(0deg) translate3d(14px, 0, 0);
+      }
+      50% {
+        opacity: 1;
+        transform: translate3d(0, -3px, 0) rotate(0deg) translate3d(14px, 0, 0);
+      }
+      67% {
+        opacity: 1;
+        transform: translate3d(0, -3px, 0) rotate(0deg) translate3d(14px, 0, 0);
+      }
+      83% {
+        opacity: 1;
+        transform: translate3d(0, -3px, 0) rotate(0deg) translate3d(14px, 0, 0);
       }
       100% {
         opacity: 1;
@@ -162,12 +197,27 @@ const DotsWrapper = styled.ul`
       0% {
         transform: translate3d(0, -6px, 0);
       }
-      33% {
+      17% {
         transform: translate3d(0, -6px, 0) rotate(-60deg)
           translate3d(14px, 0, 0);
       }
-      66% {
+      33% {
         transform: translate3d(0, -6px, 0) rotate(0deg) translate3d(14px, 0, 0);
+      }
+      50% {
+        opacity: 1;
+
+        transform: translate3d(0, -6px, 0) rotate(60deg) translate3d(14px, 0, 0);
+      }
+      67% {
+        opacity: 1;
+
+        transform: translate3d(0, -6px, 0) rotate(60deg) translate3d(14px, 0, 0);
+      }
+      83% {
+        opacity: 1;
+
+        transform: translate3d(0, -6px, 0) rotate(60deg) translate3d(14px, 0, 0);
       }
       100% {
         opacity: 1;
@@ -179,19 +229,28 @@ const DotsWrapper = styled.ul`
       0% {
         transform: translate3d(0, -9px, 0);
       }
-      25% {
+      17% {
         transform: translate3d(0, -9px, 0) rotate(-60deg)
           translate3d(14px, 0, 0);
       }
-      50% {
+      33% {
         transform: translate3d(0, -9px, 0) rotate(0deg) translate3d(14px, 0, 0);
       }
-      75% {
+      50% {
         transform: translate3d(0, -9px, 0) rotate(60deg) translate3d(14px, 0, 0);
+      }
+      67% {
+        opacity: 1;
+        transform: translate3d(0, -9px, 0) rotate(120deg)
+          translate3d(14px, 0, 0);
+      }
+      83% {
+        opacity: 1;
+        transform: translate3d(0, -9px, 0) rotate(120deg)
+          translate3d(14px, 0, 0);
       }
       100% {
         opacity: 1;
-
         transform: translate3d(0, -9px, 0) rotate(120deg)
           translate3d(14px, 0, 0);
       }
@@ -200,24 +259,28 @@ const DotsWrapper = styled.ul`
       0% {
         transform: translate3d(0, -12px, 0);
       }
-      20% {
+      17% {
         transform: translate3d(0, -12px, 0) rotate(-60deg)
           translate3d(14px, 0, 0);
       }
-      40% {
+      33% {
         transform: translate3d(0, -12px, 0) rotate(0deg) translate3d(14px, 0, 0);
       }
-      60% {
+      50% {
         transform: translate3d(0, -12px, 0) rotate(60deg)
           translate3d(14px, 0, 0);
       }
-      80% {
+      67% {
         transform: translate3d(0, -12px, 0) rotate(120deg)
+          translate3d(14px, 0, 0);
+      }
+      83% {
+        opacity: 1;
+        transform: translate3d(0, -12px, 0) rotate(180deg)
           translate3d(14px, 0, 0);
       }
       100% {
         opacity: 1;
-
         transform: translate3d(0, -12px, 0) rotate(180deg)
           translate3d(14px, 0, 0);
       }
@@ -248,7 +311,6 @@ const DotsWrapper = styled.ul`
       }
       100% {
         opacity: 1;
-
         transform: translate3d(0, -15px, 0) rotate(240deg)
           translate3d(14px, 0, 0);
       }
