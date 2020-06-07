@@ -4,6 +4,7 @@ import styled from '@emotion/styled';
 import { Link } from 'gatsby';
 
 import DarkModeSwitch from './DarkModeSwitch';
+import HeaderNavLink from './HeaderNavLink';
 
 const Header = () => {
   const [showShadow, setShowShadow] = useState(false);
@@ -37,27 +38,9 @@ const Header = () => {
           </Link>
         </NameWrapper>
         <NavLinksWrapper>
-          <StyledLink
-            activeClassName='current-page'
-            partiallyActive={true}
-            to='/work/'
-          >
-            Work
-          </StyledLink>
-          <StyledLink
-            activeClassName='current-page'
-            partiallyActive={true}
-            to='/now/'
-          >
-            Now
-          </StyledLink>
-          <StyledLink
-            activeClassName='current-page'
-            partiallyActive={true}
-            to='/writing/'
-          >
-            Writing
-          </StyledLink>
+          <HeaderNavLink to='/work/'>Work</HeaderNavLink>
+          <HeaderNavLink to='/now/'>Now</HeaderNavLink>
+          <HeaderNavLink to='/writing/'>Writing</HeaderNavLink>
           <DarkModeSwitch
             css={css`
               margin-bottom: calc(0.25 * var(--spacing));
@@ -123,103 +106,6 @@ const NavLinksWrapper = styled.div`
     flex: 1;
   }
 `;
-
-const StyledLink = styled(Link)`
-  align-items: center;
-  border: 2px solid transparent;
-  display: flex;
-  flex: 1;
-  grid-area: cta;
-  justify-content: center;
-  margin-top: 0;
-  padding: calc(0.25 * var(--spacing)) 0;
-  transition: background-size 0.2s ease-in, border 0.2s ease-in;
-
-  &.current-page {
-    border-bottom: 2px solid var(--primary);
-    font-weight: 700;
-  }
-
-  &:before {
-    border-bottom: 2px solid var(--secondary);
-    border-top: 2px solid var(--secondary);
-    background: transparent;
-    height: 100%;
-  }
-
-  &:after {
-    background: transparent;
-    bottom: 0;
-    content: '';
-    left: 0;
-    height: 100%;
-    border-left: 2px solid var(--secondary);
-    border-right: 2px solid var(--secondary);
-    position: absolute;
-    transform: scaleY(0);
-    transition: all 0.2s ease-in;
-    width: 100%;
-  }
-
-  &:focus {
-    background-size: 100% 100%;
-    border: 2px solid transparent;
-    transition: background-size 0.2s ease-out, border 0.2s ease-out;
-
-    &:after {
-      transform: scaleY(1);
-      transition: all 0.2s ease-out;
-    }
-  }
-
-  @media (hover) {
-    &:hover {
-      background-size: 100% 100%;
-      border: 2px solid transparent;
-      transition: background-size 0.2s ease-out, border 0.2s ease-out;
-
-      &:after {
-        transform: scaleY(1);
-        transition: all 0.2s ease-out;
-      }
-    }
-  }
-
-  @media (min-width: 48em) {
-    max-width: 200px;
-  }
-`;
-// const StyledLink = styled(Link)`
-//   flex: 1;
-//   margin-top: 0;
-//   padding: calc(0.25 * var(--spacing)) 0;
-//   text-align: center;
-//   text-decoration: none;
-
-//   &.current-page {
-//     border-bottom: 2px solid var(--primary);
-//     font-weight: 700;
-//   }
-
-//   @media (min-width: 62em) {
-//     background-image: linear-gradient(
-//       0deg,
-//       var(--primary) 0%,
-//       var(--background) 100%
-//     );
-//     background-position: 0 100%;
-//     background-repeat: no-repeat;
-//     background-size: 100% 0;
-//     transition: background-size 0.2s ease-in;
-
-//     &:hover {
-//       background-size: 100% 100%;
-//       border-bottom: 2px solid var(--primary);
-//       color: var(--background);
-//       transition: background-size 0.2s ease-out;
-//     }
-//   }
-// `;
 
 const SoloDMSwitchWrapper = styled.div`
   display: flex;
