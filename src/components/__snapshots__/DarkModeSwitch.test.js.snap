@@ -2,7 +2,7 @@
 
 exports[`DarkModeSwitch renders correctly in dark mode 1`] = `
 <button
-  className="css-9xbtd6"
+  className="css-1xdswwp"
   onClick={[Function]}
 >
   <svg
@@ -20,7 +20,7 @@ exports[`DarkModeSwitch renders correctly in dark mode 1`] = `
 
 exports[`DarkModeSwitch renders correctly in light mode 1`] = `
 <button
-  className="css-9xbtd6"
+  className="css-1xdswwp"
   onClick={[Function]}
 >
   <svg

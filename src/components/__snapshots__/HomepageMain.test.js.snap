@@ -18,7 +18,7 @@ exports[`HomepageMain renders correctly in dark mode 1`] = `
     className="css-1b2m9z"
   >
     <button
-      className="css-9xbtd6"
+      className="css-1xdswwp"
       onClick={[Function]}
     >
       <svg
@@ -165,7 +165,7 @@ exports[`HomepageMain renders correctly in light mode 1`] = `
     className="css-1b2m9z"
   >
     <button
-      className="css-9xbtd6"
+      className="css-1xdswwp"
       onClick={[Function]}
     >
       <svg
