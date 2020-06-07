@@ -57,7 +57,7 @@ exports[`HomepageMain renders correctly in dark mode 1`] = `
     </p>
   </div>
   <div
-    className="css-1bmuida"
+    className="css-1hxsuc"
   >
     <a
       className="btn"
@@ -204,7 +204,7 @@ exports[`HomepageMain renders correctly in light mode 1`] = `
     </p>
   </div>
   <div
-    className="css-1bmuida"
+    className="css-1hxsuc"
   >
     <a
       className="btn"

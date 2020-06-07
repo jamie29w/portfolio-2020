@@ -5,19 +5,19 @@ exports[`NavFooter renders correctly in dark mode 1`] = `
   className="css-w8m5gk"
 >
   <a
-    className="css-1enyijk"
+    className="css-ecnfs0"
     href="/work/"
   >
     Work
   </a>
   <a
-    className="css-1enyijk"
+    className="css-ecnfs0"
     href="/now/"
   >
     Now
   </a>
   <a
-    className="css-1enyijk"
+    className="css-ecnfs0"
     href="/writing/"
   >
     Writing
@@ -30,19 +30,19 @@ exports[`NavFooter renders correctly in light mode 1`] = `
   className="css-w8m5gk"
 >
   <a
-    className="css-1enyijk"
+    className="css-ecnfs0"
     href="/work/"
   >
     Work
   </a>
   <a
-    className="css-1enyijk"
+    className="css-ecnfs0"
     href="/now/"
   >
     Now
   </a>
   <a
-    className="css-1enyijk"
+    className="css-ecnfs0"
     href="/writing/"
   >
     Writing
