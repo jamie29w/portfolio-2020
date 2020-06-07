@@ -121,42 +121,54 @@ const AboutBlock = styled.div`
 `;
 
 const CtaWrapper = styled.div`
+  align-items: center;
   display: flex;
-  align-items: flex-start;
   grid-area: cta;
-
-  @media (min-width: 48em) {
-    justify-content: center;
-  }
+  justify-content: center;
 
   & > a {
-    align-items: center;
     display: flex;
     border: 2px solid var(--primary);
-    color: var(--primary);
-    grid-area: cta;
-    flex-direction: column;
-    font-weight: 600;
-    height: 68px;
+    flex: 1;
     justify-content: center;
     margin-top: 0;
-    text-align: center;
-    width: 100%;
+    padding: calc(0.25 * var(--spacing)) 0;
+    transition: background-size 0.2s ease-in, border 0.2s ease-in;
+
+    &:before {
+      background: transparent;
+      height: 100%;
+      border-top: 2px solid var(--secondary);
+      border-bottom: 2px solid var(--secondary);
+    }
+    &:after {
+      background: transparent;
+      bottom: 0;
+      content: '';
+      left: 0;
+      height: 100%;
+      border-left: 2px solid var(--secondary);
+      border-right: 2px solid var(--secondary);
+      position: absolute;
+      transform: scaleY(0);
+      transition: all 0.2s ease-in;
+      width: 100%;
+    }
+
+    &:focus,
+    &:hover {
+      background-size: 100% 100%;
+      border: 2px solid transparent;
+      transition: background-size 0.2s ease-out, border 0.2s ease-out;
+
+      &:after {
+        transform: scaleY(1);
+        transition: all 0.2s ease-out;
+      }
+    }
 
     @media (min-width: 48em) {
       max-width: 200px;
-    }
-
-    &:active {
-      border: 2px solid var(--primaryHover);
-      color: var(--primaryHover);
-    }
-
-    @media (hover) {
-      &:hover {
-        border: 2px solid var(--primaryHover);
-        color: var(--primaryHover);
-      }
     }
   }
 `;
