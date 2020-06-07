@@ -145,13 +145,13 @@ const StyledLink = styled(Link)`
     background-position: 0 100%;
     background-repeat: no-repeat;
     background-size: 100% 0;
-    transition: background-size 0.2s ease-out;
+    transition: background-size 0.2s ease-in;
 
     &:hover {
       background-size: 100% 100%;
       border-bottom: 2px solid var(--primary);
       color: var(--background);
-      transition: background-size 0.2s ease-in;
+      transition: background-size 0.2s ease-out;
     }
   }
 `;

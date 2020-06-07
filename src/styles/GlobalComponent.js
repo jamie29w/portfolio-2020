@@ -130,8 +130,8 @@ export const GlobalComponent = () => {
           a {
             color: var(--primary);
             font-weight: 600;
-            text-decoration: none;
             position: relative;
+            text-decoration: none;
 
             &:active {
               color: var(--primaryHover);
@@ -145,14 +145,14 @@ export const GlobalComponent = () => {
               height: 2px;
               position: absolute;
               transform: scaleX(0);
-              transition: all 0.2s ease-out;
+              transition: all 0.2s ease-in;
               width: 100%;
             }
 
             &:focus {
               &:before {
                 transform: scaleX(1);
-                transition: all 0.2s ease-in;
+                transition: all 0.2s ease-out;
               }
             }
 
@@ -160,7 +160,7 @@ export const GlobalComponent = () => {
               &:hover {
                 &:before {
                   transform: scaleX(1);
-                  transition: all 0.2s ease-in;
+                  transition: all 0.2s ease-out;
                 }
               }
             }
