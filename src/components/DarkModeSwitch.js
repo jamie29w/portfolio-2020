@@ -1,18 +1,37 @@
-import React, { useContext } from 'react';
-import { Brightness3, WbSunny } from '@material-ui/icons';
+import React, { useContext, useState } from 'react';
 import styled from '@emotion/styled';
 
 import { ThemeContext } from '../styles';
 
 const DarkModeSwitch = props => {
   const { themeType, setThemeType } = useContext(ThemeContext);
+  const [isAnimationActive, setIsAnimationActive] = useState(false);
+
+  const handleClick = () => {
+    setIsAnimationActive(true);
+    setTimeout(() => {
+      setThemeType(themeType === 'dark' ? 'light' : 'dark');
+      setIsAnimationActive(false);
+    }, 1200);
+  };
+
+  const classes = `${themeType === 'dark' ? 'turning-light' : 'turning-dark'} ${
+    isAnimationActive ? 'animating' : ''
+  } 
+  ${themeType === 'dark' && !isAnimationActive ? 'show-sun' : ''}
+  ${themeType === 'light' && !isAnimationActive ? 'show-moon' : ''}
+  `;
 
   return (
     <>
-      {themeType === 'dark' ? (
-        <IconButton onClick={() => setThemeType('light')} {...props}>
+      {themeType && (
+        <IconButton
+          bgcolor={themeType === 'dark' ? 'var(--secondary)' : 'var(--primary)'}
+          onClick={handleClick}
+          {...props}
+        >
           <Sun>
-            <DotsWrapper>
+            <DotsWrapper className={classes}>
               <li />
               <li />
               <li />
@@ -21,21 +40,6 @@ const DarkModeSwitch = props => {
               <li />
             </DotsWrapper>
           </Sun>
-          {/* <WbSunny /> */}
-        </IconButton>
-      ) : (
-        <IconButton onClick={() => setThemeType('dark')} {...props}>
-          <Sun>
-            <DotsWrapper>
-              <li />
-              <li />
-              <li />
-              <li />
-              <li />
-              <li />
-            </DotsWrapper>
-          </Sun>
-          {/* <Brightness3 /> */}
         </IconButton>
       )}
     </>
@@ -55,24 +59,17 @@ const IconButton = styled.button`
   height: 44px;
   width: 44px;
 
-  & > svg {
-    color: var(--headerColor);
-    height: 32;
-    width: 32;
-    transition: 0.2s;
-  }
-
   &:focus,
   &:hover {
-    & > svg {
-      color: var(--darkModeSwitchHover);
-      transition: 0.2s;
+    & > div,
+    li {
+      background: ${({ bgcolor }) => bgcolor};
     }
   }
 `;
 
 const Sun = styled.div`
-  background: var(--secondary);
+  background: var(--headerColor);
   width: 16px;
   height: 16px;
   border-radius: 50%;
@@ -80,25 +77,108 @@ const Sun = styled.div`
 `;
 
 const DotsWrapper = styled.ul`
-  --numDots: 6;
   --dotSize: 3px;
-  --ease: ease-out;
-  --numDot: 0;
 
+  border-radius: 50%;
+  height: var(--dotSize);
+  left: 50%;
+  margin: 0;
+  padding: 0;
   position: absolute;
   top: 50%;
-  left: 50%;
-  width: var(--dotSize);
-  height: var(--dotSize);
-  border-radius: 50%;
   transform: translate3d(-50%, -50%, 0);
-  padding: 0;
-  margin: 0;
+  width: var(--dotSize);
 
-  & > li {
+  &.animating li {
+    &:nth-of-type(1) {
+      --animationName: dot1;
+      --numDot: 1;
+    }
+    &:nth-of-type(2) {
+      --animationName: dot2;
+      --numDot: 2;
+    }
+    &:nth-of-type(3) {
+      --animationName: dot3;
+      --numDot: 3;
+    }
+    &:nth-of-type(4) {
+      --animationName: dot4;
+      --numDot: 4;
+    }
+    &:nth-of-type(5) {
+      --animationName: dot5;
+      --numDot: 5;
+    }
+    &:nth-of-type(6) {
+      --animationName: dot6;
+      --numDot: 6;
+    }
+  }
+
+  &.turning-dark li {
+    animation-direction: normal;
+  }
+  &.turning-light li {
+    animation-direction: reverse;
+  }
+
+  &.show-sun li {
+    opacity: 1;
+
+    &:nth-of-type(1) {
+      transform: rotate(-60deg) translate3d(14px, 0, 0);
+    }
+    &:nth-of-type(2) {
+      transform: translate3d(0, -3px, 0) translate3d(14px, 0, 0);
+    }
+    &:nth-of-type(3) {
+      transform: translate3d(0, -6px, 0) rotate(60deg) translate3d(14px, 0, 0);
+    }
+    &:nth-of-type(4) {
+      transform: translate3d(0, -9px, 0) rotate(120deg) translate3d(14px, 0, 0);
+    }
+    &:nth-of-type(5) {
+      transform: translate3d(0, -12px, 0) rotate(180deg) translate3d(14px, 0, 0);
+    }
+    &:nth-of-type(6) {
+      transform: translate3d(0, -15px, 0) rotate(240deg) translate3d(14px, 0, 0);
+    }
+  }
+
+  &.show-moon li {
+    opacity: 1;
+
+    &:nth-of-type(1) {
+      background: var(--background);
+      transform: rotate(-60deg) scale(4) translate3d(1px, 0.5px, 0);
+    }
+    &:nth-of-type(2) {
+      opacity: 0;
+      transform: translate3d(0, -3px, 0);
+    }
+    &:nth-of-type(3) {
+      opacity: 0;
+      transform: translate3d(0, -6px, 0);
+    }
+    &:nth-of-type(4) {
+      opacity: 0;
+      transform: translate3d(0, -9px, 0);
+    }
+    &:nth-of-type(5) {
+      opacity: 0;
+      transform: translate3d(0, -12px, 0);
+    }
+    &:nth-of-type(6) {
+      opacity: 0;
+      transform: translate3d(0, -15px, 0);
+    }
+  }
+
+  & li {
     animation: var(--animationName) 1s ease-out;
     animation-fill-mode: forwards;
-    background: var(--secondary);
+    background: var(--headerColor);
     padding: 0;
     margin: 0;
     opacity: 0;
@@ -106,36 +186,13 @@ const DotsWrapper = styled.ul`
     height: 3px;
     border-radius: 50%;
     z-index: 10;
-
-    &:nth-child(1) {
-      --animationName: dot1;
-      --numDot: 1;
-    }
-    &:nth-child(2) {
-      --animationName: dot2;
-      --numDot: 2;
-    }
-    &:nth-child(3) {
-      --animationName: dot3;
-      --numDot: 3;
-    }
-    &:nth-child(4) {
-      --animationName: dot4;
-      --numDot: 4;
-    }
-    &:nth-child(5) {
-      --animationName: dot5;
-      --numDot: 5;
-    }
-    &:nth-child(6) {
-      --animationName: dot6;
-      --numDot: 6;
-    }
+    animation-fill-mode: forwards;
 
     @keyframes dot1 {
       0% {
         opacity: 1;
-        transform: translate3d(0, 0, 0);
+        background: var(--background);
+        transform: rotate(-60deg) scale(4) translate3d(1px, 0.5px, 0);
       }
       17% {
         opacity: 1;
