@@ -40,7 +40,6 @@ const IconButton = styled.button`
     height: 32;
     width: 32;
     transition: 0.2s;
-    /* transition: color 0.3s ease-in; */
   }
 
   &:focus,
@@ -48,7 +47,6 @@ const IconButton = styled.button`
     & > svg {
       color: var(--darkModeSwitchHover);
       transition: 0.2s;
-      /* transition: color 0.3s ease-out; */
     }
   }
 `;
