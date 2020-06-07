@@ -25,9 +25,17 @@ const Header = () => {
   return (
     <HeaderWrapper showShadow={showShadow}>
       <InnerWrapper>
-        <NameLink className='h3' ref={nameRef} to='/'>
-          Jamie Woodmancy
-        </NameLink>
+        <NameWrapper ref={nameRef}>
+          <Link
+            className='h3'
+            css={css`
+              padding: calc(0.25 * var(--spacing)) 0;
+            `}
+            to='/'
+          >
+            Jamie Woodmancy
+          </Link>
+        </NameWrapper>
         <NavLinksWrapper>
           <StyledLink
             activeClassName='current-page'
@@ -101,7 +109,7 @@ const InnerWrapper = styled.header`
   }
 `;
 
-const NameLink = styled(Link)`
+const NameWrapper = styled.h3`
   flex: 1.5;
   margin-top: 0;
 `;
