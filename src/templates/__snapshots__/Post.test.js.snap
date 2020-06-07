@@ -10,29 +10,44 @@ exports[`Post renders correctly in dark mode 1`] = `
     <header
       className="css-1tw4u1q"
     >
-      <a
-        className="h3 css-fsljql"
-        href="/"
+      <h3
+        className="css-fsljql"
       >
-        Jamie Woodmancy
-      </a>
+        <a
+          className="h3"
+          css={
+            Object {
+              "map": undefined,
+              "name": "nvkszq",
+              "next": undefined,
+              "styles": "
+              padding: calc(0.25 * var(--spacing)) 0;
+            ",
+              "toString": [Function],
+            }
+          }
+          href="/"
+        >
+          Jamie Woodmancy
+        </a>
+      </h3>
       <div
         className="css-1xz5piw"
       >
         <a
-          className="css-aojknb"
+          className="css-1kpzqe7"
           href="/work/"
         >
           Work
         </a>
         <a
-          className="css-aojknb"
+          className="css-1kpzqe7"
           href="/now/"
         >
           Now
         </a>
         <a
-          className="css-aojknb"
+          className="css-1kpzqe7"
           href="/writing/"
         >
           Writing
@@ -117,19 +132,19 @@ exports[`Post renders correctly in dark mode 1`] = `
     className="css-w8m5gk"
   >
     <a
-      className="css-1enyijk"
+      className="css-ecnfs0"
       href="/work/"
     >
       Work
     </a>
     <a
-      className="css-1enyijk"
+      className="css-ecnfs0"
       href="/now/"
     >
       Now
     </a>
     <a
-      className="css-1enyijk"
+      className="css-ecnfs0"
       href="/writing/"
     >
       Writing
@@ -148,29 +163,44 @@ exports[`Post renders correctly in light mode 1`] = `
     <header
       className="css-1tw4u1q"
     >
-      <a
-        className="h3 css-fsljql"
-        href="/"
+      <h3
+        className="css-fsljql"
       >
-        Jamie Woodmancy
-      </a>
+        <a
+          className="h3"
+          css={
+            Object {
+              "map": undefined,
+              "name": "nvkszq",
+              "next": undefined,
+              "styles": "
+              padding: calc(0.25 * var(--spacing)) 0;
+            ",
+              "toString": [Function],
+            }
+          }
+          href="/"
+        >
+          Jamie Woodmancy
+        </a>
+      </h3>
       <div
         className="css-1xz5piw"
       >
         <a
-          className="css-aojknb"
+          className="css-1kpzqe7"
           href="/work/"
         >
           Work
         </a>
         <a
-          className="css-aojknb"
+          className="css-1kpzqe7"
           href="/now/"
         >
           Now
         </a>
         <a
-          className="css-aojknb"
+          className="css-1kpzqe7"
           href="/writing/"
         >
           Writing
@@ -255,19 +285,19 @@ exports[`Post renders correctly in light mode 1`] = `
     className="css-w8m5gk"
   >
     <a
-      className="css-1enyijk"
+      className="css-ecnfs0"
       href="/work/"
     >
       Work
     </a>
     <a
-      className="css-1enyijk"
+      className="css-ecnfs0"
       href="/now/"
     >
       Now
     </a>
     <a
-      className="css-1enyijk"
+      className="css-ecnfs0"
       href="/writing/"
     >
       Writing
