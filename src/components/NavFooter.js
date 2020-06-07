@@ -51,7 +51,7 @@ const NavFooterWrapper = styled.div`
 const StyledLink = styled(Link)`
   flex: 1;
   margin-top: 0;
-  padding: var(--spacing) 0;
+  padding: calc(0.5 * var(--spacing)) 0;
   text-align: center;
   text-decoration: none;
 
