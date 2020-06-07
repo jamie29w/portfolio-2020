@@ -32,19 +32,19 @@ exports[`Header renders correctly in dark mode 1`] = `
       className="css-1xz5piw"
     >
       <a
-        className="css-1kpzqe7"
+        className="css-10t6syk"
         href="/work/"
       >
         Work
       </a>
       <a
-        className="css-1kpzqe7"
+        className="css-10t6syk"
         href="/now/"
       >
         Now
       </a>
       <a
-        className="css-1kpzqe7"
+        className="css-10t6syk"
         href="/writing/"
       >
         Writing
@@ -120,19 +120,19 @@ exports[`Header renders correctly in light mode 1`] = `
       className="css-1xz5piw"
     >
       <a
-        className="css-1kpzqe7"
+        className="css-10t6syk"
         href="/work/"
       >
         Work
       </a>
       <a
-        className="css-1kpzqe7"
+        className="css-10t6syk"
         href="/now/"
       >
         Now
       </a>
       <a
-        className="css-1kpzqe7"
+        className="css-10t6syk"
         href="/writing/"
       >
         Writing
