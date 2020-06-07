@@ -119,13 +119,32 @@ const NavLinksWrapper = styled.div`
 const StyledLink = styled(Link)`
   flex: 1;
   margin-top: 0;
-  padding: calc(0.5 * var(--spacing)) 0;
+  padding: calc(0.25 * var(--spacing)) 0;
   text-align: center;
   text-decoration: none;
 
   &.current-page {
     border-bottom: 2px solid var(--primary);
     font-weight: 700;
+  }
+
+  @media (min-width: 62em) {
+    background-image: linear-gradient(
+      0deg,
+      var(--primary) 0%,
+      var(--background) 100%
+    );
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    background-size: 100% 0;
+    transition: background-size 0.2s ease-out;
+
+    &:hover {
+      background-size: 100% 100%;
+      border-bottom: 2px solid var(--primary);
+      color: var(--background);
+      transition: background-size 0.2s ease-in;
+    }
   }
 `;
 
