@@ -155,15 +155,17 @@ const CtaWrapper = styled.div`
       width: 100%;
     }
 
-    &:focus,
-    &:hover {
-      background-size: 100% 100%;
-      border: 2px solid transparent;
-      transition: background-size 0.2s ease-out, border 0.2s ease-out;
+    @media (hover) {
+      &:focus,
+      &:hover {
+        background-size: 100% 100%;
+        border: 2px solid transparent;
+        transition: background-size 0.2s ease-out, border 0.2s ease-out;
 
-      &:after {
-        transform: scaleY(1);
-        transition: all 0.2s ease-out;
+        &:after {
+          transform: scaleY(1);
+          transition: all 0.2s ease-out;
+        }
       }
     }
 
