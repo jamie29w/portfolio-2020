@@ -123,13 +123,13 @@ export const GlobalComponent = () => {
             font-weight: 400;
             letter-spacing: 0.5px;
             line-height: 1.8;
-            padding: 0;
             margin: var(--spacing) 0 0;
           }
 
           a {
             color: var(--primary);
             font-weight: 600;
+            padding: calc(0.25 * var(--spacing)) 0;
             position: relative;
             text-decoration: none;
 
