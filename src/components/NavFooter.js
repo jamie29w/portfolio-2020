@@ -59,4 +59,9 @@ const StyledLink = styled(Link)`
     border-top: 2px solid var(--primary);
     font-weight: 700;
   }
+
+  &:before {
+    /* remove spreading underline styling */
+    content: initial;
+  }
 `;
