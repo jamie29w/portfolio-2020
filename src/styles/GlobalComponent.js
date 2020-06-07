@@ -131,14 +131,33 @@ export const GlobalComponent = () => {
             color: var(--primary);
             font-weight: 600;
             text-decoration: none;
+            position: relative;
+
+            &:before {
+              background-color: var(--primary);
+              bottom: 0;
+              content: '';
+              left: 0;
+              height: 2px;
+              position: absolute;
+              transform: scaleX(0);
+              transition: all 0.2s ease-out;
+              width: 100%;
+            }
 
             &:focus {
-              color: var(--primaryHover);
+              &:before {
+                transform: scaleX(1);
+                transition: all 0.2s ease-in;
+              }
             }
 
             @media (hover) {
               &:hover {
-                color: var(--primaryHover);
+                &:before {
+                  transform: scaleX(1);
+                  transition: all 0.2s ease-in;
+                }
               }
             }
           }
