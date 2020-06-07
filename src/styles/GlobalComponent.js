@@ -133,6 +133,10 @@ export const GlobalComponent = () => {
             text-decoration: none;
             position: relative;
 
+            &:active {
+              color: var(--primaryHover);
+            }
+
             &:before {
               background-color: var(--primary);
               bottom: 0;
