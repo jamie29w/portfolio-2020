@@ -1,10 +1,10 @@
 import React from 'react';
 import { css } from '@emotion/core';
 import styled from '@emotion/styled';
-import { Link } from 'gatsby';
 
 import DarkModeSwitch from './DarkModeSwitch';
 import Footer from './Footer';
+import HeaderNavLink from './HeaderNavLink';
 
 const HomepageMain = () => {
   return (
@@ -25,11 +25,9 @@ const HomepageMain = () => {
         <p>Balanced form and function</p>
         <p>[Under construction]</p>
       </AboutBlock>
-      <CtaWrapper>
-        <Link className='btn' to='/work/'>
-          See my work
-        </Link>
-      </CtaWrapper>
+      <MainLinkWrapper>
+        <MainLink to='/work/'>See my work</MainLink>
+      </MainLinkWrapper>
       <Footer
         css={css`
           grid-area: footer;
@@ -47,7 +45,7 @@ const HomepageMainWrapper = styled.div`
     'nameWrapper'
     'titleBlock'
     'aboutBlock'
-    'cta'
+    'mainLink'
     'footer';
   grid-template-columns: 1fr;
   grid-template-rows: auto 1.5fr 1fr 1fr auto;
@@ -120,57 +118,13 @@ const AboutBlock = styled.div`
   }
 `;
 
-const CtaWrapper = styled.div`
+const MainLink = styled(HeaderNavLink)`
+  border: 2px solid var(--primary);
+`;
+
+const MainLinkWrapper = styled.div`
   align-items: center;
   display: flex;
-  grid-area: cta;
+  grid-area: mainLink;
   justify-content: center;
-
-  & > a {
-    display: flex;
-    border: 2px solid var(--primary);
-    flex: 1;
-    justify-content: center;
-    margin-top: 0;
-    padding: calc(0.25 * var(--spacing)) 0;
-    transition: background-size 0.2s ease-in, border 0.2s ease-in;
-
-    &:before {
-      background: transparent;
-      height: 100%;
-      border-top: 2px solid var(--secondary);
-      border-bottom: 2px solid var(--secondary);
-    }
-    &:after {
-      background: transparent;
-      bottom: 0;
-      content: '';
-      left: 0;
-      height: 100%;
-      border-left: 2px solid var(--secondary);
-      border-right: 2px solid var(--secondary);
-      position: absolute;
-      transform: scaleY(0);
-      transition: all 0.2s ease-in;
-      width: 100%;
-    }
-
-    @media (hover) {
-      &:focus,
-      &:hover {
-        background-size: 100% 100%;
-        border: 2px solid transparent;
-        transition: background-size 0.2s ease-out, border 0.2s ease-out;
-
-        &:after {
-          transform: scaleY(1);
-          transition: all 0.2s ease-out;
-        }
-      }
-    }
-
-    @media (min-width: 48em) {
-      max-width: 200px;
-    }
-  }
 `;
