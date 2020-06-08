@@ -15,7 +15,7 @@ exports[`HomepageMain renders correctly in dark mode 1`] = `
     </h2>
   </div>
   <div
-    className="css-1b2m9z"
+    className="css-1dwpqxz"
   >
     
   </div>
@@ -148,7 +148,7 @@ exports[`HomepageMain renders correctly in light mode 1`] = `
     </h2>
   </div>
   <div
-    className="css-1b2m9z"
+    className="css-1dwpqxz"
   />
   <div
     className="css-17s6pf5"
