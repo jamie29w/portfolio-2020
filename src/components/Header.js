@@ -28,7 +28,7 @@ const Header = () => {
       <InnerWrapper>
         <NameWrapper ref={nameRef}>
           <Link
-            className='h3'
+            className='h2'
             css={css`
               padding: calc(0.25 * var(--spacing)) 0;
             `}
