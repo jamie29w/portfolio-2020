@@ -39,10 +39,14 @@ const Main = styled.main`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin: var(--spacing) auto 0;
+  margin: calc(3 * var(--spacing)) auto 0;
   max-width: 1080px;
   min-height: 80vh;
   padding-bottom: calc(var(--gutterVertical) + 2rem + calc(2 * var(--spacing)));
+
+  @media (min-width: 26em) {
+    margin: var(--spacing) auto 0;
+  }
 
   @media (min-width: 62em) {
     padding-bottom: 0;
