@@ -32,8 +32,8 @@ const IndexPageWrapper = styled.div`
   @media (min-width: 62em) {
     background: linear-gradient(
       140deg,
-      var(--gradient1HomePage) 51%,
-      var(--gradient2HomePage) 66%
+      var(--gradient1HomePage) 66%,
+      var(--gradient2HomePage) 77%
     );
   }
 `;
