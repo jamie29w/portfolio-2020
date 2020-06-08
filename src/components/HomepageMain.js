@@ -77,8 +77,8 @@ const NameWrapper = styled.div`
 const DarkModeSwitchWrapper = styled.div`
   align-items: center;
   position: absolute;
-  right: calc(0.5em + var(--gutterHorizontal));
-  top: calc(0.5em + var(--gutterHorizontal));
+  right: var(--gutterHorizontal);
+  top: var(--gutterVertical);
 `;
 
 const TitleBlock = styled.div`
