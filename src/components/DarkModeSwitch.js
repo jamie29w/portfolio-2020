@@ -147,30 +147,26 @@ const DotsWrapper = styled.ul`
   }
 
   &.show-moon li {
-    opacity: 1;
+    opacity: 0;
 
     &:nth-of-type(1) {
+      opacity: 1;
       background: var(--background);
       transform: rotate(-60deg) scale(4) translate3d(1px, 0.5px, 0);
     }
     &:nth-of-type(2) {
-      opacity: 0;
       transform: translate3d(0, -3px, 0);
     }
     &:nth-of-type(3) {
-      opacity: 0;
       transform: translate3d(0, -6px, 0);
     }
     &:nth-of-type(4) {
-      opacity: 0;
       transform: translate3d(0, -9px, 0);
     }
     &:nth-of-type(5) {
-      opacity: 0;
       transform: translate3d(0, -12px, 0);
     }
     &:nth-of-type(6) {
-      opacity: 0;
       transform: translate3d(0, -15px, 0);
     }
   }
@@ -181,7 +177,7 @@ const DotsWrapper = styled.ul`
     background: var(--headerColor);
     padding: 0;
     margin: 0;
-    opacity: 0;
+    opacity: 1;
     width: 3px;
     height: 3px;
     border-radius: 50%;
@@ -190,7 +186,7 @@ const DotsWrapper = styled.ul`
 
     @keyframes dot1 {
       0% {
-        opacity: 1;
+        opacity: 0;
         background: var(--background);
         transform: rotate(-60deg) scale(4) translate3d(1px, 0.5px, 0);
       }
@@ -222,9 +218,11 @@ const DotsWrapper = styled.ul`
 
     @keyframes dot2 {
       0% {
+        opacity: 0;
         transform: translate3d(0, -3px, 0);
       }
       17% {
+        opacity: 1;
         transform: translate3d(0, calc(-3px * calc(var(--numDot) - 1)), 0)
           rotate(-60deg) translate3d(14px, 0, 0);
       }
@@ -252,13 +250,16 @@ const DotsWrapper = styled.ul`
 
     @keyframes dot3 {
       0% {
+        opacity: 0;
         transform: translate3d(0, -6px, 0);
       }
       17% {
+        opacity: 1;
         transform: translate3d(0, -6px, 0) rotate(-60deg)
           translate3d(14px, 0, 0);
       }
       33% {
+        opacity: 1;
         transform: translate3d(0, -6px, 0) rotate(0deg) translate3d(14px, 0, 0);
       }
       50% {
@@ -284,9 +285,11 @@ const DotsWrapper = styled.ul`
     }
     @keyframes dot4 {
       0% {
+        opacity: 0;
         transform: translate3d(0, -9px, 0);
       }
       17% {
+        opacity: 1;
         transform: translate3d(0, -9px, 0) rotate(-60deg)
           translate3d(14px, 0, 0);
       }
@@ -294,6 +297,7 @@ const DotsWrapper = styled.ul`
         transform: translate3d(0, -9px, 0) rotate(0deg) translate3d(14px, 0, 0);
       }
       50% {
+        opacity: 1;
         transform: translate3d(0, -9px, 0) rotate(60deg) translate3d(14px, 0, 0);
       }
       67% {
@@ -314,20 +318,25 @@ const DotsWrapper = styled.ul`
     }
     @keyframes dot5 {
       0% {
+        opacity: 0;
         transform: translate3d(0, -12px, 0);
       }
       17% {
+        opacity: 1;
         transform: translate3d(0, -12px, 0) rotate(-60deg)
           translate3d(14px, 0, 0);
       }
       33% {
+        opacity: 1;
         transform: translate3d(0, -12px, 0) rotate(0deg) translate3d(14px, 0, 0);
       }
       50% {
+        opacity: 1;
         transform: translate3d(0, -12px, 0) rotate(60deg)
           translate3d(14px, 0, 0);
       }
       67% {
+        opacity: 1;
         transform: translate3d(0, -12px, 0) rotate(120deg)
           translate3d(14px, 0, 0);
       }
@@ -345,24 +354,30 @@ const DotsWrapper = styled.ul`
 
     @keyframes dot6 {
       0% {
+        opacity: 0;
         transform: translate3d(0, -15px, 0);
       }
       17% {
+        opacity: 1;
         transform: translate3d(0, -15px, 0) rotate(-60deg)
           translate3d(14px, 0, 0);
       }
       33% {
+        opacity: 1;
         transform: translate3d(0, -15px, 0) rotate(0deg) translate3d(14px, 0, 0);
       }
       50% {
+        opacity: 1;
         transform: translate3d(0, -15px, 0) rotate(60deg)
           translate3d(14px, 0, 0);
       }
       67% {
+        opacity: 1;
         transform: translate3d(0, -15px, 0) rotate(120deg)
           translate3d(14px, 0, 0);
       }
       83% {
+        opacity: 1;
         transform: translate3d(0, -15px, 0) rotate(180deg)
           translate3d(14px, 0, 0);
       }
