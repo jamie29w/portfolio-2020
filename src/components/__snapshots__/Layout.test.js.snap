@@ -14,7 +14,7 @@ exports[`Layout renders correctly in dark mode 1`] = `
         className="css-fsljql"
       >
         <a
-          className="h3"
+          className="h2"
           css={
             Object {
               "map": undefined,
@@ -113,7 +113,7 @@ exports[`Layout renders correctly in light mode 1`] = `
         className="css-fsljql"
       >
         <a
-          className="h3"
+          className="h2"
           css={
             Object {
               "map": undefined,
