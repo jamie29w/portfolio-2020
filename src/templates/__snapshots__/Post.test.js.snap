@@ -62,7 +62,7 @@ exports[`Post renders correctly in dark mode 1`] = `
     </header>
   </header>
   <main
-    className="css-1o8olku"
+    className="css-3anlo4"
   >
     <h1 />
     <h2>
@@ -184,7 +184,7 @@ exports[`Post renders correctly in light mode 1`] = `
     </header>
   </header>
   <main
-    className="css-1o8olku"
+    className="css-3anlo4"
   >
     <h1 />
     <h2>
