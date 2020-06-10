@@ -30,7 +30,7 @@ const DarkModeSwitch = props => {
           onClick={handleClick}
           {...props}
         >
-          <Sun>
+          <SunMoon>
             <DotsWrapper className={classes}>
               <li />
               <li />
@@ -39,7 +39,7 @@ const DarkModeSwitch = props => {
               <li />
               <li />
             </DotsWrapper>
-          </Sun>
+          </SunMoon>
         </IconButton>
       )}
     </>
@@ -68,7 +68,7 @@ const IconButton = styled.button`
   }
 `;
 
-const Sun = styled.div`
+const SunMoon = styled.div`
   background: var(--headerColor);
   width: 16px;
   height: 16px;
@@ -186,7 +186,7 @@ const DotsWrapper = styled.ul`
 
     @keyframes dot1 {
       0% {
-        opacity: 0;
+        opacity: 1;
         background: var(--background);
         transform: rotate(-60deg) scale(4) translate3d(1px, 0.5px, 0);
       }
