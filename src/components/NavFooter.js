@@ -43,7 +43,7 @@ const NavFooterWrapper = styled.div`
   width: 100%;
   z-index: 500;
 
-  @media (min-width: 62em) {
+  @media (min-width: 48em) {
     display: none;
   }
 `;
