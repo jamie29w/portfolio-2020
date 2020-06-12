@@ -100,7 +100,7 @@ const NameWrapper = styled.h3`
 const NavLinksWrapper = styled.div`
   display: none;
 
-  @media (min-width: 62em) {
+  @media (min-width: 48em) {
     align-items: flex-end;
     display: flex;
     flex: 1;
@@ -110,7 +110,7 @@ const NavLinksWrapper = styled.div`
 const SoloDMSwitchWrapper = styled.div`
   display: flex;
 
-  @media (min-width: 62em) {
+  @media (min-width: 48em) {
     display: none;
   }
 `;
