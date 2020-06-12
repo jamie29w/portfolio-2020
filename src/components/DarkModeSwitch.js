@@ -9,8 +9,9 @@ const DarkModeSwitch = props => {
 
   const handleClick = () => {
     setIsAnimationActive(true);
+    setThemeType(themeType === 'dark' ? 'light' : 'dark');
+
     setTimeout(() => {
-      setThemeType(themeType === 'dark' ? 'light' : 'dark');
       setIsAnimationActive(false);
     }, 1200);
   };
@@ -27,6 +28,7 @@ const DarkModeSwitch = props => {
       {themeType && (
         <IconButton
           bgcolor={themeType === 'dark' ? 'var(--secondary)' : 'var(--primary)'}
+          disabled={isAnimationActive}
           onClick={handleClick}
           {...props}
         >
@@ -117,10 +119,10 @@ const DotsWrapper = styled.ul`
   }
 
   &.turning-dark li {
-    animation-direction: normal;
+    animation-direction: reverse;
   }
   &.turning-light li {
-    animation-direction: reverse;
+    animation-direction: normal;
   }
 
   &.show-sun li {
@@ -172,7 +174,7 @@ const DotsWrapper = styled.ul`
   }
 
   & li {
-    animation: var(--animationName) 1s ease-out;
+    animation: var(--animationName) 1s cubic-bezier(0.35, 0.68, 0.73, 1.25);
     animation-fill-mode: forwards;
     background: var(--headerColor);
     padding: 0;
