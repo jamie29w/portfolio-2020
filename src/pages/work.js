@@ -123,7 +123,6 @@ const GridList = styled.ul`
   display: grid;
   grid-gap: calc(0.5 * var(--spacing));
   grid-template-columns: 1fr 1fr;
-  margin-top: var(--spacing);
 
   & > li {
     margin-top: calc(0.5var (--spacing));

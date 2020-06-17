@@ -124,7 +124,7 @@ export const GlobalComponent = () => {
             font-weight: 400;
             letter-spacing: 0.5px;
             line-height: 1.8;
-            margin: var(--spacing) 0 0;
+            margin: calc(0.5 * var(--spacing)) 0 0;
           }
 
           a {
