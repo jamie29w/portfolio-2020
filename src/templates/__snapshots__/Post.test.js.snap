@@ -64,10 +64,9 @@ exports[`Post renders correctly in dark mode 1`] = `
   <main
     className="css-3anlo4"
   >
-    <h1 />
-    <h2>
+    <h1>
       Current Post Mock Title
-    </h2>
+    </h1>
     <p>
       Posted on 
     </p>
@@ -186,10 +185,9 @@ exports[`Post renders correctly in light mode 1`] = `
   <main
     className="css-3anlo4"
   >
-    <h1 />
-    <h2>
+    <h1>
       Current Post Mock Title
-    </h2>
+    </h1>
     <p>
       Posted on 
     </p>
