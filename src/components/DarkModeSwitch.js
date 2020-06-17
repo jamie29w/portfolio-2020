@@ -27,6 +27,7 @@ const DarkModeSwitch = props => {
     <>
       {themeType && (
         <IconButton
+          aria-label='dark mode toggle button'
           bgcolor={themeType === 'dark' ? 'var(--secondary)' : 'var(--primary)'}
           disabled={isAnimationActive}
           onClick={handleClick}
