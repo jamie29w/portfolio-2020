@@ -46,8 +46,7 @@ const PostTemplate = ({
   },
 }) => {
   return (
-    <Layout>
-      <h2>{frontmatter.title}</h2>
+    <Layout title={frontmatter.title}>
       {frontmatter.edited_date ? (
         <p>Updated on {frontmatter.edited_date}</p>
       ) : (

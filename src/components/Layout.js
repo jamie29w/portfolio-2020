@@ -10,7 +10,7 @@ const Layout = ({ title, children }) => {
       <LayoutWrapper>
         <Header />
         <Main>
-          <h1>{title}</h1>
+          {title && <h1>{title}</h1>}
           {children}
         </Main>
         <NavFooter />
