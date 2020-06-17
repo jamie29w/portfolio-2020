@@ -55,5 +55,7 @@ const Writing = () => {
 export default Writing;
 
 const PostPreviewsWrapper = styled.div`
-  margin-top: var(--spacing);
+  border-top: 2px solid var(--secondary);
+  margin-top: calc(2 * var(--spacing));
+  padding-top: calc(2 * var(--spacing));
 `;
