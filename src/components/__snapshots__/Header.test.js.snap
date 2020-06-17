@@ -29,7 +29,7 @@ exports[`Header renders correctly in dark mode 1`] = `
       </a>
     </h3>
     <div
-      className="css-1xz5piw"
+      className="css-aitx2n"
     >
       <a
         className="css-10t6syk"
@@ -52,7 +52,7 @@ exports[`Header renders correctly in dark mode 1`] = `
       
     </div>
     <div
-      className="css-16hq6ks"
+      className="css-nxgzd2"
     >
       
     </div>
@@ -89,7 +89,7 @@ exports[`Header renders correctly in light mode 1`] = `
       </a>
     </h3>
     <div
-      className="css-1xz5piw"
+      className="css-aitx2n"
     >
       <a
         className="css-10t6syk"
@@ -111,7 +111,7 @@ exports[`Header renders correctly in light mode 1`] = `
       </a>
     </div>
     <div
-      className="css-16hq6ks"
+      className="css-nxgzd2"
     />
   </header>
 </header>
