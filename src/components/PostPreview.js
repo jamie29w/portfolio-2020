@@ -10,6 +10,9 @@ const PostPreview = ({ post }) => {
       <Link className='h3' to={`/writing/${post.slug}/`}>
         {post.title}
       </Link>
+      <DateText className='caption'>
+        Published on {post.published_date}
+      </DateText>
       <p>{post.excerpt}</p>
       <StyledLink to={`/writing/${post.slug}/`}>Read more...</StyledLink>
     </SectionWrapper>
@@ -20,5 +23,8 @@ export default PostPreview;
 
 const StyledLink = styled(Link)`
   display: inline-block;
-  margin-top: var(--spacing);
+`;
+
+const DateText = styled.p`
+  font-weight: 600;
 `;
