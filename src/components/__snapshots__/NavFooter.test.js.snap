@@ -2,7 +2,7 @@
 
 exports[`NavFooter renders correctly in dark mode 1`] = `
 <div
-  className="css-w8m5gk"
+  className="css-wsh7pe"
 >
   <a
     className="css-ecnfs0"
@@ -27,7 +27,7 @@ exports[`NavFooter renders correctly in dark mode 1`] = `
 
 exports[`NavFooter renders correctly in light mode 1`] = `
 <div
-  className="css-w8m5gk"
+  className="css-wsh7pe"
 >
   <a
     className="css-ecnfs0"

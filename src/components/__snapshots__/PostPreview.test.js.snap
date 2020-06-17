@@ -10,11 +10,16 @@ exports[`PostPreview renders correctly in dark mode 1`] = `
   >
     mockPostTitle
   </a>
+  <p
+    className="caption css-66vicj"
+  >
+    Published on 
+  </p>
   <p>
     mocPostExcerpt lorem ipsum...
   </p>
   <a
-    className="css-1w26vfw"
+    className="css-7kp13n"
     href="/writing/mock-post-slug/"
   >
     Read more...
@@ -32,11 +37,16 @@ exports[`PostPreview renders correctly in light mode 1`] = `
   >
     mockPostTitle
   </a>
+  <p
+    className="caption css-66vicj"
+  >
+    Published on 
+  </p>
   <p>
     mocPostExcerpt lorem ipsum...
   </p>
   <a
-    className="css-1w26vfw"
+    className="css-7kp13n"
     href="/writing/mock-post-slug/"
   >
     Read more...

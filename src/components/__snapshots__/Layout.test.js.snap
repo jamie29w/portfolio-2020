@@ -32,7 +32,7 @@ exports[`Layout renders correctly in dark mode 1`] = `
         </a>
       </h3>
       <div
-        className="css-1xz5piw"
+        className="css-aitx2n"
       >
         <a
           className="css-10t6syk"
@@ -55,7 +55,7 @@ exports[`Layout renders correctly in dark mode 1`] = `
         
       </div>
       <div
-        className="css-16hq6ks"
+        className="css-nxgzd2"
       >
         
       </div>
@@ -75,7 +75,7 @@ exports[`Layout renders correctly in dark mode 1`] = `
     </p>
   </main>
   <div
-    className="css-w8m5gk"
+    className="css-wsh7pe"
   >
     <a
       className="css-ecnfs0"
@@ -131,7 +131,7 @@ exports[`Layout renders correctly in light mode 1`] = `
         </a>
       </h3>
       <div
-        className="css-1xz5piw"
+        className="css-aitx2n"
       >
         <a
           className="css-10t6syk"
@@ -153,7 +153,7 @@ exports[`Layout renders correctly in light mode 1`] = `
         </a>
       </div>
       <div
-        className="css-16hq6ks"
+        className="css-nxgzd2"
       />
     </header>
   </header>
@@ -171,7 +171,7 @@ exports[`Layout renders correctly in light mode 1`] = `
     </p>
   </main>
   <div
-    className="css-w8m5gk"
+    className="css-wsh7pe"
   >
     <a
       className="css-ecnfs0"
