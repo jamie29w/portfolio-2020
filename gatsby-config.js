@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: `woodmancy.dev`,
-    description: `A few thoughts tumbling around the sagebrush of northern Nevada`,
-    author: `@jamiewdev`,
+    description: `Jamie Woodmancy, Front End Engineer, personal blog`,
+    author: `jamiewdev@gmail.com`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -12,8 +12,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `portfolio-site`,
+        short_name: `portfolio`,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,
