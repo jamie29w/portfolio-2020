@@ -4,18 +4,16 @@ import styled from '@emotion/styled';
 import Header from './Header';
 import NavFooter from './NavFooter';
 
-const Layout = ({ title, children }) => {
+const Layout = ({ title = "", children }) => {
   return (
-    <>
-      <LayoutWrapper>
-        <Header />
-        <Main>
-          {title && <h1>{title}</h1>}
-          {children}
-        </Main>
-        <NavFooter />
-      </LayoutWrapper>
-    </>
+    <LayoutWrapper>
+      <Header />
+      <Main>
+        <h1>{title}</h1>
+        <ContentWrapper>{children}</ContentWrapper>
+      </Main>
+      <NavFooter />
+    </LayoutWrapper>
   );
 };
 
@@ -35,10 +33,8 @@ const LayoutWrapper = styled.div`
 `;
 
 const Main = styled.main`
-  align-items: stretch;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   margin: calc(3 * var(--spacing)) auto 0;
   max-width: 1080px;
   min-height: 80vh;
@@ -51,4 +47,11 @@ const Main = styled.main`
   @media (min-width: 62em) {
     padding-bottom: 0;
   }
+`;
+
+const ContentWrapper = styled.div`
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-between;
 `;
