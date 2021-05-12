@@ -12,7 +12,7 @@ export const query = graphql`
       body
       frontmatter {
         author
-        published_date
+        published_date(formatString: "MMMM Do, YYYY")
         image {
           sharp: childImageSharp {
             fluid(quality: 90) {

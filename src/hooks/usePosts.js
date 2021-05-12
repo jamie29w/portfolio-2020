@@ -12,7 +12,7 @@ const usePosts = () => {
             title
             author
             slug
-            published_date
+            published_date(formatString: "MMMM Do, YYYY")
           }
           excerpt
         }
