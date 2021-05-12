@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { css } from '@emotion/core';
+import { css } from '@emotion/react';
 import styled from '@emotion/styled';
 import { Link } from 'gatsby';
 
