@@ -62,41 +62,47 @@ exports[`Post renders correctly in dark mode 1`] = `
     </header>
   </header>
   <main
-    className="css-3anlo4"
+    className="css-16fbjmh"
   >
     <h1>
       Current Post Mock Title
     </h1>
-    <p>
-      Posted on 
-    </p>
-    <li>
-      The Hub coffee + Tetsu Kasuya edition Hario V60
-    </li>
-    <li>
-      Playing cornole with my wife and kids
-    </li>
-    <li>
-      Perfecting my margarita
-    </li>
-    <li>
-      Building a UI component library
-    </li>
     <div
-      className="css-1f9iw7u"
+      className="css-h5uv9"
     >
-      <a
-        href="/writing/prev-post-mock-slug"
+      <article>
+        <p>
+          Posted on 
+        </p>
+        <li>
+          The Hub coffee + Tetsu Kasuya edition Hario V60
+        </li>
+        <li>
+          Playing cornole with my wife and kids
+        </li>
+        <li>
+          Perfecting my margarita
+        </li>
+        <li>
+          Building a UI component library
+        </li>
+      </article>
+      <div
+        className="css-1f9iw7u"
       >
-        ← 
-        PrevPost Mock Title
-      </a>
-      <a
-        href="/writing/next-post-mock-slug"
-      >
-        NextPost Mock Title
-         →
-      </a>
+        <a
+          href="/writing/prev-post-mock-slug"
+        >
+          ← 
+          PrevPost Mock Title
+        </a>
+        <a
+          href="/writing/next-post-mock-slug"
+        >
+          NextPost Mock Title
+           →
+        </a>
+      </div>
     </div>
   </main>
   <div
@@ -183,41 +189,47 @@ exports[`Post renders correctly in light mode 1`] = `
     </header>
   </header>
   <main
-    className="css-3anlo4"
+    className="css-16fbjmh"
   >
     <h1>
       Current Post Mock Title
     </h1>
-    <p>
-      Posted on 
-    </p>
-    <li>
-      The Hub coffee + Tetsu Kasuya edition Hario V60
-    </li>
-    <li>
-      Playing cornole with my wife and kids
-    </li>
-    <li>
-      Perfecting my margarita
-    </li>
-    <li>
-      Building a UI component library
-    </li>
     <div
-      className="css-1f9iw7u"
+      className="css-h5uv9"
     >
-      <a
-        href="/writing/prev-post-mock-slug"
+      <article>
+        <p>
+          Posted on 
+        </p>
+        <li>
+          The Hub coffee + Tetsu Kasuya edition Hario V60
+        </li>
+        <li>
+          Playing cornole with my wife and kids
+        </li>
+        <li>
+          Perfecting my margarita
+        </li>
+        <li>
+          Building a UI component library
+        </li>
+      </article>
+      <div
+        className="css-1f9iw7u"
       >
-        ← 
-        PrevPost Mock Title
-      </a>
-      <a
-        href="/writing/next-post-mock-slug"
-      >
-        NextPost Mock Title
-         →
-      </a>
+        <a
+          href="/writing/prev-post-mock-slug"
+        >
+          ← 
+          PrevPost Mock Title
+        </a>
+        <a
+          href="/writing/next-post-mock-slug"
+        >
+          NextPost Mock Title
+           →
+        </a>
+      </div>
     </div>
   </main>
   <div

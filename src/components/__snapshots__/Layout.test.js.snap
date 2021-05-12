@@ -62,17 +62,21 @@ exports[`Layout renders correctly in dark mode 1`] = `
     </header>
   </header>
   <main
-    className="css-3anlo4"
+    className="css-16fbjmh"
   >
     <h1>
       mockTitle for Layout
     </h1>
-    <h2>
-      hey there!
-    </h2>
-    <p>
-      mock body content, etc
-    </p>
+    <div
+      className="css-h5uv9"
+    >
+      <h2>
+        hey there!
+      </h2>
+      <p>
+        mock body content, etc
+      </p>
+    </div>
   </main>
   <div
     className="css-wsh7pe"
@@ -158,17 +162,21 @@ exports[`Layout renders correctly in light mode 1`] = `
     </header>
   </header>
   <main
-    className="css-3anlo4"
+    className="css-16fbjmh"
   >
     <h1>
       mockTitle for Layout
     </h1>
-    <h2>
-      hey there!
-    </h2>
-    <p>
-      mock body content, etc
-    </p>
+    <div
+      className="css-h5uv9"
+    >
+      <h2>
+        hey there!
+      </h2>
+      <p>
+        mock body content, etc
+      </p>
+    </div>
   </main>
   <div
     className="css-wsh7pe"

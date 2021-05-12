@@ -7,7 +7,7 @@ import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { Layout } from '../components';
 
 export const query = graphql`
-  query($nextPostSlug: String, $prevPostSlug: String, $slug: String!) {
+  query ($nextPostSlug: String, $prevPostSlug: String, $slug: String!) {
     currentPost: mdx(frontmatter: { slug: { eq: $slug } }) {
       body
       frontmatter {
@@ -47,20 +47,22 @@ const PostTemplate = ({
 }) => {
   return (
     <Layout title={frontmatter.title}>
-      {frontmatter.edited_date ? (
-        <p>Updated on {frontmatter.edited_date}</p>
-      ) : (
-        <p>Posted on {frontmatter.published_date}</p>
-      )}
-      {frontmatter.image?.sharp?.fluid && (
-        <ImageBackground
-          alt={frontmatter.image_alt}
-          fadeIn='soft'
-          fluid={frontmatter.image.sharp.fluid}
-          tag='section'
-        />
-      )}
-      <MDXRenderer>{body}</MDXRenderer>
+      <article>
+        {frontmatter.edited_date ? (
+          <p>Updated on {frontmatter.edited_date}</p>
+        ) : (
+          <p>Posted on {frontmatter.published_date}</p>
+        )}
+        {frontmatter.image?.sharp?.fluid && (
+          <ImageBackground
+            alt={frontmatter.image_alt}
+            fadeIn='soft'
+            fluid={frontmatter.image.sharp.fluid}
+            tag='section'
+          />
+        )}
+        <MDXRenderer>{body}</MDXRenderer>
+      </article>
 
       <ButtonWrapper>
         {prevPost ? (

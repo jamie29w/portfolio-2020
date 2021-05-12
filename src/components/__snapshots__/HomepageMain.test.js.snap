@@ -46,7 +46,7 @@ exports[`HomepageMain renders correctly in dark mode 1`] = `
     className="css-w2qpid"
   >
     <a
-      className="css-13zoe8m"
+      className="css-1qd9oe1"
       href="/work/"
     >
       See my work
@@ -177,7 +177,7 @@ exports[`HomepageMain renders correctly in light mode 1`] = `
     className="css-w2qpid"
   >
     <a
-      className="css-13zoe8m"
+      className="css-1qd9oe1"
       href="/work/"
     >
       See my work
