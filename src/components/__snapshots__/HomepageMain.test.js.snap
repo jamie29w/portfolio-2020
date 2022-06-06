@@ -59,7 +59,7 @@ exports[`HomepageMain renders correctly in dark mode 1`] = `
       className="caption"
     >
       Woodmancy Dev™ 
-      2021
+      2022
       , built with
     </span>
     <span
@@ -190,7 +190,7 @@ exports[`HomepageMain renders correctly in light mode 1`] = `
       className="caption"
     >
       Woodmancy Dev™ 
-      2021
+      2022
       , built with
     </span>
     <span

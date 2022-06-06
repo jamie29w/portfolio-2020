@@ -43,7 +43,7 @@ const Work = () => {
           <GridList>
             <li>
               <a
-                href='https://www.benridpathfilms.com/'
+                href='https://ridpathproductions.com/'
                 rel='noopener noreferrer'
                 target='_blank'
               >
