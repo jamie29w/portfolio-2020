@@ -47,7 +47,7 @@ const Work = () => {
                 rel='noopener noreferrer'
                 target='_blank'
               >
-                Bed Ridpath Films
+                Ridpath Productions
               </a>
             </li>
             <li>
