@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `woodmancy.dev`,
-    description: `Jamie Woodmancy, Front End Engineer, personal blog`,
+    description: `Jamie Woodmancy, Software Engineer, personal blog`,
     author: `jamiewdev@gmail.com`,
   },
   plugins: [
