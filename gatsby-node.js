@@ -3,6 +3,7 @@
  *
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
+const { createOpenGraphImage } = require('gatsby-plugin-open-graph-images');
 
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const result = await graphql(`
@@ -46,6 +47,10 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         slug: `${slug}`,
         prevPostSlug: `${prevPost && prevPost.frontmatter.slug}`,
         nextPostSlug: `${nextPost && nextPost.frontmatter.slug}`,
+        ogImage: createOpenGraphImage(actions.createPage, {
+          path: `og-images/artists/${id}.png`,
+          context: { description: 'woodmancy.dev homepage' },
+        }),
       },
     });
   });
